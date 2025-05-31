@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers - Dyna-K Automotive Stamping Pvt. Ltd</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="js/jssor.slider.min.js"></script>
+    <script>
+        // Global variable to track initialization
+        let sliderInitialized = false;
+
+        // Check if Jssor slider library is loaded
+        function checkJssorSlider() {
+            if (typeof $JssorSlider$ === 'undefined') {
+                console.log('Jssor slider library not found, attempting to load from CDN...');
+                var script = document.createElement('script');
+                script.src = 'https://cdn.jsdelivr.net/npm/jssor-slider@28.0.0/jssor.slider.min.js';
+                script.onload = function() {
+                    console.log('Jssor slider library loaded successfully');
+                    initializeCustomerLogosSlider();
+                };
+                script.onerror = function() {
+                    console.error('Failed to load Jssor slider library');
+                    showFallbackGrid();
+                };
+                document.head.appendChild(script);
+            } else {
+                initializeCustomerLogosSlider();
+            }
+        }
+
+        // Initialize customer logos slider
+        function initializeCustomerLogosSlider() {
+            if (sliderInitialized) {
+                console.log('Slider already initialized');
+                return;
+            }
+
+            try {
+                var jssor_1_options = {
+                    $AutoPlay: true,
+                    $Idle: 0,
+                    $AutoPlaySteps: 5,
+                    $SlideDuration: 1600,
+                    $SlideEasing: $Jease$.$Linear,
+                    $PauseOnHover: 5,
+                    $SlideWidth: 223,
+                    $Cols: 6,
+                    $ArrowNavigatorOptions: {
+                        $Class: $JssorArrowNavigator$,
+                        $ChanceToShow: 2,
+                        $AutoCenter: 2,
+                        $Steps: 1
+                    },
+                    $BulletNavigatorOptions: {
+                        $Class: $JssorBulletNavigator$,
+                        $ChanceToShow: 2,
+                        $AutoCenter: 1,
+                        $Steps: 1,
+                        $Lanes: 1,
+                        $SpacingX: 10,
+                        $SpacingY: 10,
+                        $Orientation: 1
+                    }
+                };
+
+                var sliderContainer = document.getElementById('customer-logos-slider');
+                if (!sliderContainer) {
+                    console.error('Slider container not found');
+                    showFallbackGrid();
+                    return;
+                }
+
+                var jssor_1_slider = new $JssorSlider$("customer-logos-slider", jssor_1_options);
+                
+                // Responsive code
+                function ScaleSlider() {
+                    var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+                    if (refSize) {
+                        refSize = Math.min(refSize, 1170);
+                        jssor_1_slider.$ScaleWidth(refSize);
+                    } else {
+                        window.setTimeout(ScaleSlider, 20);
+                    }
+                }
+
+                // Initialize slider
+                ScaleSlider();
+                $Jssor$.$AddEvent(window, "load", ScaleSlider);
+                $Jssor$.$AddEvent(window, "resize", $Jssor$.$WindowResizeFilter(window, ScaleSlider));
+                $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+                
+                sliderInitialized = true;
+                console.log('Customer logos slider initialized successfully');
+            } catch (error) {
+                console.error('Error initializing customer logos slider:', error);
+                showFallbackGrid();
+            }
+        }
+
+        // Fallback grid display
+        function showFallbackGrid() {
+            var container = document.getElementById('customer-logos-slider');
+            if (container) {
+                container.innerHTML = `
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 p-4">
+                        <div class="flex items-center justify-center p-4 bg-white rounded-lg shadow">
+                            <img src="images/logo-3.jpg" alt="Customer Logo 1" class="max-h-16 object-contain">
+                        </div>
+                        <div class="flex items-center justify-center p-4 bg-white rounded-lg shadow">
+                            <img src="images/logo-7.jpg" alt="Customer Logo 2" class="max-h-16 object-contain">
+                        </div>
+                        <div class="flex items-center justify-center p-4 bg-white rounded-lg shadow">
+                            <img src="images/logo-8.jpg" alt="Customer Logo 3" class="max-h-16 object-contain">
+                        </div>
+                        <div class="flex items-center justify-center p-4 bg-white rounded-lg shadow">
+                            <img src="images/logo-9.jpg" alt="Customer Logo 4" class="max-h-16 object-contain">
+                        </div>
+                        <div class="flex items-center justify-center p-4 bg-white rounded-lg shadow">
+                            <img src="images/logo-10.jpg" alt="Customer Logo 5" class="max-h-16 object-contain">
+                        </div>
+                        <div class="flex items-center justify-center p-4 bg-white rounded-lg shadow">
+                            <img src="images/logo-12.jpg" alt="Customer Logo 6" class="max-h-16 object-contain">
+                        </div>
+                    </div>
+                `;
+            }
+        }
+
+        // Initialize when document is ready
+        document.addEventListener('DOMContentLoaded', function() {
+            checkJssorSlider();
+        });
+
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a237e',    // Deep blue
+                        secondary: '#2c3e50',   // Dark slate
+                        accent: '#34495e',      // Steel blue
+                        dark: '#0d47a1',        // Navy blue
+                        light: '#e3f2fd',       // Light blue
+                    },
+                    fontFamily: {
+                        oswald: ['Oswald', 'sans-serif'],
+                        roboto: ['Roboto', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .nav-link {
+            @apply text-base-content hover:text-white transition-colors duration-300 relative;
+        }
+        .nav-link::after {
+            content: '';
+            @apply absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300;
+        }
+        .nav-link:hover::after {
+            @apply w-full;
+        }
+        .nav-link.active {
+            @apply text-white font-bold;
+        }
+        .nav-link.active::after {
+            @apply w-full;
+        }
+        .dropdown-content {
+            @apply mt-2 border-t-2 border-primary;
+        }
+        .drawer-side {
+            @apply bg-base-100;
+        }
+        .drawer-side ul {
+            @apply p-4;
+        }
+        .drawer-side a {
+            @apply hover:bg-base-200 rounded-lg transition-all duration-300;
+        }
+        .card {
+            @apply transition-all duration-300 hover:-translate-y-1;
+        }
+        .btn {
+            @apply transition-all duration-300 hover:scale-105;
+        }
+        .stats {
+            @apply transition-all duration-300 hover:shadow-xl;
+        }
+        .section-title {
+            @apply relative inline-block;
+        }
+        .section-title::after {
+            content: '';
+            @apply absolute bottom-0 left-0 w-1/2 h-1 bg-primary transform -translate-x-1/2;
+        }
+        .btn-primary {
+            @apply bg-primary hover:bg-dark text-white;
+        }
+        .btn-secondary {
+            @apply bg-primary/80 hover:bg-primary text-white;
+        }
+        .btn-outline {
+            @apply border-2 border-white hover:bg-white hover:text-white;
+        }
+        .icon-primary {
+            @apply text-white;
+        }
+        .icon-secondary {
+            @apply text-white;
+        }
+        .form-input {
+            @apply input input-bordered w-full max-w-full bg-white text-base-content;
+        }
+        .form-select {
+            @apply select select-bordered w-full max-w-full bg-white text-base-content;
+        }
+        .form-file {
+            @apply file-input file-input-bordered w-full max-w-full bg-white text-base-content;
+        }
+        /* Marquee styling */
+        .marquee-container {
+            @apply h-40 overflow-hidden relative bg-white rounded-lg shadow-md p-4;
+        }
+        .marquee-content {
+            @apply absolute top-0 left-0 w-full h-full overflow-hidden p-4;
+            animation: marquee 20s linear infinite;
+        }
+        .marquee-content:hover {
+            animation-play-state: paused;
+        }
+        @keyframes marquee {
+            0% { transform: translateY(100%); }
+            100% { transform: translateY(-100%); }
+        }
+        
+        /* Fixed Current Openings section styles */
+        .marquee-container {
+            width: 100%;
+            overflow: hidden;
+        }
+        .marquee-content {
+            width: 100%;
+        }
+        .marquee-content h3 {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            hyphens: auto;
+            max-width: 100%;
+            font-size: 1.1rem;
+        }
+        .marquee-content p {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            max-width: 100%;
+        }
+        .marquee-content a {
+            display: inline-block;
+            word-break: break-all;
+        }
+        
+        /* Form styles */
+        .form-input, .form-select, .form-file {
+            @apply w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary;
+        }
+    </style>
+</head>
+<body class="font-roboto bg-base-200">
+    <!-- Announcement Bar -->
+    <div class="bg-primary text-white py-1 px-4 text-center text-sm">
+        <span>Leading manufacturer of precision automotive components | IATF16949:2016 Certified</span>
+    </div>
+
+    <!-- Top Navigation -->
+    <div class="bg-neutral text-white py-2">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <a href="#" class="hover:text-white transition-colors duration-300 flex items-center space-x-2">
+                        <i class="fa fa-book text-white"></i>
+                        <span>Download Brochure</span>
+                    </a>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="mailto:contact@dynakstamp.com" class="hover:text-white transition-colors duration-300 flex items-center space-x-2">
+                        <i class="fa fa-envelope text-white"></i>
+                        <span>contact@dynakstamp.com</span>
+                    </a>
+                    <a href="tel:+91 90110 37455" class="hover:text-white transition-colors duration-300 flex items-center space-x-2">
+                        <i class="fa fa-phone text-white"></i>
+                        <span>+91 90110 37455</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <img src="images/logo-dyna.jpg" alt="Dyna-K Logo" class="h-16">
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link font-medium active">Home</a>
+                    <div class="dropdown dropdown-hover">
+                        <label tabindex="0" class="nav-link font-medium cursor-pointer flex items-center">
+                            About Us <i class="fa fa-chevron-down ml-1 text-xs"></i>
+                        </label>
+                        <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a href="company-profile.html">Company Profile</a></li>
+                            <li><a href="vision-quality-policy.html">Vision & Quality</a></li>
+                            <li><a href="certification.html">Certification</a></li>
+                            <li><a href="initiatives.html">Initiatives</a></li>
+                        </ul>
+                    </div>
+                    <a href="services.html" class="nav-link font-medium">Services</a>
+                    <a href="facilities.html" class="nav-link font-medium">Facilities</a>
+                    <a href="customers.html" class="nav-link font-medium">Customers</a>
+                    <div class="dropdown dropdown-hover">
+                        <label tabindex="0" class="nav-link font-medium cursor-pointer flex items-center">
+                            Products <i class="fa fa-chevron-down ml-1 text-xs"></i>
+                        </label>
+                        <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a href="engine-parts.html">Engine Parts</a></li>
+                            <li><a href="brake-components.html">Brake Components</a></li>
+                            <li><a href="chassis-parts.html">Chassis Parts</a></li>
+                            <li><a href="turbo-chargers.html">Turbo Chargers</a></li>
+                            <li><a href="other-parts.html">Other Parts</a></li>
+                            <li><a href="emission-filtration-parts.html">Emission & Filtration</a></li>
+                            <li><a href="welded-assemblies.html">Welded Assemblies</a></li>
+                        </ul>
+                    </div>
+                    <a href="career.html" class="nav-link font-medium">Careers</a>
+                    <a href="contact.html" class="nav-link font-medium">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <div class="drawer drawer-end">
+                        <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+                        <div class="drawer-content">
+                            <label for="my-drawer" class="btn btn-ghost btn-circle">
+                                <i class="fa fa-bars text-xl"></i>
+                            </label>
+                        </div> 
+                        <div class="drawer-side">
+                            <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+                            <ul class="menu p-4 w-80 min-h-full bg-base-200">
+                                <li><a href="index.html" class="active">Home</a></li>
+                                <li>
+                                    <details>
+                                        <summary>About Us</summary>
+                                        <ul>
+                                            <li><a href="company-profile.html">Company Profile</a></li>
+                                            <li><a href="vision-quality-policy.html">Vision & Quality</a></li>
+                                            <li><a href="certification.html">Certification</a></li>
+                                            <li><a href="initiatives.html">Initiatives</a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="facilities.html">Facilities</a></li>
+                                <li><a href="customers.html">Customers</a></li>
+                                <li>
+                                    <details>
+                                        <summary>Products</summary>
+                                        <ul>
+                                            <li><a href="engine-parts.html">Engine Parts</a></li>
+                                            <li><a href="brake-components.html">Brake Components</a></li>
+                                            <li><a href="chassis-parts.html">Chassis Parts</a></li>
+                                            <li><a href="turbo-chargers.html">Turbo Chargers</a></li>
+                                            <li><a href="other-parts.html">Other Parts</a></li>
+                                            <li><a href="emission-filtration-parts.html">Emission & Filtration</a></li>
+                                            <li><a href="welded-assemblies.html">Welded Assemblies</a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+                                <li><a href="career.html">Careers</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative bg-primary text-white py-20" style="background-image: url('images/career-banner.jpg'); background-size: cover; background-position: center;">
+        <div class="absolute inset-0 bg-primary/70"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-oswald font-bold mb-6">Join Our Team</h1>
+                <p class="text-xl">Build your career with a global leader in automotive manufacturing</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Career Content Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <!-- Career Form -->
+                <div class="lg:col-span-2 order-2 lg:order-1">
+                    <div class="bg-white rounded-lg shadow-lg p-8">
+                        <h2 class="text-3xl font-oswald font-bold text-primary mb-6">Career Application</h2>
+                        <div class="w-24 h-1 bg-primary mb-6"></div>
+                        
+                        <form id="career-form" action="test1.php" method="post" enctype="multipart/form-data" class="space-y-4">
+                            <div>
+                                <input class = ' w-full py-2 rounded-lg border-2 ' placeholder="Salutation" type="text" name="salutation" class="form-input" required>
+                            </div>
+                            
+                            <div>
+                                <input class = ' w-full py-2 rounded-lg border-2 ' placeholder="Your name" type="text" name="name" class="form-input" required>
+                            </div>
+                            
+                            <div>
+                                <input class = ' w-full py-2 rounded-lg border-2 ' placeholder="Your Email Address" type="email" name="email" class="form-input" required>
+                            </div>
+                            
+                            <div>
+                                <input class = ' w-full py-2 rounded-lg border-2 ' placeholder="Your Phone Number" type="tel" name="phone" class="form-input" required>
+                            </div>
+                            
+                            <div>
+                                <input class = ' w-full py-2 rounded-lg border-2 ' placeholder="Address" type="text" name="address" class="form-input" required>
+                            </div>
+                            
+                            <div>
+                                <select class = ' w-full py-2 rounded-lg border-2 ' name="Lineofwork" class="form-select" required>
+                                    <option value="" selected>Line of work</option>
+                                    <option value="Production">Production</option>
+                                    <option value="Quality">Quality</option>
+                                    <option value="HR / Admin">HR / Admin</option>
+                                    <option value="Finance">Finance</option>
+                                    <option value="Sales /Marketing">Sales /Marketing</option>
+                                    <option value="Stores/ Purchase">Stores/ Purchase</option>
+                                    <option value="Export /Dispatch">Export /Dispatch</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <select class = ' w-full py-2 rounded-lg border-2 ' name="purpose" id="purpose" class="form-select" required>
+                                    <option value="0" selected>Experience in Sheet Metal Stamping:</option>
+                                    <option value="0 years">0 years</option>
+                                    <option value="1-5 years">1-5 years</option>
+                                    <option value="5-10 years">5-10 years</option>
+                                    <option value="10+ years">10+ years</option>
+                                </select>
+                            </div>
+                            
+                            <div id="experience" class="space-y-4" style="display:none;">
+                                <div>
+                                    <input class = ' w-full py-2 rounded-lg border-2 ' placeholder="Current CTC" type="text" name="c_ctc" class="form-input">
+                                </div>
+                                
+                                <div>
+                                    <input class = ' w-full py-2 rounded-lg border-2 ' placeholder="Expected CTC" type="text" name="e_ctc" class="form-input">
+                                </div>
+                                
+                                <div>
+                                    <input class = ' w-full py-2 rounded-lg border-2 ' placeholder="Notice Period if any (In months)" type="tel" name="np_m" class="form-input">
+                                </div>
+
+                                <div>
+                                    <select name="Notice_p" class="form-select">
+                                        <option value="" selected>Notice Period Negotiable</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text text-base-content">Upload Resume</span>
+                                </label>
+                                <input type="file" name="fileAttach" class="form-file" required>
+                            </div>
+                            
+                            <input name="hdnAction" value="SendEmail" type="hidden">
+                            <button type="submit" class="btn btn-primary w-full">Submit Application</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Career Information -->
+                <div class="lg:col-span-1 order-1 lg:order-2">
+                    <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+                        <h2 class="text-2xl font-oswald font-bold text-primary mb-4">Join Our Team</h2>
+                        <div class="w-16 h-1 bg-primary mb-4"></div>
+                        
+                        <p class="text-base-content mb-4">
+                            The only constant in the rapidly changing world, is the word change itself. Change is fast catching up with products like ours.
+                        </p>
+                        
+                        <p class="text-base-content mb-4">
+                            Dyna-K Automotive Stamping Pvt. Ltd being a mix diversity employer is looking for Young Engineers and Management graduates to support a gender balanced work force, who can take up these challenges and contribute in its rapid growth in different disciplines.
+                        </p>
+                        
+                        <p class="text-base-content">
+                            Those with required qualifications and relevant experience may fill up the form and send in their bio-data.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-lg p-8">
+                        <h2 class="text-2xl font-oswald font-bold text-primary mb-4">Current Openings</h2>
+                        <div class="w-16 h-1 bg-primary mb-4"></div>
+                        
+                        <div class="marquee-container">
+                            <div class="marquee-content">
+                                <div class="mb-4">
+                                    <h3 class="font-bold text-primary">Team Member – HR & IR Compliances</h3>
+                                    <p>For Job description 
+                                        <a href="/download/TM-HR & Admin.pdf" download="PDF" class="text-primary hover:underline">
+                                            Click here
+                                        </a>
+                                    </p>
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <h3 class="font-bold text-primary">Accounts & Finance - Jnr. Accounts Team Member</h3>
+                                    <p>For Job description 
+                                        <a href="/download/AC FINANCE JOB POSTING - Jr. TM-AC.pdf" download="PDF" class="text-primary hover:underline">
+                                            Click here
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Join Us Section -->
+    <section class="py-16 bg-base-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-oswald font-bold text-primary mb-2">Why Join Dyna-K</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-4"></div>
+                <p class="text-lg text-base-content/70 max-w-3xl mx-auto">Discover the benefits of building your career with us</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card bg-white shadow-xl">
+                    <div class="card-body">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center  mb-4">
+                            <i class="fa fa-line-chart text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="card-title text-primary font-oswald text-xl">Growth Opportunities</h3>
+                        <p class="text-base-content/70">Continuous learning and development programs to help you advance your career and reach your full potential.</p>
+                    </div>
+                </div>
+                
+                <div class="card bg-white shadow-xl">
+                    <div class="card-body">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                            <i class="fa fa-users text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="card-title text-primary font-oswald text-xl">Inclusive Workplace</h3>
+                        <p class="text-base-content/70">A diverse and inclusive environment where everyone's ideas are valued and different perspectives are encouraged.</p>
+                    </div>
+                </div>
+                
+                <div class="card bg-white shadow-xl">
+                    <div class="card-body">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                            <i class="fa fa-globe text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="card-title text-primary font-oswald text-xl">Global Exposure</h3>
+                        <p class="text-base-content/70">Opportunity to work with international teams and clients, gaining valuable experience in the global automotive industry.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Logo Section -->
+    <section class="py-16 bg-base-200">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-oswald font-bold text-primary mb-2">Our Trusted Customers</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-4"></div>
+                <p class="text-lg text-base-content/70 max-w-3xl mx-auto">We proudly serve leading automotive manufacturers worldwide</p>
+            </div>
+
+            <!-- Jssor Slider Begin -->
+            <div id="customer-logos-slider" style="position:relative;margin:0 auto;top:0px;left:0px;width:980px;height:100px;overflow:hidden;visibility:visible;" class="mx-auto">
+                <!-- Loading Screen -->
+                <div data-u="loading" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-position:50% 50%;background-repeat:no-repeat;background-image:url('images/loading.gif');background-color:rgba(0, 0, 0, 0.7);">
+                </div>
+                <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:980px;height:100px;overflow:hidden;">
+                    <div>
+                        <img data-u="image" src="images/logo-3.jpg" alt="Customer Logo 1" style="width:auto;height:80px;display:block;max-width:none;margin:0 auto;" />
+                    </div>
+                    <div>
+                        <img data-u="image" src="images/logo-7.jpg" alt="Customer Logo 2" style="width:auto;height:80px;display:block;max-width:none;margin:0 auto;" />
+                    </div>
+                    <div>
+                        <img data-u="image" src="images/logo-8.jpg" alt="Customer Logo 3" style="width:auto;height:80px;display:block;max-width:none;margin:0 auto;" />
+                    </div>
+                    <div>
+                        <img data-u="image" src="images/logo-9.jpg" alt="Customer Logo 4" style="width:auto;height:80px;display:block;max-width:none;margin:0 auto;" />
+                    </div>
+                    <div>
+                        <img data-u="image" src="images/logo-10.jpg" alt="Customer Logo 5" style="width:auto;height:80px;display:block;max-width:none;margin:0 auto;" />
+                    </div>
+                    <div>
+                        <img data-u="image" src="images/logo-12.jpg" alt="Customer Logo 6" style="width:auto;height:80px;display:block;max-width:none;margin:0 auto;" />
+                    </div>
+                    <div>
+                        <img data-u="image" src="images/logo-15.jpg" alt="Customer Logo 7" style="width:auto;height:80px;display:block;max-width:none;margin:0 auto;" />
+                    </div>
+                    <div>
+                        <img data-u="image" src="images/logo-17.jpg" alt="Customer Logo 8" style="width:auto;height:80px;display:block;max-width:none;margin:0 auto;" />
+                    </div>
+                    <div>
+                        <img data-u="image" src="images/logo-19.jpg" alt="Customer Logo 9" style="width:auto;height:80px;display:block;max-width:none;margin:0 auto;" />
+                    </div>
+                    <div>
+                        <img data-u="image" src="images/logo-20.jpg" alt="Customer Logo 10" style="width:auto;height:80px;display:block;max-width:none;margin:0 auto;" />
+                    </div>
+                </div>
+            </div>
+            <!-- Jssor Slider End -->
+
+            <!-- Fallback for customer logos if JavaScript is disabled -->
+            <noscript>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mt-8">
+                    <div class="bg-white p-4 flex items-center justify-center rounded shadow">
+                        <img src="images/logo-3.jpg" alt="Customer Logo 1" class="h-16 w-auto" />
+                    </div>
+                    <div class="bg-white p-4 flex items-center justify-center rounded shadow">
+                        <img src="images/logo-7.jpg" alt="Customer Logo 2" class="h-16 w-auto" />
+                    </div>
+                    <div class="bg-white p-4 flex items-center justify-center rounded shadow">
+                        <img src="images/logo-8.jpg" alt="Customer Logo 3" class="h-16 w-auto" />
+                    </div>
+                    <div class="bg-white p-4 flex items-center justify-center rounded shadow">
+                        <img src="images/logo-9.jpg" alt="Customer Logo 4" class="h-16 w-auto" />
+                    </div>
+                    <div class="bg-white p-4 flex items-center justify-center rounded shadow">
+                        <img src="images/logo-10.jpg" alt="Customer Logo 5" class="h-16 w-auto" />
+                    </div>
+                    <div class="bg-white p-4 flex items-center justify-center rounded shadow">
+                        <img src="images/logo-12.jpg" alt="Customer Logo 6" class="h-16 w-auto" />
+                    </div>
+                </div>
+            </noscript>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-neutral text-white">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-oswald font-bold mb-6 text-white">About Us</h3>
+                    <p class="text-gray-300 mb-4">Dyna-K Automotive Stamping Pvt. Ltd is a leading manufacturer of precision automotive components with a commitment to quality and innovation.</p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="btn btn-circle btn-sm ">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/dyna-k-automotive-stampings/" target="_blank" class="btn btn-circle btn-sm ">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="btn btn-circle btn-sm ">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-oswald font-bold mb-6 text-white">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="flex items-center hover:text-white transition-colors">
+                            <i class="fa fa-chevron-right mr-2 text-white text-xs"></i> Home
+                        </a></li>
+                        <li><a href="products.html" class="flex items-center hover:text-white transition-colors">
+                            <i class="fa fa-chevron-right mr-2 text-white text-xs"></i> Products
+                        </a></li>
+                        <li><a href="company-profile.html" class="flex items-center hover:text-white transition-colors">
+                            <i class="fa fa-chevron-right mr-2 text-white text-xs"></i> About Us
+                        </a></li>
+                        <li><a href="facilities.html" class="flex items-center hover:text-white transition-colors">
+                            <i class="fa fa-chevron-right mr-2 text-white text-xs"></i> Facilities
+                        </a></li>
+                        <li><a href="contact.html" class="flex items-center hover:text-white transition-colors">
+                            <i class="fa fa-chevron-right mr-2 text-white text-xs"></i> Contact
+                        </a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-oswald font-bold mb-6 text-white">Contact Info</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fa fa-map-marker text-white mt-1 mr-3"></i>
+                            <span>J6, MIDC Indrayani Nagar Road, Balaji Nagar, Bhosari,
+                              Pimpri-Chinchwad, Maharashtra, India – 411026.</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-phone text-white mr-3"></i>
+                            <span>+91 90110 37455</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-envelope text-white mr-3"></i>
+                            <span>contact@dynakstamp.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-clock-o text-white mr-3"></i>
+                            <span>Mon-Fri: 9:00 AM - 6:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-oswald font-bold mb-6 text-white">Newsletter</h3>
+                    <p class="text-gray-300 mb-4">Subscribe to our newsletter for the latest updates and industry insights.</p>
+                    <div class="form-control">
+                        <div class="join">
+                            <input type="email" placeholder="Your email" class="input text-black input-bordered join-item" />
+                            <button class="btn btn-primary join-item">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-10 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Dyna-K Automotive Stamping Pvt. Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Experience Form Show/Hide Script -->
+    <script type="text/javascript">
+        $(document).ready(function(){
+            // Form field show/hide logic
+            $('#purpose').on('change', function() {
+                if (this.value != "0" && this.value != "0 years") {
+                    $("#experience").show();
+                }
+                else {
+                    $("#experience").hide();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

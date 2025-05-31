@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facilities - Dyna-K Automotive Stamping Pvt. Ltd</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a237e',
+                        secondary: '#ff6f00',
+                        accent: '#ffd700',
+                        dark: '#0d47a1',
+                        light: '#e3f2fd',
+                    },
+                    fontFamily: {
+                        oswald: ['Oswald', 'sans-serif'],
+                        roboto: ['Roboto', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>  
+    <style>
+        .nav-link {
+            @apply text-base-content hover:text-white transition-colors duration-300 relative;
+        }
+        .nav-link::after {
+            content: '';
+            @apply absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300;
+        }
+        .nav-link:hover::after {
+            @apply w-full;
+        }
+        .nav-link.active {
+            @apply text-white font-bold;
+        }
+        .nav-link.active::after {
+            @apply w-full;
+        }
+        .dropdown-content {
+            @apply mt-2 border-t-2 border-primary;
+        }
+        .drawer-side {
+            @apply bg-base-100;
+        }
+        .drawer-side ul {
+            @apply p-4;
+        }
+        .drawer-side a {
+            @apply hover:bg-base-200 rounded-lg transition-all duration-300;
+        }
+        .card {
+            @apply transition-all duration-300 hover:-translate-y-1;
+        }
+        .btn {
+            @apply transition-all duration-300 hover:scale-105;
+        }
+        .stats {
+            @apply transition-all duration-300 hover:shadow-xl;
+        }
+        .section-title {
+            @apply relative inline-block;
+        }
+        .section-title::after {
+            content: '';
+            @apply absolute bottom-0 left-0 w-1/2 h-1 bg-secondary transform -translate-x-1/2;
+        }
+        .facility-image {
+            @apply relative overflow-hidden rounded-lg shadow-lg;
+        }
+        .facility-image img {
+            @apply w-full h-64 object-cover transition-transform duration-500;
+        }
+        .facility-image:hover img {
+            @apply scale-110;
+        }
+        .facility-overlay {
+            @apply absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 transition-opacity duration-300;
+        }
+        .facility-image:hover .facility-overlay {
+            @apply opacity-100;
+        }
+    </style>
+</head>
+<body class="font-roboto bg-base-200">
+    <!-- Announcement Bar -->
+    <div class="bg-primary text-white py-1 px-4 text-center text-sm">
+        <span>Leading manufacturer of precision automotive components | IATF16949:2016 Certified</span>
+            </div>
+            
+    <!-- Top Navigation -->
+    <div class="bg-neutral text-white py-2">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <a href="#" class=" transition-colors duration-300 flex items-center space-x-2">
+                        <i class="fa fa-book"></i>
+                        <span>Download Brochure</span>
+                    </a>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="mailto:contact@dynakstamp.com" class=" transition-colors duration-300 flex items-center space-x-2">
+                        <i class="fa fa-envelope"></i>
+                        <span>contact@dynakstamp.com</span>
+                    </a>
+                    <a href="tel:+91 20 27111900" class=" transition-colors duration-300 flex items-center space-x-2">
+                        <i class="fa fa-phone"></i>
+                        <span>+91 20 27111900</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+		</div>
+
+    <!-- Main Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <img src="images/logo-dyna.jpg" alt="Dyna-K Logo" class="h-16">
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link font-medium active">Home</a>
+                    <div class="dropdown dropdown-hover">
+                        <label tabindex="0" class="nav-link font-medium cursor-pointer flex items-center">
+                            About Us <i class="fa fa-chevron-down ml-1 text-xs"></i>
+                        </label>
+                        <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a href="company-profile.html">Company Profile</a></li>
+                            <li><a href="vision-quality-policy.html">Vision & Quality</a></li>
+                            <li><a href="certification.html">Certification</a></li>
+                            <li><a href="initiatives.html">Initiatives</a></li>
+                        </ul>
+                    </div>
+                    <a href="services.html" class="nav-link font-medium">Services</a>
+                    <a href="facilities.html" class="nav-link font-medium">Facilities</a>
+                    <a href="customers.html" class="nav-link font-medium">Customers</a>
+                    <div class="dropdown dropdown-hover">
+                        <label tabindex="0" class="nav-link font-medium cursor-pointer flex items-center">
+                            Products <i class="fa fa-chevron-down ml-1 text-xs"></i>
+                        </label>
+                        <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a href="engine-parts.html">Engine Parts</a></li>
+                            <li><a href="brake-components.html">Brake Components</a></li>
+                            <li><a href="chassis-parts.html">Chassis Parts</a></li>
+                            <li><a href="turbo-chargers.html">Turbo Chargers</a></li>
+                            <li><a href="other-parts.html">Other Parts</a></li>
+                            <li><a href="emission-filtration-parts.html">Emission & Filtration</a></li>
+                            <li><a href="welded-assemblies.html">Welded Assemblies</a></li>
+                        </ul>
+                    </div>
+                    <a href="career.html" class="nav-link font-medium">Careers</a>
+                    <a href="contact.html" class="nav-link font-medium">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <div class="drawer drawer-end">
+                        <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+                        <div class="drawer-content">
+                            <label for="my-drawer" class="btn btn-ghost btn-circle">
+                                <i class="fa fa-bars text-xl"></i>
+                            </label>
+                        </div> 
+                        <div class="drawer-side">
+                            <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+                            <ul class="menu p-4 w-80 min-h-full bg-base-200">
+                                <li><a href="index.html" class="active">Home</a></li>
+                                <li>
+                                    <details>
+                                        <summary>About Us</summary>
+                                        <ul>
+                                            <li><a href="company-profile.html">Company Profile</a></li>
+                                            <li><a href="vision-quality-policy.html">Vision & Quality</a></li>
+                                            <li><a href="certification.html">Certification</a></li>
+                                            <li><a href="initiatives.html">Initiatives</a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="facilities.html">Facilities</a></li>
+                                <li><a href="customers.html">Customers</a></li>
+                                <li>
+                                    <details>
+                                        <summary>Products</summary>
+                                        <ul>
+                                            <li><a href="engine-parts.html">Engine Parts</a></li>
+                                            <li><a href="brake-components.html">Brake Components</a></li>
+                                            <li><a href="chassis-parts.html">Chassis Parts</a></li>
+                                            <li><a href="turbo-chargers.html">Turbo Chargers</a></li>
+                                            <li><a href="other-parts.html">Other Parts</a></li>
+                                            <li><a href="emission-filtration-parts.html">Emission & Filtration</a></li>
+                                            <li><a href="welded-assemblies.html">Welded Assemblies</a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+                                <li><a href="career.html">Careers</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative bg-primary text-white py-20">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-oswald font-bold mb-6">Our Facilities</h1>
+                <p class="text-xl">State-of-the-art manufacturing infrastructure and equipment</p>
+            </div>
+        </div>
+</div>
+
+    <!-- Stamping Infrastructure Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-oswald font-bold text-primary mb-2">Stamping Infrastructure & Equipment</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-4"></div>
+                <p class="text-lg text-base-content max-w-3xl mx-auto">Our advanced manufacturing facilities are equipped with cutting-edge technology and machinery to deliver superior quality products.</p>
+</div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <div class="bg-white rounded-xl shadow-xl p-8">
+                    <h3 class="text-2xl font-oswald font-bold text-primary mb-4">Press Capacity</h3>
+                    <p class="text-base-content mb-4">Dyna-K Automotive Stamping Pvt. Ltd. maintains Mechanical/Hydraulic Presses of a capacity of 250 to 6500 KN with 50 Presses at Facility 1(J6) and 10 Presses at Facility 2 (J450). The fleet of progressive presses offer the best in quality and speed.</p>
+                    <p class="text-base-content mb-4">We are constantly upgrading our equipment to meet the current demands of the stamping industry as well as continually training our employees and machine operators in the latest manufacturing technologies.</p>
+                    <p class="text-base-content">Keeping up with our ever-growing customer base needs, we are expanding and have acquired an additional + 28000 sq. ft. as well.</p>
+  </div>
+                <div class="bg-white rounded-xl shadow-xl p-8">
+                    <h3 class="text-2xl font-oswald font-bold text-primary mb-4">Capabilities</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                            <span class="text-base-content">Material Shearing & Pre-Processing Facility</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                            <span class="text-base-content">Tool Design & Manufacturing</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                            <span class="text-base-content">Projection Welding & MIG Welding</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                            <span class="text-base-content">Raw Material Shearing / Pre-Processing</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                            <span class="text-base-content">Welding & Tapping centre</span>
+</li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                            <span class="text-base-content">Vibro-Deburring</span>
+</li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                            <span class="text-base-content">Washing</span>
+</li>
+</ul>
+</div>
+</div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="facility-image">
+                    <img src="images/stamping-1.jpg" alt="Stamping Facility 1">
+                    <div class="facility-overlay"></div>
+                </div>
+                <div class="facility-image">
+                    <img src="images/stamping-2.jpg" alt="Stamping Facility 2">
+                    <div class="facility-overlay"></div>
+ </div> 
+                <div class="facility-image">
+                    <img src="images/stamping-3.jpg" alt="Stamping Facility 3">
+                    <div class="facility-overlay"></div>
+</div>
+ </div>
+ </div>
+    </section>
+
+    <!-- Tooling & Design Section -->
+    <section class="py-16 bg-base-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-oswald font-bold text-primary mb-2">Tooling & Design Capabilities</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-4"></div>
+                <p class="text-lg text-base-content max-w-3xl mx-auto">Our in-house tool design and manufacturing capabilities ensure superior quality and precision in every component.</p>
+ </div>
+ 
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <div class="bg-white rounded-xl shadow-xl p-8">
+                    <h3 class="text-2xl font-oswald font-bold text-primary mb-4">Advanced Tooling</h3>
+                    <p class="text-base-content mb-4">The High Quality Single Stage & Progressive Tools make Dyna-K Automotive Stamping Pvt. Ltd one of the best precision stamping companies in India.</p>
+                    <p class="text-base-content mb-4">The Product development process is supported by an in-house Tool Design team & Tool Manufacturing facility, monitored by a cross-functional APQP (Advance Product Quality Planning) team and also supported by FMEA/MSA/SPC activities.</p>
+                    <p class="text-base-content">After reviewing customer needs, the team focuses on process excellence, innovation and validation transposing customer data of many forms into articulate designs.</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-xl p-8">
+                    <h3 class="text-2xl font-oswald font-bold text-primary mb-4">Key Features</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                            <span class="text-base-content">Designed & Manufactured In-House</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                            <span class="text-base-content">Tool Design through Autocad & 3D Modelling Software (Solid Edge)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                            <span class="text-base-content">High Quality Steels & Components</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                            <span class="text-base-content">Vacuum Heat Treated / TiN & CrN & WC Coated</span>
+                        </li>
+   </ul>
+ </div>   
+ </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="facility-image">
+                    <img src="images/tolling-1.jpg" alt="Tooling Facility 1">
+                    <div class="facility-overlay"></div>
+ </div> 
+                <div class="facility-image">
+                    <img src="images/tolling-2.jpg" alt="Tooling Facility 2">
+                    <div class="facility-overlay"></div>
+</div>
+                <div class="facility-image">
+                    <img src="images/tolling-3.jpg" alt="Tooling Facility 3">
+                    <div class="facility-overlay"></div>
+</div>
+    </div>
+        </div>
+    </section>
+
+    <!-- Quality Systems Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-oswald font-bold text-primary mb-2">Quality Systems</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-4"></div>
+                <p class="text-lg text-base-content max-w-3xl mx-auto">Our commitment to quality is validated by comprehensive testing and monitoring systems.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <div class="bg-white rounded-xl shadow-xl p-8">
+                    <h3 class="text-2xl font-oswald font-bold text-primary mb-4">Quality Assurance</h3>
+                    <p class="text-base-content mb-4">Dyna-K Automotive Stamping Pvt. Ltd  customers are world leaders in their respective fields & technologies and are demanding in the areas of Cost, Quality & Service. These demands are consistently met by our IATF 16949 Quality System; our People Development System and our in-house Continuous Improvement Programs.</p>
+                    <p class="text-base-content">The quality and the reliability of the products are accurately tested and monitored by the following tools and processes.</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-xl p-8">
+                    <h3 class="text-2xl font-oswald font-bold text-primary mb-4">Testing Equipment</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                            <span class="text-base-content">IATF 16949 - Gauge R&R / MSA</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                            <span class="text-base-content">SPC & Data Evaluation (Minitab)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                            <span class="text-base-content">In house Fixture Calibration</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                            <span class="text-base-content">Metrology Equipment - Online Gauging</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                            <span class="text-base-content">CMM</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                            <span class="text-base-content">Contour Tracing Machine</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                            <span class="text-base-content">Millipore Test Equipment</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                            <span class="text-base-content">Material Testing Equipment - UTS / YS / Erickson Cupping</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                            <span class="text-base-content">Trimos</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                            <span class="text-base-content">Flexible Arm magnifiers</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                            <span class="text-base-content">Radioactive Testing equipment</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                            <span class="text-base-content">Hardness Testing M/C</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="facility-image">
+                    <img src="images/quality-1.jpg" alt="Quality Facility 1">
+                    <div class="facility-overlay"></div>
+                </div>
+                <div class="facility-image">
+                    <img src="images/quality-2.jpg" alt="Quality Facility 2">
+                    <div class="facility-overlay"></div>
+                </div>
+                <div class="facility-image">
+                    <img src="images/quality-3.jpg" alt="Quality Facility 3">
+                    <div class="facility-overlay"></div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+                <div class="facility-image">
+                    <img src="images/quality-4.jpg" alt="Quality Facility 4">
+                    <div class="facility-overlay"></div>
+                </div>
+                <div class="facility-image">
+                    <img src="images/quality-5.jpg" alt="Quality Facility 5">
+                    <div class="facility-overlay"></div>
+                </div>
+                <div class="facility-image">
+                    <img src="images/quality-6.jpg" alt="Quality Facility 6">
+                    <div class="facility-overlay"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="bg-neutral text-white">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-oswald font-bold mb-6 text-white">About Us</h3>
+                    <p class="text-gray-300 mb-4">Dyna-K Automotive Stamping Pvt. Ltd is a leading manufacturer of precision automotive components with a commitment to quality and innovation.</p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="btn btn-circle btn-sm ">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/dyna-k-automotive-stampings/" class="btn btn-circle btn-sm ">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="btn btn-circle btn-sm ">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-oswald font-bold mb-6 text-white">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="flex items-center  transition-colors">
+                            <i class="fa fa-chevron-right mr-2 text-white text-xs"></i> Home
+                        </a></li>
+                        <li><a href="products.html" class="flex items-center  transition-colors">
+                            <i class="fa fa-chevron-right mr-2 text-white text-xs"></i> Products
+                        </a></li>
+                        <li><a href="company-profile.html" class="flex items-center  transition-colors">
+                            <i class="fa fa-chevron-right mr-2 text-white text-xs"></i> About Us
+                        </a></li>
+                        <li><a href="facilities.html" class="flex items-center  transition-colors">
+                            <i class="fa fa-chevron-right mr-2 text-white text-xs"></i> Facilities
+                        </a></li>
+                        <li><a href="contact.html" class="flex items-center  transition-colors">
+                            <i class="fa fa-chevron-right mr-2 text-white text-xs"></i> Contact
+                        </a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-oswald font-bold mb-6 text-white">Contact Info</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fa fa-map-marker text-white mt-1 mr-3"></i>
+                            <span>J6, MIDC Indrayani Nagar Road, Balaji Nagar, Bhosari,
+                              Pimpri-Chinchwad, Maharashtra, India – 411026.</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-phone text-white mr-3"></i>
+                            <span>+91 20 27111900</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-envelope text-white mr-3"></i>
+                            <span>contact@dynakstamp.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-clock-o text-white mr-3"></i>
+                            <span>Mon-Sat: 9:00 AM - 5:30 PM</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-oswald font-bold mb-6 text-white">Newsletter</h3>
+                    <p class="text-gray-300 mb-4">Subscribe to our newsletter for the latest updates and industry insights.</p>
+                    <div class="form-control">
+                        <div class="join">
+                            <input type="email" placeholder="Your email" class="input input-bordered join-item text-black" />
+                            <button class="btn btn-primary join-item">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-10 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Dyna-K Automotive Stamping Pvt. Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

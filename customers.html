@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<!-- Mirrored from dynakstamp.com/customers.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 05 Dec 2020 07:19:15 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Customers - Dyna-K Automotive Stamping Pvt. Ltd</title>
+    <link rel="icon" type="image/png" href="favicaon.png">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- Slider scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="src/skdslider.min.js"></script>
+    <link href="src/skdslider.css" rel="stylesheet">
+    <script src="js/jssor.slider.min.js"></script>
+    
+    <!-- Polyfill for older browsers -->
+    <script>
+        // Object.assign polyfill for IE
+        if (typeof Object.assign !== 'function') {
+            Object.assign = function(target) {
+                'use strict';
+                if (target === null || target === undefined) {
+                    throw new TypeError('Cannot convert undefined or null to object');
+                }
+                var to = Object(target);
+                for (var index = 1; index < arguments.length; index++) {
+                    var nextSource = arguments[index];
+                    if (nextSource !== null && nextSource !== undefined) {
+                        for (var nextKey in nextSource) {
+                            if (Object.prototype.hasOwnProperty.call(nextSource, nextKey)) {
+                                to[nextKey] = nextSource[nextKey];
+                            }
+                        }
+                    }
+                }
+                return to;
+            };
+        }
+    </script>
+    
+    <script type="text/javascript">
+        $(document).ready(function(){
+            // Product slider initialization
+            $('#demo2').skdslider({
+                delay: 5000, 
+                animationSpeed: 1000,
+                showNextPrev: false,
+                showPlayButton: false,
+                autoSlide: true,
+                animationType: 'sliding'
+            });
+        });
+        
+        // Move customer logos slider initialization outside document.ready
+        // to ensure it's available globally
+        var jssor_1_slider;
+        
+        function jssor_1_slider_init() {
+            var jssor_1_options = {
+                $AutoPlay: true,
+                $Idle: 0,
+                $AutoPlaySteps: 5,
+                $SlideDuration: 1600,
+                $SlideEasing: $Jease$.$Linear,
+                $PauseOnHover: 5,
+                $SlideWidth: 223,
+                $Cols: 6
+            };
+            
+            // Make sure the element exists before initializing
+            var sliderElement = document.getElementById("jssor_1");
+            if(sliderElement) {
+                // Force visibility before initialization
+                sliderElement.style.visibility = 'visible';
+                jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+                
+                // Responsive code
+                function ScaleSlider() {
+                    var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+                    if (refSize) {
+                        refSize = Math.min(refSize, 1170);
+                        jssor_1_slider.$ScaleWidth(refSize);
+                    }
+                    else {
+                        window.setTimeout(ScaleSlider, 20);
+                    }
+                }
+                ScaleSlider();
+                $Jssor$.$AddEvent(window, "load", ScaleSlider);
+                $Jssor$.$AddEvent(window, "resize", $Jssor$.$WindowResizeFilter(window, ScaleSlider));
+                $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+            }
+        }
+    </script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a237e',    // Deep blue
+                        secondary: '#2c3e50',   // Dark slate
+                        accent: '#34495e',      // Steel blue
+                        dark: '#0d47a1',        // Navy blue
+                        light: '#e3f2fd',       // Light blue
+                    },
+                    fontFamily: {
+                        oswald: ['Oswald', 'sans-serif'],
+                        roboto: ['Roboto', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .nav-link {
+            @apply text-base-content hover:text-white transition-colors duration-300 relative;
+        }
+        .nav-link::after {
+            content: '';
+            @apply absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300;
+        }
+        .nav-link:hover::after {
+            @apply w-full;
+        }
+        .nav-link.active {
+            @apply text-white font-bold;
+        }
+        .nav-link.active::after {
+            @apply w-full;
+        }
+        .dropdown-content {
+            @apply mt-2 border-t-2 border-primary;
+        }
+        .drawer-side {
+            @apply bg-base-100;
+        }
+        .drawer-side ul {
+            @apply p-4;
+        }
+        .drawer-side a {
+            @apply hover:bg-base-200 rounded-lg transition-all duration-300;
+        }
+        .card {
+            @apply transition-all duration-300 hover:-translate-y-1;
+        }
+        .btn {
+            @apply transition-all duration-300 hover:scale-105;
+        }
+        .stats {
+            @apply transition-all duration-300 hover:shadow-xl;
+        }
+        .section-title {
+            @apply relative inline-block;
+        }
+        .section-title::after {
+            content: '';
+            @apply absolute bottom-0 left-0 w-1/2 h-1 bg-primary transform -translate-x-1/2;
+        }
+        .btn-primary {
+            @apply bg-primary hover:bg-dark text-white;
+        }
+        .btn-secondary {
+            @apply bg-primary/80 hover:bg-primary text-white;
+        }
+        .btn-outline {
+            @apply border-2 border-white hover:bg-white hover:text-white;
+        }
+        .icon-primary {
+            @apply text-white;
+        }
+        .icon-secondary {
+            @apply text-white;
+        }
+        .logo-card {
+            @apply bg-white p-6 rounded-lg shadow-md flex items-center justify-center transition-all duration-300 hover:shadow-xl hover:-translate-y-1 h-24;
+        }
+        .logo-card img {
+            @apply max-h-16 max-w-full object-contain;
+            display: block;
+            margin: 0 auto;
+        }
+        /* Fix for missing images */
+        img[src$=".jpg"]:not([src^="data:"]):not([onerror]), 
+        img[src$=".png"]:not([src^="data:"]):not([onerror]) {
+            position: relative;
+        }
+        img[src$=".jpg"]:not([src^="data:"]):not([onerror])::after, 
+        img[src$=".png"]:not([src^="data:"]):not([onerror])::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255,255,255,0.5);
+        }
+        .error-img {
+            opacity: 0.7;
+            filter: grayscale(100%);
+        }
+    </style>
+</head>
+<body class="font-roboto bg-base-200">
+    <!-- Announcement Bar -->
+    <div class="bg-primary text-white py-1 px-4 text-center text-sm">
+        <span>Leading manufacturer of precision automotive components | IATF16949:2016 Certified</span>
+            </div>
+            
+    <!-- Top Navigation -->
+    <div class="bg-neutral text-white py-2">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <a href="#" class="hover:text-white transition-colors duration-300 flex items-center space-x-2">
+                        <i class="fa fa-book text-white"></i>
+                        <span>Download Brochure</span>
+                    </a>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="mailto:contact@dynakstamp.com" class="hover:text-white transition-colors duration-300 flex items-center space-x-2">
+                        <i class="fa fa-envelope text-white"></i>
+                        <span>contact@dynakstamp.com</span>
+                    </a>
+                    <a href="tel:+91 90110 37455" class="hover:text-white transition-colors duration-300 flex items-center space-x-2">
+                        <i class="fa fa-phone text-white"></i>
+                        <span>+91 90110 37455</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+		</div>
+
+    <!-- Main Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <img src="images/logo-dyna.jpg" alt="Dyna-K Logo" class="h-16">
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link font-medium active">Home</a>
+                    <div class="dropdown dropdown-hover">
+                        <label tabindex="0" class="nav-link font-medium cursor-pointer flex items-center">
+                            About Us <i class="fa fa-chevron-down ml-1 text-xs"></i>
+                        </label>
+                        <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a href="company-profile.html">Company Profile</a></li>
+                            <li><a href="vision-quality-policy.html">Vision & Quality</a></li>
+                            <li><a href="certification.html">Certification</a></li>
+                            <li><a href="initiatives.html">Initiatives</a></li>
+                        </ul>
+                    </div>
+                    <a href="services.html" class="nav-link font-medium">Services</a>
+                    <a href="facilities.html" class="nav-link font-medium">Facilities</a>
+                    <a href="customers.html" class="nav-link font-medium">Customers</a>
+                    <div class="dropdown dropdown-hover">
+                        <label tabindex="0" class="nav-link font-medium cursor-pointer flex items-center">
+                            Products <i class="fa fa-chevron-down ml-1 text-xs"></i>
+                        </label>
+                        <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a href="engine-parts.html">Engine Parts</a></li>
+                            <li><a href="brake-components.html">Brake Components</a></li>
+                            <li><a href="chassis-parts.html">Chassis Parts</a></li>
+                            <li><a href="turbo-chargers.html">Turbo Chargers</a></li>
+                            <li><a href="other-parts.html">Other Parts</a></li>
+                            <li><a href="emission-filtration-parts.html">Emission & Filtration</a></li>
+                            <li><a href="welded-assemblies.html">Welded Assemblies</a></li>
+                        </ul>
+                    </div>
+                    <a href="career.html" class="nav-link font-medium">Careers</a>
+                    <a href="contact.html" class="nav-link font-medium">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <div class="drawer drawer-end">
+                        <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+                        <div class="drawer-content">
+                            <label for="my-drawer" class="btn btn-ghost btn-circle">
+                                <i class="fa fa-bars text-xl"></i>
+                            </label>
+                        </div> 
+                        <div class="drawer-side">
+                            <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+                            <ul class="menu p-4 w-80 min-h-full bg-base-200">
+                                <li><a href="index.html" class="active">Home</a></li>
+                                <li>
+                                    <details>
+                                        <summary>About Us</summary>
+                                        <ul>
+                                            <li><a href="company-profile.html">Company Profile</a></li>
+                                            <li><a href="vision-quality-policy.html">Vision & Quality</a></li>
+                                            <li><a href="certification.html">Certification</a></li>
+                                            <li><a href="initiatives.html">Initiatives</a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="facilities.html">Facilities</a></li>
+                                <li><a href="customers.html">Customers</a></li>
+                                <li>
+                                    <details>
+                                        <summary>Products</summary>
+                                        <ul>
+                                            <li><a href="engine-parts.html">Engine Parts</a></li>
+                                            <li><a href="brake-components.html">Brake Components</a></li>
+                                            <li><a href="chassis-parts.html">Chassis Parts</a></li>
+                                            <li><a href="turbo-chargers.html">Turbo Chargers</a></li>
+                                            <li><a href="other-parts.html">Other Parts</a></li>
+                                            <li><a href="emission-filtration-parts.html">Emission & Filtration</a></li>
+                                            <li><a href="welded-assemblies.html">Welded Assemblies</a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+                                <li><a href="career.html">Careers</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative bg-primary text-white py-20">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-oswald font-bold mb-6">Our Customers</h1>
+                <p class="text-xl">Building strong partnerships with leading automotive manufacturers globally</p>
+            </div>
+        </div>
+</div>
+
+    <!-- Customer Introduction Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <p class="text-lg text-base-content/80 mb-8">
+                    We strive to establish long-term collaborative partnerships with our customers and become their trusted partner. Our highly professional and technically competent engineers and design team work closely with our customers to extract the best design and produce cost effective and quality end products. Today we are proud to be recognized as a trusted supplier catering to global automotive.
+                </p>
+                <p class="text-lg text-base-content/80 mb-8">
+                    We bring value to our customers by combining our product precision, our dedicated team experience and our seamless management in distribution of the finished goods to our clients spread all over the globe.
+                </p>
+            </div>
+        </div>
+    </section>
+      
+    <!-- Customer Stats Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="stats shadow bg-white rounded-xl p-8 text-center">
+                    <div class="stat">
+                        <div class="stat-title text-primary font-oswald text-xl">Global Presence</div>
+                        <div class="stat-value text-4xl font-bold text-primary">15+</div>
+                        <div class="stat-desc text-base-content/70">Countries Served</div>
+                    </div>
+                </div>
+                <div class="stats shadow bg-white rounded-xl p-8 text-center">
+                    <div class="stat">
+                        <div class="stat-title text-primary font-oswald text-xl">Customer Satisfaction</div>
+                        <div class="stat-value text-4xl font-bold text-primary">98%</div>
+                        <div class="stat-desc text-base-content/70">Satisfied Clients</div>
+                    </div>
+                </div>
+                <div class="stats shadow bg-white rounded-xl p-8 text-center">
+                    <div class="stat">
+                        <div class="stat-title text-primary font-oswald text-xl">Long-term Partnerships</div>
+                        <div class="stat-value text-4xl font-bold text-primary">25+</div>
+                        <div class="stat-desc text-base-content/70">Years of Trust</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Categories Section -->
+    <section class="py-16 bg-base-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-oswald font-bold text-primary mb-2">Our Customer Categories</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto mb-4"></div>
+                <p class="text-lg text-base-content max-w-3xl mx-auto">Serving diverse segments of the automotive industry with our premium components.</p>
+</div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card bg-white shadow-xl">
+                    <div class="card-body">
+                        <h3 class="card-title text-primary font-oswald text-xl">Manufacturers</h3>
+                        <p class="text-base-content/70">Supplying high-quality components to leading automotive manufacturers worldwide.</p>
+                    </div>
+                </div>
+                <div class="card bg-white shadow-xl">
+                    <div class="card-body">
+                        <h3 class="card-title text-primary font-oswald text-xl">Suppliers</h3>
+                        <p class="text-base-content/70">Partnering with major automotive suppliers to deliver precision components.</p>
+                    </div>
+                </div>
+                <div class="card bg-white shadow-xl">
+                    <div class="card-body">
+                        <h3 class="card-title text-primary font-oswald text-xl">Aftermarket</h3>
+                        <p class="text-base-content/70">Providing reliable replacement parts for the global aftermarket.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Logos Grid -->
+    <section class="py-16 bg-base-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-oswald font-bold text-primary mb-2">Our Trusted Partners</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-4"></div>
+                <p class="text-lg text-base-content/70 max-w-3xl mx-auto">Proudly serving leading automotive manufacturers worldwide</p>
+</div>
+
+            <!-- First Row -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10">
+                <div class="logo-card">
+                    <img src="images/logo-1.jpg" alt="Customer Logo" class="h-16 object-contain" onerror="this.onerror=null; this.src='images/loading.gif'; this.className+=' error-img'">
+                </div>
+                <div class="logo-card">
+                    <img src="images/logo-24.jpg" alt="Customer Logo" class="h-16 object-contain" onerror="this.onerror=null; this.src='images/loading.gif'; this.className+=' error-img'">
+                </div>
+                <div class="logo-card">
+                    <img src="images/logo-3.jpg" alt="Customer Logo" class="h-16 object-contain" onerror="this.onerror=null; this.src='images/loading.gif'; this.className+=' error-img'">
+                </div>
+                <div class="logo-card">
+                    <img src="images/logo-4.jpg" alt="Customer Logo" class="h-16 object-contain" onerror="this.onerror=null; this.src='images/loading.gif'; this.className+=' error-img'">
+                </div>
+            </div>
+
+            <!-- Second Row -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10">
+                <div class="logo-card">
+                    <img src="images/logo-20.jpg" alt="Customer Logo" class="h-16 object-contain" onerror="this.onerror=null; this.src='images/loading.gif'; this.className+=' error-img'">
+                </div>
+                <div class="logo-card">
+                    <img src="images/logo-6.jpg" alt="Customer Logo" class="h-16 object-contain" onerror="this.onerror=null; this.src='images/loading.gif'; this.className+=' error-img'">
+                </div>
+                <div class="logo-card">
+                    <img src="images/logo-7.jpg" alt="Customer Logo" class="h-16 object-contain" onerror="this.onerror=null; this.src='images/loading.gif'; this.className+=' error-img'">
+                </div>
+                <div class="logo-card">
+                    <img src="images/logo-8.jpg" alt="Customer Logo" class="h-16 object-contain" onerror="this.onerror=null; this.src='images/loading.gif'; this.className+=' error-img'">
+                </div>
+            </div>
+
+            <!-- Third Row -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10">
+                <div class="logo-card">
+                    <img src="images/logo-9.jpg" alt="Customer Logo" class="h-16 object-contain" onerror="this.onerror=null; this.src='images/loading.gif'; this.className+=' error-img'">
+                </div>
+                <div class="logo-card">
+                    <img src="images/logo-10.jpg" alt="Customer Logo" class="h-16 object-contain" onerror="this.onerror=null; this.src='images/loading.gif'; this.className+=' error-img'">
+                </div>
+                <div class="logo-card">
+                    <img src="images/logo-12.jpg" alt="Customer Logo" class="h-16 object-contain" onerror="this.onerror=null; this.src='images/loading.gif'; this.className+=' error-img'">
+                </div>
+                <div class="logo-card">
+                    <img src="images/logo-23.jpg" alt="Customer Logo" class="h-16 object-contain" onerror="this.onerror=null; this.src='images/loading.gif'; this.className+=' error-img'">
+                </div>
+                </div>
+                
+            <!-- Fourth Row -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10">
+                <div class="logo-card">
+                    <img src="images/logo-13.jpg" alt="Customer Logo" class="h-16 object-contain" onerror="this.onerror=null; this.src='images/loading.gif'; this.className+=' error-img'">
+                </div>
+                <div class="logo-card">
+                    <img src="images/logo-15.jpg" alt="Customer Logo" class="h-16 object-contain" onerror="this.onerror=null; this.src='images/loading.gif'; this.className+=' error-img'">
+                </div>
+                <div class="logo-card">
+                    <img src="images/logo-16.jpg" alt="Customer Logo" class="h-16 object-contain" onerror="this.onerror=null; this.src='images/loading.gif'; this.className+=' error-img'">
+                </div>
+                <div class="logo-card">
+                    <img src="images/logo-17.jpg" alt="Customer Logo" class="h-16 object-contain" onerror="this.onerror=null; this.src='images/loading.gif'; this.className+=' error-img'">
+                </div>
+            </div>
+
+            <!-- Fifth Row -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10">
+                <div class="logo-card">
+                    <img src="images/logo-22.jpg" alt="Customer Logo" class="h-16 object-contain" onerror="this.onerror=null; this.src='images/loading.gif'; this.className+=' error-img'">
+                </div>
+                <div class="logo-card">
+                    <img src="images/logo-19.jpg" alt="Customer Logo" class="h-16 object-contain" onerror="this.onerror=null; this.src='images/loading.gif'; this.className+=' error-img'">
+                </div>
+                <div class="logo-card">
+                    <img src="images/logo-25.jpg" alt="Customer Logo" class="h-16 object-contain" onerror="this.onerror=null; this.src='images/loading.gif'; this.className+=' error-img'">
+                </div>
+                <div class="logo-card">
+                    <img src="images/logo-26.jpg" alt="Customer Logo" class="h-16 object-contain" onerror="this.onerror=null; this.src='images/loading.gif'; this.className+=' error-img'">
+                </div>
+            </div>
+
+            <!-- Sixth Row -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="logo-card">
+                    <img src="images/logo-27.jpg" alt="Customer Logo" class="h-16 object-contain" onerror="this.onerror=null; this.src='images/loading.gif'; this.className+=' error-img'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-oswald font-bold text-primary mb-2">What Our Customers Say</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-4"></div>
+                <p class="text-lg text-base-content/70 max-w-3xl mx-auto">Hear from our global partners about their experience working with us</p>
+</div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card bg-white shadow-xl">
+                    <div class="card-body">
+                        <div class="flex justify-center mb-4">
+                            <i class="fa fa-quote-left text-4xl text-primary"></i>
+                        </div>
+                        <p class="text-center text-base-content/80 mb-6">Dyna-K has consistently delivered high-quality components that meet our stringent specifications. Their engineering team's collaborative approach has helped us optimize our designs for better performance.</p>
+                        <div class="text-center">
+                            <p class="font-semibold text-primary">Senior Procurement Manager</p>
+                            <p class="text-sm text-base-content/60">Leading   Manufacturer</p>
+                                </div>
+                            </div>
+                            </div>
+                
+                <div class="card bg-white shadow-xl">
+                    <div class="card-body">
+                        <div class="flex justify-center mb-4">
+                            <i class="fa fa-quote-left text-4xl text-primary"></i>
+                        </div>
+                        <p class="text-center text-base-content/80 mb-6">Their commitment to quality and on-time delivery has made Dyna-K an invaluable supplier for our critical components. We value their proactive approach to problem-solving and continuous improvement.</p>
+                        <div class="text-center">
+                            <p class="font-semibold text-primary">Supply Chain Director</p>
+                            <p class="text-sm text-base-content/60">Global Automotive Company</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card bg-white shadow-xl">
+                    <div class="card-body">
+                        <div class="flex justify-center mb-4">
+                            <i class="fa fa-quote-left text-4xl text-primary"></i>
+                        </div>
+                        <p class="text-center text-base-content/80 mb-6">We appreciate Dyna-K's flexibility and responsiveness to our changing requirements. Their technical expertise and quality manufacturing have consistently met our expectations for precision components.</p>
+                        <div class="text-center">
+                            <p class="font-semibold text-primary">Engineering Manager</p>
+                            <p class="text-sm text-base-content/60">Automotive Supplier</p>
+                        </div>
+                    </div>
+                </div>
+                                </div>
+                            </div>
+    </section>
+
+    <!-- Partnership Benefits Section -->
+    <section class="py-16 bg-base-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-oswald font-bold text-primary mb-2">Partnership Benefits</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-4"></div>
+                <p class="text-lg text-base-content/70 max-w-3xl mx-auto">What sets us apart as your trusted automotive component supplier</p>
+                            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card bg-white shadow-xl">
+                    <div class="card-body">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                            <i class="fa fa-cogs text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="card-title text-primary font-oswald text-xl">Engineering Excellence</h3>
+                        <p class="text-base-content/70">Our skilled engineers work closely with customers to optimize component designs for performance, manufacturability, and cost-effectiveness.</p>
+                    </div>
+                </div>
+                <div class="card bg-white shadow-xl">
+                    <div class="card-body">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                            <i class="fa fa-certificate text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="card-title text-primary font-oswald text-xl">Quality Assurance</h3>
+                        <p class="text-base-content/70">IATF 16949:2016 certified quality management system ensures consistent, high-quality components that meet or exceed customer specifications.</p>
+                    </div>
+                </div>
+                <div class="card bg-white shadow-xl">
+                    <div class="card-body">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                            <i class="fa fa-truck text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="card-title text-primary font-oswald text-xl">Reliable Delivery</h3>
+                        <p class="text-base-content/70">Our efficient production planning and supply chain management ensure on-time delivery of components to customers worldwide.</p>
+                    </div>
+                </div>
+                                </div>
+                            </div>
+    </section>
+
+    <!-- Global Reach Section -->
+    <section class="py-16 bg-base-200">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-oswald font-bold text-primary mb-6">Our Global Reach</h2>
+                    <p class="text-lg text-base-content/70 mb-8">Dyna-K proudly serves automotive manufacturers across multiple continents. Our components are found in vehicles operating in diverse conditions worldwide, from extreme heat to sub-zero temperatures.</p>
+                    
+                    <div class="stats stats-vertical lg:stats-horizontal shadow mb-8">
+                        <div class="stat">
+                            <div class="stat-title">Countries</div>
+                            <div class="stat-value text-primary">15+</div>
+                            <div class="stat-desc">Global presence</div>
+                            </div>
+                        <div class="stat">
+                            <div class="stat-title">Customers</div>
+                            <div class="stat-value text-primary">50+</div>
+                            <div class="stat-desc">Trusted partnerships</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-title">Components</div>
+                            <div class="stat-value text-primary">10M+</div>
+                            <div class="stat-desc">Annually produced</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card bg-white shadow-xl">
+                    <figure class="relative overflow-hidden">
+                        <img src="images/clients-map.jpg" alt="Global Reach" class="w-full h-96 object-cover" onerror="this.src='images/customers.jpg'">
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="bg-neutral text-white">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-oswald font-bold mb-6 text-white">About Us</h3>
+                    <p class="text-gray-300 mb-4">Dyna-K Automotive Stamping Pvt. Ltd is a leading manufacturer of precision automotive components with a commitment to quality and innovation.</p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="btn btn-circle btn-sm ">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/dyna-k-automotive-stampings/" target="_blank" class="btn btn-circle btn-sm ">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="btn btn-circle btn-sm ">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-oswald font-bold mb-6 text-white">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="flex items-center hover:text-white transition-colors">
+                            <i class="fa fa-chevron-right mr-2 text-white text-xs"></i> Home
+                        </a></li>
+                        <li><a href="products.html" class="flex items-center hover:text-white transition-colors">
+                            <i class="fa fa-chevron-right mr-2 text-white text-xs"></i> Products
+                        </a></li>
+                        <li><a href="company-profile.html" class="flex items-center hover:text-white transition-colors">
+                            <i class="fa fa-chevron-right mr-2 text-white text-xs"></i> About Us
+                        </a></li>
+                        <li><a href="facilities.html" class="flex items-center hover:text-white transition-colors">
+                            <i class="fa fa-chevron-right mr-2 text-white text-xs"></i> Facilities
+                        </a></li>
+                        <li><a href="contact.html" class="flex items-center hover:text-white transition-colors">
+                            <i class="fa fa-chevron-right mr-2 text-white text-xs"></i> Contact
+                        </a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-oswald font-bold mb-6 text-white">Contact Info</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fa fa-map-marker text-white mt-1 mr-3"></i>
+                            <span>J6, MIDC Indrayani Nagar Road, Balaji Nagar, Bhosari,
+                              Pimpri-Chinchwad, Maharashtra, India – 411026.</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-phone text-white mr-3"></i>
+                            <span>+91 90110 37455</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-envelope text-white mr-3"></i>
+                            <span>contact@dynakstamp.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-clock-o text-white mr-3"></i>
+                            <span>Mon-Sat: 9:00 AM - 5:30 PM</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-oswald font-bold mb-6 text-white">Newsletter</h3>
+                    <p class="text-gray-300 mb-4">Subscribe to our newsletter for the latest updates and industry insights.</p>
+                    <div class="form-control">
+                        <div class="join">
+                            <input type="email" placeholder="Your email" class="input text-black input-bordered join-item" />
+                            <button class="btn btn-primary join-item">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-10 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Dyna-K Automotive Stamping Pvt. Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Slider Initialization Script -->
+    <script type="text/javascript">
+        // Initialize customer logos slider after window load
+        window.addEventListener('load', function() {
+            if (typeof jssor_1_slider_init === 'function') {
+                jssor_1_slider_init();
+                console.log("Customer logos slider initialized on window load");
+            } else {
+                console.error("Jssor slider initialization function not found");
+            }
+        });
+
+        // Backup initialization after a timeout
+        setTimeout(function() {
+            if (typeof jssor_1_slider === 'undefined' || jssor_1_slider === null) {
+                if (typeof jssor_1_slider_init === 'function') {
+                    jssor_1_slider_init();
+                    console.log("Customer logos slider initialized on timeout");
+                }
+            }
+        }, 1500);
+        
+        // Fix for logo display issues
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check for any missing logo images and handle them properly
+            var logoImages = document.querySelectorAll('.logo-card img');
+            logoImages.forEach(function(img) {
+                // Force image reload to ensure proper display
+                if (img.complete) {
+                    if (img.naturalWidth === 0) {
+                        img.src = 'images/loading.gif';
+                        img.classList.add('error-img');
+                    }
+                }
+                
+                // Add fixed height to parent containers for consistency
+                var logoCard = img.closest('.logo-card');
+                if (logoCard) {
+                    logoCard.style.height = '120px';
+                }
+            });
+            
+            // Apply consistent styles to logo cards
+            var logoCards = document.querySelectorAll('.logo-card');
+            logoCards.forEach(function(card) {
+                card.style.display = 'flex';
+                card.style.alignItems = 'center';
+                card.style.justifyContent = 'center';
+                card.style.padding = '1rem';
+            });
+        });
+    </script>
+</body>
+
+<!-- Mirrored from dynakstamp.com/customers.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 05 Dec 2020 07:19:17 GMT -->
+</html>

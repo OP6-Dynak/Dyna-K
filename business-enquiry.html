@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Enquiry - Dyna-K Automotive Stamping Pvt. Ltd</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a237e',    // Deep blue
+                        secondary: '#ff6f00',   // Orange
+                        accent: '#ffd700',      // Gold
+                        dark: '#0d47a1',        // Navy blue
+                        light: '#e3f2fd',       // Light blue
+                    },
+                    fontFamily: {
+                        oswald: ['Oswald', 'sans-serif'],
+                        roboto: ['Roboto', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .nav-link {
+            @apply text-base-content hover:text-white transition-colors duration-300 relative;
+        }
+        .nav-link::after {
+            content: '';
+            @apply absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300;
+        }
+        .nav-link:hover::after {
+            @apply w-full;
+        }
+        .nav-link.active {
+            @apply text-white font-bold;
+        }
+        .nav-link.active::after {
+            @apply w-full;
+        }
+        .dropdown-content {
+            @apply mt-2 border-t-2 border-primary;
+        }
+        .drawer-side {
+            @apply bg-base-100;
+        }
+        .drawer-side ul {
+            @apply p-4;
+        }
+        .drawer-side a {
+            @apply hover:bg-base-200 rounded-lg transition-all duration-300;
+        }
+        .card {
+            @apply transition-all duration-300 hover:-translate-y-1;
+        }
+        .btn {
+            @apply transition-all duration-300 hover:scale-105;
+        }
+        .btn-primary {
+            @apply bg-primary hover:bg-dark text-white;
+        }
+        .btn-secondary {
+            @apply bg-secondary hover:bg-accent text-white;
+        }
+        .btn-outline {
+            @apply border-2 border-white hover:bg-white hover:text-white;
+        }
+        .icon-primary {
+            @apply text-white;
+        }
+        .icon-secondary {
+            @apply text-secondary;
+        }
+        .form-input {
+            @apply input input-bordered w-full bg-white focus:border-primary;
+        }
+        .form-select {
+            @apply select select-bordered w-full bg-white focus:border-primary;
+        }
+    </style>
+    <script type="text/javascript" src="js/jssor.slider.min.js"></script>
+    <script>
+        jssor_1_slider_init = function() {
+            var jssor_1_options = {
+              $AutoPlay: true,
+              $Idle: 0,
+              $AutoPlaySteps: 5,
+              $SlideDuration: 1600,
+              $SlideEasing: $Jease$.$Linear,
+              $PauseOnHover: 5,
+              $SlideWidth: 223,
+              $Cols: 6
+            };
+            
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+            
+            function ScaleSlider() {
+                var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+                if (refSize) {
+                    refSize = Math.min(refSize, 1170);
+                    jssor_1_slider.$ScaleWidth(refSize);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 20);
+                }
+            }
+            ScaleSlider();
+            $Jssor$.$AddEvent(window, "load", ScaleSlider);
+            $Jssor$.$AddEvent(window, "resize", $Jssor$.$WindowResizeFilter(window, ScaleSlider));
+            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+        };
+    </script>
+</head>
+<body class="font-roboto bg-base-200">
+    <!-- Announcement Bar -->
+    <div class="bg-primary text-white py-1 px-4 text-center text-sm">
+        <span>Leading manufacturer of precision automotive components | IATF16949:2016 Certified</span>
+    </div>
+    
+    <!-- Top Navigation -->
+    <div class="bg-neutral text-white py-2">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <a href="#" class=" transition-colors duration-300 flex items-center space-x-2">
+                        <i class="fa fa-book "></i>
+                        <span>Download Brochure</span>
+                    </a>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="mailto:contact@dynakstamp.com" class=" transition-colors duration-300 flex items-center space-x-2">
+                        <i class="fa fa-envelope "></i>
+                        <span>contact@dynakstamp.com</span>
+                    </a>
+                    <a href="tel:+91 90110 37455" class=" transition-colors duration-300 flex items-center space-x-2">
+                        <i class="fa fa-phone "></i>
+                        <span>+91 90110 37455</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <img src="images/logo-dyna.jpg" alt="Dyna-K Logo" class="h-16">
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link font-medium active">Home</a>
+                    <div class="dropdown dropdown-hover">
+                        <label tabindex="0" class="nav-link font-medium cursor-pointer flex items-center">
+                            About Us <i class="fa fa-chevron-down ml-1 text-xs"></i>
+                        </label>
+                        <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a href="company-profile.html">Company Profile</a></li>
+                            <li><a href="vision-quality-policy.html">Vision & Quality</a></li>
+                            <li><a href="certification.html">Certification</a></li>
+                            <li><a href="initiatives.html">Initiatives</a></li>
+                        </ul>
+                    </div>
+                    <a href="services.html" class="nav-link font-medium">Services</a>
+                    <a href="facilities.html" class="nav-link font-medium">Facilities</a>
+                    <a href="customers.html" class="nav-link font-medium">Customers</a>
+                    <div class="dropdown dropdown-hover">
+                        <label tabindex="0" class="nav-link font-medium cursor-pointer flex items-center">
+                            Products <i class="fa fa-chevron-down ml-1 text-xs"></i>
+                        </label>
+                        <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a href="engine-parts.html">Engine Parts</a></li>
+                            <li><a href="brake-components.html">Brake Components</a></li>
+                            <li><a href="chassis-parts.html">Chassis Parts</a></li>
+                            <li><a href="turbo-chargers.html">Turbo Chargers</a></li>
+                            <li><a href="other-parts.html">Other Parts</a></li>
+                            <li><a href="emission-filtration-parts.html">Emission & Filtration</a></li>
+                            <li><a href="welded-assemblies.html">Welded Assemblies</a></li>
+                        </ul>
+                    </div>
+                    <a href="career.html" class="nav-link font-medium">Careers</a>
+                    <a href="contact.html" class="nav-link font-medium">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <div class="drawer drawer-end">
+                        <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+                        <div class="drawer-content">
+                            <label for="my-drawer" class="btn btn-ghost btn-circle">
+                                <i class="fa fa-bars text-xl"></i>
+                            </label>
+                        </div> 
+                        <div class="drawer-side">
+                            <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+                            <ul class="menu p-4 w-80 min-h-full bg-base-200">
+                                <li><a href="index.html" class="active">Home</a></li>
+                                <li>
+                                    <details>
+                                        <summary>About Us</summary>
+                                        <ul>
+                                            <li><a href="company-profile.html">Company Profile</a></li>
+                                            <li><a href="vision-quality-policy.html">Vision & Quality</a></li>
+                                            <li><a href="certification.html">Certification</a></li>
+                                            <li><a href="initiatives.html">Initiatives</a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="facilities.html">Facilities</a></li>
+                                <li><a href="customers.html">Customers</a></li>
+                                <li>
+                                    <details>
+                                        <summary>Products</summary>
+                                        <ul>
+                                            <li><a href="engine-parts.html">Engine Parts</a></li>
+                                            <li><a href="brake-components.html">Brake Components</a></li>
+                                            <li><a href="chassis-parts.html">Chassis Parts</a></li>
+                                            <li><a href="turbo-chargers.html">Turbo Chargers</a></li>
+                                            <li><a href="other-parts.html">Other Parts</a></li>
+                                            <li><a href="emission-filtration-parts.html">Emission & Filtration</a></li>
+                                            <li><a href="welded-assemblies.html">Welded Assemblies</a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+                                <li><a href="career.html">Careers</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative text-white py-20">
+        <div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-primary/60" style="background-image: url('images/business-enquiry.jpg'); background-size: cover; background-position: center; background-blend-mode: overlay;"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-primary/90 via-primary/70 to-primary/80"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-3xl mx-auto text-center">
+                <div class="inline-block mb-4 bg-white/10 px-6 py-2 rounded-full backdrop-blur-sm">
+                    <span class=" font-medium">Dyna-K Automotive Stamping Pvt. Ltd</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-oswald font-bold mb-6">Business Enquiry</h1>
+                <p class="text-xl text-white/90 mb-6">Connect with us to discuss your business requirements and explore our precision automotive solutions</p>
+                <div class="flex flex-wrap gap-4 justify-center">
+                    <a href="#enquiry-form" class="btn btn-primary animate-pulse">
+                        Fill Enquiry Form <i class="fa fa-arrow-down ml-2"></i>
+                    </a>
+                    <a href="contact.html" class="btn bg-white/20 backdrop-blur-sm text-white hover:btn-primary hover:bg-primary">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Business Enquiry Section -->
+    <section id="enquiry-form" class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <div class="lg:col-span-2">
+                    <div class="card bg-white shadow-xl">
+                        <div class="card-body">
+                            <h2 class="text-3xl font-oswald font-bold text-white mb-6">Enquiry Form</h2>
+                            <p class="mb-8">Would you like to submit a Request For a Quote or would you like further information about services provided by us? Just fill out the form below and one of our team members will be in touch with you shortly.</p>
+                            
+                            <form action="http://dynakstamp.com/business-enquiry.php" method="post" class="space-y-6">
+                                <div class="form-control">
+                                    <label class="label">
+                                        <span class="label-text text-base-content">Product</span>
+                                    </label>
+                                    <select name="product" class="form-select focus:ring-2 focus:ring-primary" tabindex="1" required>
+                                        <option value="product not selected">Choose product</option>
+                                        <option value="New Business">New Business</option>
+                                        <option value="Brake Components">Brake Components</option>
+                                        <option value="Welded Assemblies">Welded Assemblies</option>
+                                        <option value="Turbo Chargers">Turbo Chargers</option>
+                                        <option value="Emission and Filtration Parts">Emission and Filtration Parts</option>
+                                        <option value="Engine Parts">Engine Parts</option>
+                                        <option value="Chassis Parts">Chassis Parts</option>
+                                        <option value="Other Parts">Other Parts</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div class="form-control">
+                                        <label class="label">
+                                            <span class="label-text text-base-content">Salutation</span>
+                                        </label>
+                                        <input placeholder="Mr./Ms./Dr." name="salutation" type="text" class="form-input focus:ring-2 focus:ring-primary" tabindex="2" required>
+                                    </div>
+                                    
+                                    <div class="form-control">
+                                        <label class="label">
+                                            <span class="label-text text-base-content">Your Name</span>
+                                        </label>
+                                        <input placeholder="Your full name" type="text" name="name" class="form-input focus:ring-2 focus:ring-primary" tabindex="3" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div class="form-control">
+                                        <label class="label">
+                                            <span class="label-text text-base-content">Email Address</span>
+                                        </label>
+                                        <input placeholder="your.email@example.com" type="email" name="email" class="form-input focus:ring-2 focus:ring-primary" tabindex="4" required>
+                                    </div>
+                                    
+                                    <div class="form-control">
+                                        <label class="label">
+                                            <span class="label-text text-base-content">Company Name</span>
+                                        </label>
+                                        <input placeholder="Your company" type="text" name="CompanyName" class="form-input focus:ring-2 focus:ring-primary" tabindex="5" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-control">
+                                    <label class="label">
+                                        <span class="label-text text-base-content">Phone Number</span>
+                                    </label>
+                                    <input placeholder="+91 XXXXX XXXXX" type="tel" name="phone" class="form-input focus:ring-2 focus:ring-primary" tabindex="6" required>
+                                </div>
+                                
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div class="form-control">
+                                        <label class="label">
+                                            <span class="label-text text-base-content">Address</span>
+                                        </label>
+                                        <input placeholder="Street address" type="text" name="address" class="form-input focus:ring-2 focus:ring-primary" tabindex="7" required>
+                                    </div>
+                                    
+                                    <div class="form-control">
+                                        <label class="label">
+                                            <span class="label-text text-base-content">City</span>
+                                        </label>
+                                        <input placeholder="City name" type="text" name="city" class="form-input focus:ring-2 focus:ring-primary" tabindex="8" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-control">
+                                    <label class="label">
+                                        <span class="label-text text-base-content">Your Message</span>
+                                    </label>
+                                    <textarea placeholder="Please provide details about your inquiry..." tabindex="9" name="message" class="textarea textarea-bordered h-32 bg-white focus:border-primary focus:ring-2 focus:ring-primary" required></textarea>
+                                </div>
+                                
+                                <input name="hdnAction" value="SendEmail" type="hidden" />
+                                
+                                <div class="form-control mt-8">
+                                    <button name="submit" type="submit" id="contact-submit" class="btn btn-primary btn-lg w-full">Submit Enquiry</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hidden lg:block">
+                    <img src="images/business-enquiry.jpg" alt="Business Enquiry" class="rounded-xl shadow-xl w-full h-auto">
+                    <div class="card bg-white shadow-xl mt-8">
+                        <div class="card-body">
+                            <h3 class="card-title text-primary font-oswald">Why Choose Us?</h3>
+                            <ul class="space-y-3 mt-4">
+                                <li class="flex items-start">
+                                    <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                                    <span>Over 35 years of experience in automotive manufacturing</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                                    <span>IATF16949:2016 certified quality management</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                                    <span>Precision engineering and cutting-edge technology</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                                    <span>Global delivery capabilities</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                                    <span>Custom manufacturing solutions</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customers Section -->
+    <section class="py-12 bg-light">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-oswald font-bold text-primary mb-2">OUR CUSTOMERS</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-4"></div>
+                <p class="text-lg text-base-content">Customers who trust our quality and service</p>
+            </div>
+            
+            <div class="overflow-x-auto">
+                <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 1180px; height:135px; overflow: hidden; visibility: hidden;">
+                    <!-- Loading Screen -->
+                    <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+                        <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+                        <div style="position:absolute;display:block;background:url('images/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+                    </div>
+                    <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 1180px; height:135px; overflow: hidden;">
+                        <div style="display: none; margin-right:5px;"> <img data-u="image" src="images/logo-1.jpg" /> </div>
+                        <div style="display: none;margin-right:5px;"> <img data-u="image" src="images/logo-3.jpg" /> </div>
+                        <div style="display: none; margin-right:5px;"> <img data-u="image" src="images/logo-4.jpg" /> </div>
+                        <div style="display: none; margin-right:5px;"> <img data-u="image" src="images/logo-6.jpg" /> </div>
+                        <div style="display: none; margin-right:5px;"> <img data-u="image" src="images/logo-7.jpg" /> </div>
+                        <div style="display: none; margin-right:5px;"> <img data-u="image" src="images/logo-8.jpg" /> </div>
+                        <div style="display: none; margin-right:5px;"> <img data-u="image" src="images/logo-9.jpg" /> </div>
+                        <div style="display: none; margin-right:5px;"> <img data-u="image" src="images/logo-10.jpg" /> </div>
+                        <div style="display: none; margin-right:5px;"> <img data-u="image" src="images/logo-12.jpg" /> </div>
+                        <div style="display: none; margin-right:5px;"> <img data-u="image" src="images/logo-13.jpg" /> </div>
+                        <div style="display: none; margin-right:5px;"> <img data-u="image" src="images/logo-15.jpg" /> </div>
+                        <div style="display: none; margin-right:5px;"> <img data-u="image" src="images/logo-16.jpg" /> </div>
+                        <div style="display: none; margin-right:5px;"> <img data-u="image" src="images/logo-17.jpg" /> </div>
+                        <div style="display: none; margin-right:5px;"> <img data-u="image" src="images/logo-19.jpg" /> </div>
+                        <div style="display: none; margin-right:5px;"> <img data-u="image" src="images/logo-20.jpg" /> </div>
+                        <div style="display: none; margin-right:5px;"> <img data-u="image" src="images/logo-23.jpg" /> </div>
+                        <div style="display: none; margin-right:5px;"> <img data-u="image" src="images/logo-24.jpg" /> </div>
+                        <div style="display: none; margin-right:5px;"> <img data-u="image" src="images/logo-25.jpg" /> </div>
+                        <div style="display: none; margin-right:5px;"> <img data-u="image" src="images/logo-26.jpg" /> </div>
+                        <div style="display: none; margin-right:5px;"> <img data-u="image" src="images/logo-27.jpg" /> </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mobile Customers List (Fallback) -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 md:hidden">
+                <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center">
+                    <img src="images/logo-1.jpg" alt="Customer Logo" class="max-h-16" />
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center">
+                    <img src="images/logo-3.jpg" alt="Customer Logo" class="max-h-16" />
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center">
+                    <img src="images/logo-4.jpg" alt="Customer Logo" class="max-h-16" />
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center">
+                    <img src="images/logo-7.jpg" alt="Customer Logo" class="max-h-16" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+
+    <!-- Footer -->
+    <footer class="bg-neutral text-white">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-oswald font-bold mb-6  relative inline-block">
+                        About Us
+                    </h3>
+                    <p class="text-gray-300 mb-4">Dyna-K Automotive Stamping Pvt. Ltd is a leading manufacturer of precision automotive components with a commitment to quality and innovation.</p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="btn btn-circle btn-sm ">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/dyna-k-automotive-stampings/" class="btn btn-circle btn-sm ">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="btn btn-circle btn-sm ">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-oswald font-bold mb-6  relative inline-block">
+                        Quick Links
+                    </h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="flex items-center  transition-colors">
+                            <i class="fa fa-chevron-right mr-2  text-xs"></i> Home
+                        </a></li>
+                        <li><a href="business-enquiry.html" class="flex items-center  transition-colors">
+                            <i class="fa fa-chevron-right mr-2  text-xs"></i> Business Enquiry
+                        </a></li>
+                        <li><a href="privacy-policy.html" class="flex items-center  transition-colors">
+                            <i class="fa fa-chevron-right mr-2  text-xs"></i> Privacy Policy
+                        </a></li>
+                        <li><a href="contact.html" class="flex items-center  transition-colors">
+                            <i class="fa fa-chevron-right mr-2  text-xs"></i> Contact Us
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="sm:col-span-2 md:col-span-1">
+                    <h3 class="text-xl font-oswald font-bold mb-6  relative inline-block">
+                        Contact Info
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fa fa-map-marker  mt-1 mr-3"></i>
+                            <span>J6, MIDC Indrayani Nagar Road, Balaji Nagar, Bhosari,
+                              Pimpri-Chinchwad, Maharashtra, India – 411026.</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-phone  mr-3"></i>
+                            <span>+91 90110 37455</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-envelope  mr-3"></i>
+                            <span>contact@dynakstamp.com</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sm:col-span-2 md:col-span-1">
+                    <h3 class="text-xl font-oswald font-bold mb-6  relative inline-block">
+                        Newsletter
+                    </h3>
+                    <p class="text-gray-300 mb-4">Subscribe to our newsletter for the latest updates and industry insights.</p>
+                    <div class="form-control">
+                        <div class="join w-full">
+                            <input type="email" placeholder="Your email" class="input input-bordered join-item w-2/3 text-black" />
+                            <button class="btn btn-primary join-item w-1/3">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-10 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Dyna-K Automotive Stamping. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        jssor_1_slider_init();
+    </script>
+</body>
+</html>

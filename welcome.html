@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to the Team - Dyna-K Automotive Stamping Pvt. Ltd</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+	
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+ <style>
+        #myDiv {
+            display: none;
+            background-color: white;
+            padding: 20px;
+            margin-top: 10px;
+        }
+    </style>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a237e',    // Deep blue
+                        secondary: '#2c3e50',   // Dark slate
+                        accent: '#34495e',      // Steel blue
+                        dark: '#0d47a1',        // Navy blue
+                        light: '#e3f2fd',       // Light blue
+                    },
+                    fontFamily: {
+                        oswald: ['Oswald', 'sans-serif'],
+                        roboto: ['Roboto', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .nav-link {
+            @apply text-base-content hover:text-white transition-colors duration-300 relative;
+        }
+        .nav-link::after {
+            content: '';
+            @apply absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300;
+        }
+        .nav-link:hover::after {
+            @apply w-full;
+        }
+        .nav-link.active {
+            @apply text-white font-bold;
+        }
+        .nav-link.active::after {
+            @apply w-full;
+        }
+        .dropdown-content {
+            @apply mt-2 border-t-2 border-primary;
+        }
+        .drawer-side {
+            @apply bg-base-100;
+        }
+        .drawer-side ul {
+            @apply p-4;
+        }
+        .drawer-side a {
+            @apply hover:bg-base-200 rounded-lg transition-all duration-300;
+        }
+        .card {
+            @apply transition-all duration-300 hover:-translate-y-1;
+        }
+        .btn {
+            @apply transition-all duration-300 hover:scale-105;
+        }
+        .welcome-card {
+            @apply transition-all duration-300 hover:shadow-xl;
+        }
+        .section-title {
+            @apply relative inline-block;
+        }
+        .section-title::after {
+            content: '';
+            @apply absolute bottom-0 left-0 w-1/2 h-1 bg-primary transform -translate-x-1/2;
+        }
+        .btn-primary {
+            @apply bg-primary hover:bg-dark text-white;
+        }
+        .btn-secondary {
+            @apply bg-secondary hover:bg-accent text-white;
+        }
+        .btn-outline {
+            @apply border-2 border-white hover:bg-white hover:text-white;
+        }
+        .icon-primary {
+            @apply text-white;
+        }
+        .icon-secondary {
+            @apply text-secondary;
+        }
+    </style>
+</head>
+<body class="font-roboto bg-base-200">
+    <!-- Announcement Bar -->
+    <div class="bg-primary text-white py-1 px-4 text-center text-sm">
+        <span></span>
+    </div>
+
+    <!-- Top Navigation -->
+    <div class="bg-neutral text-white py-2">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <a href="#" class="transition-colors duration-300 flex items-center space-x-2">
+                        <i class="fa fa-book"></i>
+                       <!-- <span>Download Brochure</span> -->
+                    </a>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="mailto:contact@dynakstamp.com" class="transition-colors duration-300 flex items-center space-x-2">
+                        <i class="fa fa-envelope"></i>
+                        <span>hrsupport@dynakstamp.com</span>
+                    </a>
+                    <a href="tel:+91 20 27111900" class="transition-colors duration-300 flex items-center space-x-2">
+                        <i class="fa fa-phone"></i>
+                        <span>+91 888</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-2">
+                <div class="flex items-center">
+                    <img src="images/logo-dyna.jpg" alt="Dyna-K Logo" class="h-16">
+                </div>
+				<!--
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link font-medium">Home</a>
+                    <div class="dropdown dropdown-hover">
+                        <label tabindex="0" class="nav-link font-medium cursor-pointer flex items-center">
+                            About Us <i class="fa fa-chevron-down ml-1 text-xs"></i>
+                        </label>
+                        <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a href="company-profile.html">Company Profile</a></li>
+                            <li><a href="vision-quality-policy.html">Vision & Quality</a></li>
+                            <li><a href="certification.html">Certification</a></li>
+                            <li><a href="initiatives.html">Initiatives</a></li>
+                        </ul>
+                    </div>
+                    <a href="services.html" class="nav-link font-medium">Services</a>
+                    <a href="facilities.html" class="nav-link font-medium">Facilities</a>
+                    <a href="customers.html" class="nav-link font-medium">Customers</a>
+                    <div class="dropdown dropdown-hover">
+                        <label tabindex="0" class="nav-link font-medium cursor-pointer flex items-center">
+                            Products <i class="fa fa-chevron-down ml-1 text-xs"></i>
+                        </label>
+                        <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a href="engine-parts.html">Engine Parts</a></li>
+                            <li><a href="brake-components.html">Brake Components</a></li>
+                            <li><a href="chassis-parts.html">Chassis Parts</a></li>
+                            <li><a href="turbo-chargers.html">Turbo Chargers</a></li>
+                            <li><a href="other-parts.html">Other Parts</a></li>
+                            <li><a href="emission-filtration-parts.html">Emission & Filtration</a></li>
+                            <li><a href="welded-assemblies.html">Welded Assemblies</a></li>
+                        </ul>
+                    </div>
+                    <a href="career.html" class="nav-link font-medium">Careers</a>
+                    <a href="contact.html" class="nav-link font-medium">Contact</a>
+                </div>
+               
+
+
+
+			   <div class="md:hidden">
+                    <div class="drawer drawer-end">
+                        <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+                        <div class="drawer-content">
+                            <label for="my-drawer" class="btn btn-ghost btn-circle">
+                                <i class="fa fa-bars text-xl"></i>
+                            </label>
+                        </div> 
+                        <div class="drawer-side">
+                            <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+                            <ul class="menu p-4 w-80 min-h-full bg-base-200">
+                                <li><a href="index.html">Home</a></li>
+                                <li>
+                                    <details>
+                                        <summary>About Us</summary>
+                                        <ul>
+                                            <li><a href="company-profile.html">Company Profile</a></li>
+                                            <li><a href="vision-quality-policy.html">Vision & Quality</a></li>
+                                            <li><a href="certification.html">Certification</a></li>
+                                            <li><a href="initiatives.html">Initiatives</a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="facilities.html">Facilities</a></li>
+                                <li><a href="customers.html">Customers</a></li>
+                                <li>
+                                    <details>
+                                        <summary>Products</summary>
+                                        <ul>
+                                            <li><a href="engine-parts.html">Engine Parts</a></li>
+                                            <li><a href="brake-components.html">Brake Components</a></li>
+                                            <li><a href="chassis-parts.html">Chassis Parts</a></li>
+                                            <li><a href="turbo-chargers.html">Turbo Chargers</a></li>
+                                            <li><a href="other-parts.html">Other Parts</a></li>
+                                            <li><a href="emission-filtration-parts.html">Emission & Filtration</a></li>
+                                            <li><a href="welded-assemblies.html">Welded Assemblies</a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+                                <li><a href="career.html">Careers</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+					
+					-->
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative bg-primary text-white py-1">
+        <div class="container mx-auto px-2">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-oswald font-bold mb-6">Welcome to the Team</h1>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Welcome Content -->
+    <section class="py-8">
+        <div class="container mx-auto px-4">
+            <div class="bg-white max-w-4xl mx-auto">
+                <div class="bg-white rounded-xl shadow-xl p-8 mb-8">
+                    <h2 class="text-3xl font-oswald font-bold text-primary mb-6">Your Journey Begins Here</h2>
+                    <div class="w-24 h-1 bg-primary mb-8"></div>
+                    
+                    <div class="bg-white prose max-w-none">
+                        <p class="text-lg mb-6">
+                            We are thrilled to welcome you to Dyna-K Automotive Stampings Pvt. Ltd. 
+                        </p>
+                        
+                        <p class="text-lg mb-6">
+                            This interface will guide you through your induction process and help you get settled in.
+                        </p>
+                        
+                        <p class="text-lg mb-6">
+                            You will be welcomed by our HR/Admin Manager, who will help you with the initial paperwork, introduce you to your team, give you a tour of the office, plant and facilities.
+                        </p>
+                        
+                        <p class="text-lg mb-6">
+                            IT team will connect you to all email passcodes and approved server access.
+                        </p>
+                        
+                        <p class="text-lg mb-6">
+                            Please take time to review the company information, existing codes of conduct, structures and procedures here.
+                        </p>
+                        
+                        <p class="text-lg mb-4">
+                            Get ready for a journey filled with exciting learnings and opportunities. If you need anything, don't hesitate to reach out to anyone who will guide you appropriately.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+                    <div class="card bg-white shadow-lg p-6 text-center">
+                        <div class="rounded-full bg-primary w-16 h-16 flex items-center justify-center text-white mx-auto mb-6">
+                            <i class="fa fa-file-text-o text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Company Presentation</h3>
+                        <p class="mb-4">Learn about our history, products and stakeholders</p>
+                        <a href="..\Dynak\download\Dyna-K Profile April 2025.pdf" class="btn btn-primary btn-sm">View Presentation</a>
+                    </div>
+                    
+                    <div class="card bg-white shadow-lg p-6 text-center">
+                        <div class="rounded-full bg-primary w-16 h-16 flex items-center justify-center text-white mx-auto mb-6">
+                            <i class="fa fa-sitemap text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Organisation Chart</h3>
+                        <p class="mb-4">Understand our company structure and reporting lines</p>
+                        <a href="#" class="btn btn-primary btn-sm">View Chart</a>
+                    </div>
+	<div class="card bg-white shadow-lg p-6 text-center">	
+                        <div class="rounded-full bg-primary w-16 h-16 flex items-center justify-center text-white mx-auto mb-4">
+                            <i class="fa fa-book text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">HR Policies & Procedures</h3>
+                        <p class="mb-4">Review important workplace policies and guidelines</p>
+						<button onclick="toggleDiv()" class="btn btn-primary btn-sm">View Policies</button>
+                        
+                    </div>
+                   
+					
+									
+
+                </div>
+				
+				
+<div class="bg-white rounded-xl shadow-xl p-8 mb-8" id="myDiv">
+    <h2 class="text-3xl font-oswald font-bold text-primary mb-6">HR Policies & Procedures</h2>
+    <div class="w-24 h-1 bg-primary mb-8"></div>
+
+    <div class="prose max-w-none">
+        <ol class="list-decimal pl-5 space-y-3">
+            <li>
+                <a href="..\Dynak\download\Final Policy\HR1. DYNAK EMPLOYEE HANDBOOK REV004.pdf" class="">Employee Code of Conduct</a>
+            </li>
+            <li>
+                <a href="..\Dynak\download\Final Policy\HR2.Anti Bribery Anti Corruption Policy.pdf" class="">Anti Bribery Anti Corruption Policy</a>
+            </li>
+            <li>
+                <a href="..\Dynak\download\Final Policy\HR3.Motivational Policy.pdf" class="">Employee Motivation Policy</a>
+            </li>
+            <li>
+                <a href="..\Dynak\download\Final Policy\HR4.Whistleblower Policy.pdf" class="">Whistle Blowing Policy</a>
+            </li>
+            <li>
+                <a href="..\Dynak\download\Final Policy\HR5.Policy Against Sexual Harassment At Workplace.pdf" class="">Policy Against Sexual Harassment At Workplace</a>
+            </li>
+            <li>
+                <a href="..\Dynak\download\Final Policy\HR6.Company Holiday List  CY 2025.pdf" class="">2025 Holiday List</a>
+            </li>
+            <li>
+                <a href="..\Dynak\download\Final Policy\HR7.Dynak Conveyance Policy Jan 25 - June 25.pdf" class="">Dyna-K Conveyance Policy Jan 25 - June 25</a>
+            </li>
+        </ol>
+    </div>
+</div>
+
+   
+
+    
+
+				
+                  <script>
+ function toggleDiv() {
+        const myDiv = document.getElementById('myDiv');
+        if (myDiv.style.display === 'none' || myDiv.style.display === '') {
+            myDiv.style.display = 'block';
+        } else {
+            myDiv.style.display = 'none';
+        }
+    }
+				</script>  
+				
+					
+	<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+                    <div class="card bg-white shadow-lg p-6 text-center">
+                        <div class="rounded-full bg-primary w-16 h-16 flex items-center justify-center text-white mx-auto mb-6">
+                            <i class="fa fa-file-text-o text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Company Certifications</h3>
+
+                        <a href="./download/9. IATF Certificate - J6 - Validity - 12Apr24 to 11Apr27.pdf" class="btn btn-primary btn-sm">IATF 16949</a>
+						<br>
+						<a href="./download/DYNA-K AUTOMOTIVE STAMPINGS PVT.LTD _ISO_14001.pdf" class="btn btn-primary btn-sm">ISO 14001-EMS</a>
+						<br>
+						<a href="..\Dynak\download\QUALITY POLICY AND OBJECTIVES.pdf" class="btn btn-primary btn-sm">Quality Policy & Objectives</a>
+						
+                    </div>
+					
+					
+
+                    
+<div class="card bg-white shadow-lg p-6 text-center">
+    <div class="rounded-full bg-primary w-16 h-16 flex items-center justify-center text-white mx-auto mb-6">
+        <i class="fa fa-shield-alt text-2xl"></i> <!-- Shield for safety -->
+    </div>
+    <h3 class="text-xl font-bold mb-3">Safety</h3>
+    <p class="mb-4"></p>
+    <a href="../Dynak/download/EHS Policy Dyna-K Automotive Stampings Pvt. Ltd - UNSIGNED.pdf" class="btn btn-primary btn-sm">Environment Health and Safety Policy</a>
+						<br>
+	<a href="..\Dynak\download\KNOW YOUR PPE.pdf" class="btn btn-primary btn-sm">Safety PPE Guidelines</a>
+</div>
+
+<!-- 5S Card -->
+<div class="card bg-white shadow-lg p-6 text-center">
+    <div class="rounded-full bg-primary w-16 h-16 flex items-center justify-center text-white mx-auto mb-6">
+        <i class="fa fa-tools text-2xl"></i> <!-- Tools for 5S (organization/efficiency) -->
+    </div>
+    <h3 class="text-xl font-bold mb-3">5S</h3>
+    <p class="mb-4"></p>
+    <a href="../Dynak/download/5S committed workplace.pdf" class="btn btn-primary btn-sm">View note</a>
+</div>
+	
+                   
+				
+									
+
+                </div>
+												
+
+                </div>
+				
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-12 bg-primary text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-oswald font-bold mb-6">Have Questions?</h2>
+                <p class="text-xl mb-8">Our team is here to support you through your transition</p>
+                <div class="flex flex-col md:flex-row justify-center gap-4">
+                    <a href="mailto:hrsupport@dynakstamp.com" class="btn bg-white text-primary hover:bg-gray-100">
+                        <i class="fa fa-envelope mr-2"></i> Contact HR
+                    </a>
+                    <a href="tel:+91 20 27111900" class="btn bg-white text-primary hover:bg-gray-100">
+                        <i class="fa fa-phone mr-2"></i> Call Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-neutral text-white">
+	
+	<!--
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-oswald font-bold mb-6 text-white">About Us</h3>
+                    <p class="text-gray-300 mb-4">Dyna-K Automotive Stamping Pvt. Ltd is a leading manufacturer of precision automotive components with a commitment to quality and innovation.</p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="btn btn-circle btn-sm">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/dyna-k-automotive-stampings/" class="btn btn-circle btn-sm">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="btn btn-circle btn-sm">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-oswald font-bold mb-6 text-white">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="flex items-center transition-colors">
+                            <i class="fa fa-chevron-right mr-2 text-white text-xs"></i> Home
+                        </a></li>
+                        <li><a href="products.html" class="flex items-center transition-colors">
+                            <i class="fa fa-chevron-right mr-2 text-white text-xs"></i> Products
+                        </a></li>
+                        <li><a href="company-profile.html" class="flex items-center transition-colors">
+                            <i class="fa fa-chevron-right mr-2 text-white text-xs"></i> About Us
+                        </a></li>
+                        <li><a href="facilities.html" class="flex items-center transition-colors">
+                            <i class="fa fa-chevron-right mr-2 text-white text-xs"></i> Facilities
+                        </a></li>
+                        <li><a href="contact.html" class="flex items-center transition-colors">
+                            <i class="fa fa-chevron-right mr-2 text-white text-xs"></i> Contact
+                        </a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-oswald font-bold mb-6 text-white">Contact Info</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fa fa-map-marker text-white mt-1 mr-3"></i>
+                            <span>J6, MIDC Indrayani Nagar Road, Balaji Nagar, Bhosari,
+                              Pimpri-Chinchwad, Maharashtra, India – 411026.</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-phone text-white mr-3"></i>
+                            <span>+91 20 27111900</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-envelope text-white mr-3"></i>
+                            <span>contact@dynakstamp.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-clock-o text-white mr-3"></i>
+                            <span>Mon-Sat: 9:00 AM - 5:30 PM</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-oswald font-bold mb-6 text-white">Newsletter</h3>
+                    <p class="text-gray-300 mb-4">Subscribe to our newsletter for the latest updates and industry insights.</p>
+                    <div class="form-control">
+                        <div class="join">
+                            <input type="email" placeholder="Your email" class="input input-bordered join-item text-black" />
+                            <button class="btn btn-primary join-item">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-10 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Dyna-K Automotive Stamping Pvt. Ltd. All rights reserved.</p>
+            </div>
+        </div> -->
+    </footer>
+</body>
+</html> 

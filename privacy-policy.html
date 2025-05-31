@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Dyna-K Automotive Stamping Pvt. Ltd</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a237e',    // Deep blue
+                        secondary: '#ff6f00',   // Orange
+                        accent: '#ffd700',      // Gold
+                        dark: '#0d47a1',        // Navy blue
+                        light: '#e3f2fd',       // Light blue
+                    },
+                    fontFamily: {
+                        oswald: ['Oswald', 'sans-serif'],
+                        roboto: ['Roboto', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .nav-link {
+            @apply text-base-content hover:text-white transition-colors duration-300 relative;
+        }
+        .nav-link::after {
+            content: '';
+            @apply absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300;
+        }
+        .nav-link:hover::after {
+            @apply w-full;
+        }
+        .nav-link.active {
+            @apply text-white font-bold;
+        }
+        .nav-link.active::after {
+            @apply w-full;
+        }
+        .dropdown-content {
+            @apply mt-2 border-t-2 border-primary;
+        }
+        .drawer-side {
+            @apply bg-base-100;
+        }
+        .drawer-side ul {
+            @apply p-4;
+        }
+        .drawer-side a {
+            @apply hover:bg-base-200 rounded-lg transition-all duration-300;
+        }
+        .card {
+            @apply transition-all duration-300 hover:-translate-y-1;
+        }
+        .btn {
+            @apply transition-all duration-300 hover:scale-105;
+        }
+        .stats {
+            @apply transition-all duration-300 hover:shadow-xl;
+        }
+        .section-title {
+            @apply relative inline-block;
+        }
+        .section-title::after {
+            content: '';
+            @apply absolute bottom-0 left-0 w-1/2 h-1 bg-primary transform -translate-x-1/2;
+        }
+        .btn-primary {
+            @apply bg-primary hover:bg-dark text-white;
+        }
+        .btn-secondary {
+            @apply bg-secondary hover:bg-accent text-white;
+        }
+        .btn-outline {
+            @apply border-2 border-white hover:bg-white hover:text-white;
+        }
+        .icon-primary {
+            @apply text-white;
+        }
+        .icon-secondary {
+            @apply text-secondary;
+        }
+    </style>
+</head>
+<body class="font-roboto bg-base-200">
+    <!-- Announcement Bar -->
+    <div class="bg-primary text-white py-1 px-4 text-center text-sm">
+        <span>Leading manufacturer of precision automotive components | IATF16949:2016 Certified</span>
+    </div>
+
+    <!-- Top Navigation -->
+    <div class="bg-neutral text-white py-2">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <a href="#" class=" transition-colors duration-300 flex items-center space-x-2">
+                        <i class="fa fa-book"></i>
+                        <span>Download Brochure</span>
+                    </a>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="mailto:contact@dynakstamp.com" class=" transition-colors duration-300 flex items-center space-x-2">
+                        <i class="fa fa-envelope"></i>
+                        <span>contact@dynakstamp.com</span>
+                    </a>
+                    <a href="tel:+91 20 27111900" class=" transition-colors duration-300 flex items-center space-x-2">
+                        <i class="fa fa-phone"></i>
+                        <span>+91 20 27111900</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <img src="images/logo-dyna.jpg" alt="Dyna-K Logo" class="h-16">
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link font-medium active">Home</a>
+                    <div class="dropdown dropdown-hover">
+                        <label tabindex="0" class="nav-link font-medium cursor-pointer flex items-center">
+                            About Us <i class="fa fa-chevron-down ml-1 text-xs"></i>
+                        </label>
+                        <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a href="company-profile.html">Company Profile</a></li>
+                            <li><a href="vision-quality-policy.html">Vision & Quality</a></li>
+                            <li><a href="certification.html">Certification</a></li>
+                            <li><a href="initiatives.html">Initiatives</a></li>
+                        </ul>
+                    </div>
+                    <a href="services.html" class="nav-link font-medium">Services</a>
+                    <a href="facilities.html" class="nav-link font-medium">Facilities</a>
+                    <a href="customers.html" class="nav-link font-medium">Customers</a>
+                    <div class="dropdown dropdown-hover">
+                        <label tabindex="0" class="nav-link font-medium cursor-pointer flex items-center">
+                            Products <i class="fa fa-chevron-down ml-1 text-xs"></i>
+                        </label>
+                        <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a href="engine-parts.html">Engine Parts</a></li>
+                            <li><a href="brake-components.html">Brake Components</a></li>
+                            <li><a href="chassis-parts.html">Chassis Parts</a></li>
+                            <li><a href="turbo-chargers.html">Turbo Chargers</a></li>
+                            <li><a href="other-parts.html">Other Parts</a></li>
+                            <li><a href="emission-filtration-parts.html">Emission & Filtration</a></li>
+                            <li><a href="welded-assemblies.html">Welded Assemblies</a></li>
+                        </ul>
+                    </div>
+                    <a href="career.html" class="nav-link font-medium">Careers</a>
+                    <a href="contact.html" class="nav-link font-medium">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <div class="drawer drawer-end">
+                        <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+                        <div class="drawer-content">
+                            <label for="my-drawer" class="btn btn-ghost btn-circle">
+                                <i class="fa fa-bars text-xl"></i>
+                            </label>
+                        </div> 
+                        <div class="drawer-side">
+                            <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+                            <ul class="menu p-4 w-80 min-h-full bg-base-200">
+                                <li><a href="index.html" class="active">Home</a></li>
+                                <li>
+                                    <details>
+                                        <summary>About Us</summary>
+                                        <ul>
+                                            <li><a href="company-profile.html">Company Profile</a></li>
+                                            <li><a href="vision-quality-policy.html">Vision & Quality</a></li>
+                                            <li><a href="certification.html">Certification</a></li>
+                                            <li><a href="initiatives.html">Initiatives</a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="facilities.html">Facilities</a></li>
+                                <li><a href="customers.html">Customers</a></li>
+                                <li>
+                                    <details>
+                                        <summary>Products</summary>
+                                        <ul>
+                                            <li><a href="engine-parts.html">Engine Parts</a></li>
+                                            <li><a href="brake-components.html">Brake Components</a></li>
+                                            <li><a href="chassis-parts.html">Chassis Parts</a></li>
+                                            <li><a href="turbo-chargers.html">Turbo Chargers</a></li>
+                                            <li><a href="other-parts.html">Other Parts</a></li>
+                                            <li><a href="emission-filtration-parts.html">Emission & Filtration</a></li>
+                                            <li><a href="welded-assemblies.html">Welded Assemblies</a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+                                <li><a href="career.html">Careers</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative h-80 md:h-96 overflow-hidden ">
+        <!-- Background image with overlay -->
+        <div class="absolute inset-0 bg-gradient-to-r from-primary/90 to-dark/80">
+        </div>
+        
+        <div class="relative container mx-auto px-4 h-full flex items-center">
+            <div class="max-w-3xl">
+                <div class="inline-block bg-white/10 backdrop-blur-sm px-4 py-1 rounded-full mb-4">
+                    <span class="text-white/90 text-sm font-medium">Transparency & Trust</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-oswald font-bold mb-4 text-white">Privacy Policy</h1>
+                <p class="text-xl text-white/90 mb-8 max-w-2xl">Our commitment to protecting your personal information and maintaining your trust</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto bg-white shadow-xl rounded-lg p-8 md:p-12">
+                <div class="prose max-w-none">
+                    <h2 class="text-2xl md:text-3xl font-oswald font-bold text-primary mb-6 relative inline-block">
+                        Introduction
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-primary"></span>
+                    </h2>
+                    <p class="text-base-content/80 mb-6">Dyna-K Automotive Stamping Pvt. Ltd ("we," "our," or "us") respects your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website, use our services, or communicate with us.</p>
+                    <p class="text-base-content/80 mb-6">We encourage you to read this Privacy Policy carefully to understand our practices regarding your personal information. By accessing or using our services, you acknowledge that you have read and understood this Privacy Policy.</p>
+                    
+                    <h2 class="text-2xl md:text-3xl font-oswald font-bold text-primary mb-6 mt-10 relative inline-block">
+                        Information We Collect
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-primary"></span>
+                    </h2>
+                    
+                    <div class="bg-base-100 p-6 rounded-lg mb-8 shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <h3 class="text-xl font-oswald font-bold text-primary mb-4 flex items-center">
+                            <i class="fa fa-user-circle text-primary mr-3"></i>
+                            Personal Information
+                        </h3>
+                        <p class="text-base-content/80 mb-4">We may collect personal information that you provide directly to us when you:</p>
+                        <ul class="list-disc pl-6 mb-6 space-y-2 text-base-content/80">
+                            <li>Contact us through our website, email, or phone</li>
+                            <li>Request a quote or information about our products</li>
+                            <li>Submit job applications or career inquiries</li>
+                            <li>Subscribe to our newsletter or marketing communications</li>
+                            <li>Register for events or webinars</li>
+                        </ul>
+                        <p class="text-base-content/80 mb-6">The types of personal information we may collect include:</p>
+                        <ul class="list-disc pl-6 mb-6 space-y-2 text-base-content/80">
+                            <li>Name, email address, phone number, and company information</li>
+                            <li>Job title and professional background</li>
+                            <li>Information about your business needs and requirements</li>
+                            <li>Any other information you choose to provide</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-base-100 p-6 rounded-lg mb-8 shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <h3 class="text-xl font-oswald font-bold text-primary mb-4 flex items-center">
+                            <i class="fa fa-desktop text-primary mr-3"></i>
+                            Automatically Collected Information
+                        </h3>
+                        <p class="text-base-content/80 mb-4">When you visit our website, we may automatically collect certain information about your device and usage patterns, including:</p>
+                        <ul class="list-disc pl-6 mb-6 space-y-2 text-base-content/80">
+                            <li>IP address and browser type</li>
+                            <li>Device information (such as your operating system)</li>
+                            <li>Pages visited and time spent on the website</li>
+                            <li>Referral sources and links clicked</li>
+                            <li>Location information</li>
+                        </ul>
+                        <p class="text-base-content/80 mb-6">We collect this information using cookies, log files, and similar technologies. For more information about our use of cookies, please see our Cookie Policy.</p>
+                    </div>
+                    
+                    <h2 class="text-2xl md:text-3xl font-oswald font-bold text-primary mb-6 mt-10 relative inline-block">
+                        How We Use Your Information
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-primary"></span>
+                    </h2>
+                    <p class="text-base-content/80 mb-4">We may use the information we collect for various purposes, including to:</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                        <div class="bg-base-100 p-4 rounded-lg shadow flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                            <span>Provide, maintain, and improve our services</span>
+                        </div>
+                        <div class="bg-base-100 p-4 rounded-lg shadow flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                            <span>Process and respond to your inquiries and requests</span>
+                        </div>
+                        <div class="bg-base-100 p-4 rounded-lg shadow flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                            <span>Send technical notices and administrative messages</span>
+                        </div>
+                        <div class="bg-base-100 p-4 rounded-lg shadow flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                            <span>Provide customer support and communications</span>
+                        </div>
+                        <div class="bg-base-100 p-4 rounded-lg shadow flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                            <span>Analyze usage patterns and improve functionality</span>
+                        </div>
+                        <div class="bg-base-100 p-4 rounded-lg shadow flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                            <span>Protect against fraud and illegal activities</span>
+                        </div>
+                    </div>
+                    
+                    <h2 class="text-2xl md:text-3xl font-oswald font-bold text-primary mb-6 mt-10 relative inline-block">
+                        Information Sharing and Disclosure
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-primary"></span>
+                    </h2>
+                    <p class="text-base-content/80 mb-4">We may share your personal information in the following circumstances:</p>
+                    <div class="space-y-4 mb-8">
+                        <div class="bg-base-100 p-5 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                            <h4 class="font-bold text-primary mb-2">Service Providers</h4>
+                            <p>We may share your information with third-party vendors, consultants, and other service providers who need access to such information to carry out work on our behalf.</p>
+                        </div>
+                        <div class="bg-base-100 p-5 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                            <h4 class="font-bold text-primary mb-2">Business Transfers</h4>
+                            <p>If we are involved in a merger, acquisition, financing, or sale of all or a portion of our business, your information may be transferred as part of that transaction.</p>
+                        </div>
+                        <div class="bg-base-100 p-5 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                            <h4 class="font-bold text-primary mb-2">Legal Requirements</h4>
+                            <p>We may disclose your information if required to do so by law or in response to valid requests by public authorities.</p>
+                        </div>
+                        <div class="bg-base-100 p-5 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                            <h4 class="font-bold text-primary mb-2">With Your Consent</h4>
+                            <p>We may share your information with third parties when we have your consent to do so.</p>
+                        </div>
+                    </div>
+                    
+                    <h2 class="text-2xl md:text-3xl font-oswald font-bold text-primary mb-6 mt-10 relative inline-block">
+                        Data Security
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-secondary/50"></span>
+                    </h2>
+                    <div class="bg-base-100 p-6 rounded-lg mb-8 shadow-md border-l-4 border-primary">
+                        <p class="text-base-content/80">We implement appropriate security measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the Internet or electronic storage is 100% secure, and we cannot guarantee absolute security of your data.</p>
+                    </div>
+                    
+                    <h2 class="text-2xl md:text-3xl font-oswald font-bold text-primary mb-6 mt-10 relative inline-block">
+                        Your Rights and Choices
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-primary"></span>
+                    </h2>
+                    <p class="text-base-content/80 mb-4">Depending on your location, you may have certain rights regarding your personal information, including:</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                        <div class="bg-base-100 p-4 rounded-lg shadow flex items-center border-l-2 border-secondary">
+                            <span>Accessing and correcting your information</span>
+                        </div>
+                        <div class="bg-base-100 p-4 rounded-lg shadow flex items-center border-l-2 border-secondary">
+                            <span>Withdrawing consent at any time</span>
+                        </div>
+                        <div class="bg-base-100 p-4 rounded-lg shadow flex items-center border-l-2 border-secondary">
+                            <span>Objecting to processing of your information</span>
+                        </div>
+                        <div class="bg-base-100 p-4 rounded-lg shadow flex items-center border-l-2 border-secondary">
+                            <span>Requesting restriction of processing</span>
+                        </div>
+                        <div class="bg-base-100 p-4 rounded-lg shadow flex items-center border-l-2 border-secondary">
+                            <span>Requesting transfer of your information</span>
+                        </div>
+                        <div class="bg-base-100 p-4 rounded-lg shadow flex items-center border-l-2 border-secondary">
+                            <span>Opting out of marketing communications</span>
+                        </div>
+                    </div>
+                    <p class="text-base-content/80 mb-6">To exercise these rights or to ask questions about our privacy practices, please contact us using the information provided in the "Contact Us" section below.</p>
+                    
+                    <h2 class="text-2xl md:text-3xl font-oswald font-bold text-primary mb-6 mt-10 relative inline-block">
+                        Third-Party Websites
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-primary"></span>
+                    </h2>
+                    <div class="bg-base-100 p-6 rounded-lg mb-8 shadow-md border-l-4 border-secondary">
+                        <p class="text-base-content/80">Our website may contain links to third-party websites, products, or services. We are not responsible for the privacy practices or content of these third-party sites. We encourage you to read the privacy policies of any third-party sites you visit.</p>
+                    </div>
+                    
+                    <h2 class="text-2xl md:text-3xl font-oswald font-bold text-primary mb-6 mt-10 relative inline-block">
+                        Children's Privacy
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-primary"></span>
+                    </h2>
+                    <div class="bg-base-100 p-6 rounded-lg mb-8 shadow-md border-l-4 border-primary">
+                        <p class="text-base-content/80">Our services are not directed to children under the age of 16, and we do not knowingly collect personal information from children. If you believe we have inadvertently collected information from a child, please contact us, and we will promptly delete such information.</p>
+                    </div>
+                    
+                    <h2 class="text-2xl md:text-3xl font-oswald font-bold text-primary mb-6 mt-10 relative inline-block">
+                        Changes to this Privacy Policy
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-primary"></span>
+                    </h2>
+                    <div class="bg-base-100 p-6 rounded-lg mb-8 shadow-md border-l-4 border-secondary">
+                        <p class="text-base-content/80">We may update this Privacy Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons. We will post the revised policy on our website with the effective date. We encourage you to review the Privacy Policy whenever you access our services.</p>
+                    </div>
+                    
+                    <h2 class="text-2xl md:text-3xl font-oswald font-bold text-primary mb-6 mt-10 relative inline-block">
+                        Contact Us
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-primary"></span>
+                    </h2>
+                    <p class="text-base-content/80 mb-6">If you have any questions, concerns, or requests regarding this Privacy Policy or our privacy practices, please contact us at:</p>
+                    <div class="bg-base-200 p-6 rounded-lg mb-6 shadow-lg border border-secondary/20">
+                        <div class="flex items-start mb-2">
+                            <i class="fa fa-building text-primary mt-1 mr-3"></i>
+                            <p class="text-base-content/80"><strong>Dyna-K Automotive Stamping Pvt. Ltd</strong></p>
+                        </div>
+                        <div class="flex items-start mb-2">
+                            <i class="fa fa-map-marker text-primary mt-1 mr-3"></i>
+                            <p class="text-base-content/80">J6, MIDC Indrayani Nagar Road, Balaji Nagar, Bhosari, Pimpri-Chinchwad, Maharashtra, India – 411026</p>
+                        </div>
+                        <div class="flex items-start mb-2">
+                            <i class="fa fa-envelope text-primary mt-1 mr-3"></i>
+                            <p class="text-base-content/80">privacy@dynakstamp.com</p>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fa fa-phone text-primary mt-1 mr-3"></i>
+                            <p class="text-base-content/80">+91 20 27111900</p>
+                        </div>
+                    </div>
+                    
+                    <div class="border-t border-gray-300 pt-6 mt-10">
+                        <p class="text-base-content/80 italic">Last Updated: Apr 1, 2025</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-neutral text-white">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-oswald font-bold mb-6  relative inline-block">
+                        About Us
+                        <span class="absolute bottom-0 left-0 w-full h-0.5"></span>
+                    </h3>
+                    <p class="text-gray-300 mb-4">Dyna-K Automotive Stamping Pvt. Ltd is a leading manufacturer of precision automotive components with a commitment to quality and innovation.</p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="btn btn-circle btn-sm ">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/dyna-k-automotive-stampings/" class="btn btn-circle btn-sm ">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="btn btn-circle btn-sm ">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-oswald font-bold mb-6  relative inline-block">
+                        Quick Links
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 "></span>
+                    </h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="flex items-center transition-colors">
+                            <i class="fa fa-chevron-right mr-2  text-xs"></i> Home
+                        </a></li>
+                        <li><a href="products.html" class="flex items-center  transition-colors">
+                            <i class="fa fa-chevron-right mr-2  text-xs"></i> Products
+                        </a></li>
+                        <li><a href="company-profile.html" class="flex items-center  transition-colors">
+                            <i class="fa fa-chevron-right mr-2  text-xs"></i> About Us
+                        </a></li>
+                        <li><a href="facilities.html" class="flex items-center  transition-colors">
+                            <i class="fa fa-chevron-right mr-2  text-xs"></i> Facilities
+                        </a></li>
+                        <li><a href="contact.html" class="flex items-center  transition-colors">
+                            <i class="fa fa-chevron-right mr-2  text-xs"></i> Contact
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="sm:col-span-2 md:col-span-1">
+                    <h3 class="text-xl font-oswald font-bold mb-6  relative inline-block">
+                        Contact Info
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 "></span>
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fa fa-map-marker  mt-1 mr-3"></i>
+                            <span>J6, MIDC Indrayani Nagar Road, Balaji Nagar, Bhosari,
+                              Pimpri-Chinchwad, Maharashtra, India – 411026.</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-phone  mr-3"></i>
+                            <span>+91 20 27111900</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-envelope  mr-3"></i>
+                            <span>contact@dynakstamp.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-clock-o  mr-3"></i>
+                            <span>Mon-Sat: 9:00 AM - 5:30 PM</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sm:col-span-2 md:col-span-1">
+                    <h3 class="text-xl font-oswald font-bold mb-6  relative inline-block">
+                        Newsletter
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 "></span>
+                    </h3>
+                    <p class="text-gray-300 mb-4">Subscribe to our newsletter for the latest updates and industry insights.</p>
+                    <div class="form-control">
+                        <div class="join w-full">
+                            <input type="email" placeholder="Your email" class="input input-bordered join-item w-2/3 text-black" />
+                            <button class="btn btn-primary join-item w-1/3">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-10 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Dyna-K Automotive Stamping. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

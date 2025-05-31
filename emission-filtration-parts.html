@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<!-- Mirrored from dynakstamp.com/emission-filtration-parts.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 05 Dec 2020 07:18:18 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emission & Filtration Parts - Dyna-K Automotive Stamping Pvt. Ltd</title>
+    <link rel="icon" type="image/png" href="favicaon.png">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- Slider scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="src/skdslider.min.js"></script>
+    <link href="src/skdslider-inner.css" rel="stylesheet">
+    <script src="js/jssor.slider.min.js"></script>
+    
+    <!-- Polyfill for older browsers -->
+    <script>
+        // Object.assign polyfill for IE
+        if (typeof Object.assign !== 'function') {
+            Object.assign = function(target) {
+                'use strict';
+                if (target === null || target === undefined) {
+                    throw new TypeError('Cannot convert undefined or null to object');
+                }
+                var to = Object(target);
+                for (var index = 1; index < arguments.length; index++) {
+                    var nextSource = arguments[index];
+                    if (nextSource !== null && nextSource !== undefined) {
+                        for (var nextKey in nextSource) {
+                            if (Object.prototype.hasOwnProperty.call(nextSource, nextKey)) {
+                                to[nextKey] = nextSource[nextKey];
+                            }
+                        }
+                    }
+                }
+                return to;
+            };
+        }
+    </script>
+    
+    <script type="text/javascript">
+        $(document).ready(function(){
+            // Product slider initialization
+            $('#product-slider').skdslider({
+                delay: 5000, 
+                animationSpeed: 1000,
+                showNextPrev: true,
+                showPlayButton: false,
+                showNav: true,
+                autoSlide: true,
+                animationType: 'sliding'
+            });
+        });
+        
+        // Move customer logos slider initialization outside document.ready
+        // to ensure it's available globally
+        var jssor_1_slider;
+        
+        function jssor_1_slider_init() {
+            var jssor_1_options = {
+                $AutoPlay: true,
+                $Idle: 0,
+                $AutoPlaySteps: 5,
+                $SlideDuration: 1600,
+                $SlideEasing: $Jease$.$Linear,
+                $PauseOnHover: 5,
+                $SlideWidth: 223,
+                $Cols: 6
+            };
+            
+            // Make sure the element exists before initializing
+            var sliderElement = document.getElementById("customer-logos-slider");
+            if(sliderElement) {
+                // Force visibility before initialization
+                sliderElement.style.visibility = 'visible';
+                jssor_1_slider = new $JssorSlider$("customer-logos-slider", jssor_1_options);
+                
+                // Responsive code
+                function ScaleSlider() {
+                    var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+                    if (refSize) {
+                        refSize = Math.min(refSize, 1170);
+                        jssor_1_slider.$ScaleWidth(refSize);
+                    }
+                    else {
+                        window.setTimeout(ScaleSlider, 20);
+                    }
+                }
+                ScaleSlider();
+                $Jssor$.$AddEvent(window, "load", ScaleSlider);
+                $Jssor$.$AddEvent(window, "resize", $Jssor$.$WindowResizeFilter(window, ScaleSlider));
+                $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+            }
+        }
+    </script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a237e',    // Deep blue
+                        secondary: '#2c3e50',   // Dark slate
+                        accent: '#34495e',      // Steel blue
+                        dark: '#0d47a1',        // Navy blue
+                        light: '#e3f2fd',       // Light blue
+                    },
+                    fontFamily: {
+                        oswald: ['Oswald', 'sans-serif'],
+                        roboto: ['Roboto', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .nav-link {
+            @apply text-base-content hover:text-white transition-colors duration-300 relative;
+        }
+        .nav-link::after {
+            content: '';
+            @apply absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300;
+        }
+        .nav-link:hover::after {
+            @apply w-full;
+        }
+        .nav-link.active {
+            @apply text-white font-bold;
+        }
+        .nav-link.active::after {
+            @apply w-full;
+        }
+        .dropdown-content {
+            @apply mt-2 border-t-2 border-primary;
+        }
+        .drawer-side {
+            @apply bg-base-100;
+        }
+        .drawer-side ul {
+            @apply p-4;
+        }
+        .drawer-side a {
+            @apply hover:bg-base-200 rounded-lg transition-all duration-300;
+        }
+        .card {
+            @apply transition-all duration-300 hover:-translate-y-1;
+        }
+        .btn {
+            @apply transition-all duration-300 hover:scale-105;
+        }
+        .stats {
+            @apply transition-all duration-300 hover:shadow-xl;
+        }
+        .section-title {
+            @apply relative inline-block;
+        }
+        .section-title::after {
+            content: '';
+            @apply absolute bottom-0 left-0 w-1/2 h-1 bg-primary transform -translate-x-1/2;
+        }
+        .btn-primary {
+            @apply bg-primary hover:bg-dark text-white;
+        }
+        .btn-secondary {
+            @apply bg-primary/80 hover:bg-primary text-white;
+        }
+        .btn-outline {
+            @apply border-2 border-white hover:bg-white hover:text-white;
+        }
+        .icon-primary {
+            @apply text-white;
+        }
+        .icon-secondary {
+            @apply text-white;
+        }
+    </style>
+</head>
+<body class="font-roboto bg-base-200">
+    <!-- Announcement Bar -->
+    <div class="bg-primary text-white py-1 px-4 text-center text-sm">
+        <span>Leading manufacturer of precision automotive components | IATF16949:2016 Certified</span>
+    </div>
+
+    <!-- Top Navigation -->
+    <div class="bg-neutral text-white py-2">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <a href="#" class="hover:text-white transition-colors duration-300 flex items-center space-x-2">
+                        <i class="fa fa-book text-white"></i>
+                        <span>Download Brochure</span>
+                    </a>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="mailto:contact@dynakstamp.com" class="hover:text-white transition-colors duration-300 flex items-center space-x-2">
+                        <i class="fa fa-envelope text-white"></i>
+                        <span>contact@dynakstamp.com</span>
+                    </a>
+                    <a href="tel:+91 20 27111900" class="hover:text-white transition-colors duration-300 flex items-center space-x-2">
+                        <i class="fa fa-phone text-white"></i>
+                        <span>+91 20 27111900</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <img src="images/logo-dyna.jpg" alt="Dyna-K Logo" class="h-16">
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link font-medium active">Home</a>
+                    <div class="dropdown dropdown-hover">
+                        <label tabindex="0" class="nav-link font-medium cursor-pointer flex items-center">
+                            About Us <i class="fa fa-chevron-down ml-1 text-xs"></i>
+                        </label>
+                        <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a href="company-profile.html">Company Profile</a></li>
+                            <li><a href="vision-quality-policy.html">Vision & Quality</a></li>
+                            <li><a href="certification.html">Certification</a></li>
+                            <li><a href="initiatives.html">Initiatives</a></li>
+                        </ul>
+                    </div>
+                    <a href="services.html" class="nav-link font-medium">Services</a>
+                    <a href="facilities.html" class="nav-link font-medium">Facilities</a>
+                    <a href="customers.html" class="nav-link font-medium">Customers</a>
+                    <div class="dropdown dropdown-hover">
+                        <label tabindex="0" class="nav-link font-medium cursor-pointer flex items-center">
+                            Products <i class="fa fa-chevron-down ml-1 text-xs"></i>
+                        </label>
+                        <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a href="engine-parts.html">Engine Parts</a></li>
+                            <li><a href="brake-components.html">Brake Components</a></li>
+                            <li><a href="chassis-parts.html">Chassis Parts</a></li>
+                            <li><a href="turbo-chargers.html">Turbo Chargers</a></li>
+                            <li><a href="other-parts.html">Other Parts</a></li>
+                            <li><a href="emission-filtration-parts.html">Emission & Filtration</a></li>
+                            <li><a href="welded-assemblies.html">Welded Assemblies</a></li>
+                        </ul>
+                    </div>
+                    <a href="career.html" class="nav-link font-medium">Careers</a>
+                    <a href="contact.html" class="nav-link font-medium">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <div class="drawer drawer-end">
+                        <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+                        <div class="drawer-content">
+                            <label for="my-drawer" class="btn btn-ghost btn-circle">
+                                <i class="fa fa-bars text-xl"></i>
+                            </label>
+                        </div> 
+                        <div class="drawer-side">
+                            <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+                            <ul class="menu p-4 w-80 min-h-full bg-base-200">
+                                <li><a href="index.html" class="active">Home</a></li>
+                                <li>
+                                    <details>
+                                        <summary>About Us</summary>
+                                        <ul>
+                                            <li><a href="company-profile.html">Company Profile</a></li>
+                                            <li><a href="vision-quality-policy.html">Vision & Quality</a></li>
+                                            <li><a href="certification.html">Certification</a></li>
+                                            <li><a href="initiatives.html">Initiatives</a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="facilities.html">Facilities</a></li>
+                                <li><a href="customers.html">Customers</a></li>
+                                <li>
+                                    <details>
+                                        <summary>Products</summary>
+                                        <ul>
+                                            <li><a href="engine-parts.html">Engine Parts</a></li>
+                                            <li><a href="brake-components.html">Brake Components</a></li>
+                                            <li><a href="chassis-parts.html">Chassis Parts</a></li>
+                                            <li><a href="turbo-chargers.html">Turbo Chargers</a></li>
+                                            <li><a href="other-parts.html">Other Parts</a></li>
+                                            <li><a href="emission-filtration-parts.html">Emission & Filtration</a></li>
+                                            <li><a href="welded-assemblies.html">Welded Assemblies</a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+                                <li><a href="career.html">Careers</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative bg-primary text-white py-20">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-oswald font-bold mb-6">Emission & Filtration Parts</h1>
+                <p class="text-xl">High-quality components for emission control and air filtration systems</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Overview Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="card bg-white shadow-xl">
+                    <figure class="relative overflow-hidden">
+                        <img src="images/end-plates-1.jpg" alt="Emission & Filtration Parts" class="w-full h-96 object-cover">
+                    </figure>
+                </div>
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-oswald font-bold text-primary mb-6">Advanced Emission & Filtration Components</h2>
+                    <p class="text-lg text-base-content/70 mb-6">Our precision-engineered emission and filtration parts are designed for optimal performance in demanding automotive applications. Each component is manufactured to exact specifications, ensuring reliability and compliance with emission standards.</p>
+                    
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div class="flex items-center">
+                            <i class="fa fa-check-circle text-primary text-xl mr-3"></i>
+                            <span class="text-base-content">CRCA Steel</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fa fa-check-circle text-primary text-xl mr-3"></i>
+                            <span class="text-base-content">Thickness: 0.5mm to 1.5mm</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fa fa-check-circle text-primary text-xl mr-3"></i>
+                            <span class="text-base-content">Diameter: 250mm to 600mm</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fa fa-check-circle text-primary text-xl mr-3"></i>
+                            <span class="text-base-content">Precision Stamping</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fa fa-check-circle text-primary text-xl mr-3"></i>
+                            <span class="text-base-content">High Durability</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fa fa-check-circle text-primary text-xl mr-3"></i>
+                            <span class="text-base-content">Corrosion Resistant</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <h3 class="text-xl font-oswald font-bold text-primary mb-2">Applications</h3>
+                        <p class="text-lg text-base-content/70">Air Filters for Light & Heavy Trucks</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section class="py-16 bg-base-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-oswald font-bold text-primary mb-2">Our Manufacturing Expertise</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-4"></div>
+                <p class="text-lg text-base-content max-w-3xl mx-auto">We employ advanced manufacturing technologies to produce high-precision emission and filtration components.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card bg-white shadow-xl">
+                    <div class="card-body">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                            <i class="fa fa-cogs text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="card-title text-primary font-oswald text-xl">Precision Stamping</h3>
+                        <p class="text-base-content/70">High-precision stamping technology ensures exact dimensional accuracy for optimal filtration performance.</p>
+                    </div>
+                </div>
+                <div class="card bg-white shadow-xl">
+                    <div class="card-body">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                            <i class="fa fa-shield text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="card-title text-primary font-oswald text-xl">Corrosion Protection</h3>
+                        <p class="text-base-content/70">Advanced surface treatments and coatings provide superior corrosion resistance for extended component life.</p>
+                    </div>
+                </div>
+                <div class="card bg-white shadow-xl">
+                    <div class="card-body">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                            <i class="fa fa-search-plus text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="card-title text-primary font-oswald text-xl">Quality Testing</h3>
+                        <p class="text-base-content/70">Comprehensive testing for leakage, flow capacity, and pressure resistance ensures optimal performance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Categories Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-oswald font-bold text-primary mb-2">Our Emission & Filtration Range</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-4"></div>
+                <p class="text-lg text-base-content max-w-3xl mx-auto">Explore our comprehensive range of high-performance emission control and filtration components.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card bg-white shadow-xl">
+                    <figure class="relative overflow-hidden">
+                        <img src="images/end-plates-3.jpg" alt="Air Filter End Plates" class="w-full h-64 object-cover">
+                    </figure>
+                    <div class="card-body">
+                        <h3 class="card-title text-primary font-oswald text-xl">Air Filter End Plates</h3>
+                        <p class="text-base-content/70">Precision-engineered end plates designed for optimal air flow and filtration efficiency in heavy-duty applications.</p>
+                        <div class="card-actions justify-end">
+                            <a href="contact.html" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card bg-white shadow-xl">
+                    <figure class="relative overflow-hidden">
+                        <img src="images/end-plates-4.jpg" alt="Filtration Components" class="w-full h-64 object-cover">
+                    </figure>
+                    <div class="card-body">
+                        <h3 class="card-title text-primary font-oswald text-xl">Filtration Components</h3>
+                        <p class="text-base-content/70">High-quality filter casings and housings manufactured to precise specifications for superior filtration performance.</p>
+                        <div class="card-actions justify-end">
+                            <a href="contact.html" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card bg-white shadow-xl">
+                    <figure class="relative overflow-hidden">
+                        <img src="images/end-plates-5.jpg" alt="Emission System Parts" class="w-full h-64 object-cover">
+                    </figure>
+                    <div class="card-body">
+                        <h3 class="card-title text-primary font-oswald text-xl">Emission System Parts</h3>
+                        <p class="text-base-content/70">Components for emission control systems that help vehicles meet stringent environmental regulations while maintaining performance.</p>
+                        <div class="card-actions justify-end">
+                            <a href="contact.html" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Specifications Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-oswald font-bold text-primary mb-2">Technical Excellence</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-4"></div>
+                < class="text-lg text-base-content max-w-3xl mx-auto">Our emission and filtration components are engineered to meet the highest standardsorange-500
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="card bg-white shadow-xl">
+                    <div class="card-body">
+                        <h3 class="card-title text-primary font-oswald text-xl">Material Specifications</h3>
+                        <ul class="space-y-3 mt-4">
+                            <li class="flex items-start">
+                                <i class="fa fa-circle text-primary text-xs mt-1.5 mr-3"></i>
+                                <span>Heat-resistant stainless steel (AISI 304, 316, 321)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-circle text-primary text-xs mt-1.5 mr-3"></i>
+                                <span>Corrosion-resistant alloys for extreme environments</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-circle text-primary text-xs mt-1.5 mr-3"></i>
+                                <span>High-temperature ceramic coatings</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-circle text-primary text-xs mt-1.5 mr-3"></i>
+                                <span>Environmentally friendly materials</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card bg-white shadow-xl">
+                    <div class="card-body">
+                        <h3 class="card-title text-primary font-oswald text-xl">Performance Features</h3>
+                        <ul class="space-y-3 mt-4">
+                            <li class="flex items-start">
+                                <i class="fa fa-circle text-primary text-xs mt-1.5 mr-3"></i>
+                                <span>Temperature resistance: up to 950°C</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-circle text-primary text-xs mt-1.5 mr-3"></i>
+                                <span>Pressure tolerance: up to 10 bar</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-circle text-primary text-xs mt-1.5 mr-3"></i>
+                                <span>Compliance with Euro 6, BS-VI emission standards</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-circle text-primary text-xs mt-1.5 mr-3"></i>
+                                <span>Extended operational lifespan: 150,000+ km</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-base-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-oswald font-bold text-primary mb-2">Why Choose Our Emission Components</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-4"></div>
+                <p class="text-lg text-base-content max-w-3xl mx-auto">Experience the difference with our premium emission and filtration components.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card bg-white shadow-xl">
+                    <div class="card-body">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                            <i class="fa fa-leaf text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="card-title text-primary font-oswald text-xl">Environmental Compliance</h3>
+                        <p class="text-base-content/70">Our components help vehicles meet and exceed global emission standards for cleaner operation.</p>
+                    </div>
+                </div>
+                <div class="card bg-white shadow-xl">
+                    <div class="card-body">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                            <i class="fa fa-tachometer text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="card-title text-primary font-oswald text-xl">Performance Optimization</h3>
+                        <p class="text-base-content/70">Designed to maintain optimal engine performance while reducing emissions.</p>
+                    </div>
+                </div>
+                <div class="card bg-white shadow-xl">
+                    <div class="card-body">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                            <i class="fa fa-wrench text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="card-title text-primary font-oswald text-xl">Durability & Longevity</h3>
+                        <p class="text-base-content/70">Engineered for extended operational life even under extreme conditions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Slider Section -->
+    <section class="py-16 bg-base-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-oswald font-bold text-primary mb-2">Product Gallery</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-4"></div>
+                <p class="text-lg text-base-content/70 max-w-3xl mx-auto">Explore our comprehensive range of emission and filtration components</p>
+            </div>
+
+            <div class="skdslider mb-12">
+                <ul id="product-slider" class="slides">
+                    <li>
+                        <img src="images/end-plates-1.jpg" alt="Emission & Filtration Overview" class="w-full" />
+                        <div class="slide-desc">
+                            <h3>Emission & Filtration Components</h3>
+                            <p>Precision engineered for optimal performance</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/end-plates-2.jpg" alt="Air Filter Components" class="w-full" />
+                        <div class="slide-desc">
+                            <h3>Air Filter Components</h3>
+                            <p>Designed for heavy-duty filtration applications</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/end-plates-3.jpg" alt="End Plates" class="w-full" />
+                        <div class="slide-desc">
+                            <h3>Filter End Plates</h3>
+                            <p>Precision manufactured for proper sealing and filtration</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/end-plates-4.jpg" alt="Filter Housings" class="w-full" />
+                        <div class="slide-desc">
+                            <h3>Filter Housings</h3>
+                            <p>Durable components for protection and performance</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/end-plates-5.jpg" alt="Emission Control Parts" class="w-full" />
+                        <div class="slide-desc">
+                            <h3>Emission Control Parts</h3>
+                            <p>Components that help meet environmental regulations</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Logos Section -->
+    <section class="py-16 bg-base-200">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-oswald font-bold text-primary mb-2">Our Trusted Customers</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-4"></div>
+                <p class="text-lg text-base-content/70 max-w-3xl mx-auto">We proudly serve leading automotive manufacturers worldwide</p>
+            </div>
+
+            <!-- Jssor Slider Begin -->
+            <div id="customer-logos-slider" style="position:relative;margin:0 auto;top:0px;left:0px;width:980px;height:100px;overflow:hidden;visibility:visible;" class="mx-auto">
+                <!-- Loading Screen -->
+                <div data-u="loading" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-position:50% 50%;background-repeat:no-repeat;background-image:url('images/loading.gif');background-color:rgba(0, 0, 0, 0.7);">
+                </div>
+                <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:980px;height:100px;overflow:hidden;">
+                    <div>
+                        <img data-u="image" src="images/logo-3.jpg" alt="Customer Logo 1" style="width:auto;height:80px;display:block;max-width:none;margin:0 auto;" />
+                    </div>
+                    <div>
+                        <img data-u="image" src="images/logo-7.jpg" alt="Customer Logo 2" style="width:auto;height:80px;display:block;max-width:none;margin:0 auto;" />
+                    </div>
+                    <div>
+                        <img data-u="image" src="images/logo-8.jpg" alt="Customer Logo 3" style="width:auto;height:80px;display:block;max-width:none;margin:0 auto;" />
+                    </div>
+                    <div>
+                        <img data-u="image" src="images/logo-9.jpg" alt="Customer Logo 4" style="width:auto;height:80px;display:block;max-width:none;margin:0 auto;" />
+                    </div>
+                    <div>
+                        <img data-u="image" src="images/logo-10.jpg" alt="Customer Logo 5" style="width:auto;height:80px;display:block;max-width:none;margin:0 auto;" />
+                    </div>
+                    <div>
+                        <img data-u="image" src="images/logo-12.jpg" alt="Customer Logo 6" style="width:auto;height:80px;display:block;max-width:none;margin:0 auto;" />
+                    </div>
+                    <div>
+                        <img data-u="image" src="images/logo-15.jpg" alt="Customer Logo 7" style="width:auto;height:80px;display:block;max-width:none;margin:0 auto;" />
+                    </div>
+                    <div>
+                        <img data-u="image" src="images/logo-17.jpg" alt="Customer Logo 8" style="width:auto;height:80px;display:block;max-width:none;margin:0 auto;" />
+                    </div>
+                    <div>
+                        <img data-u="image" src="images/logo-19.jpg" alt="Customer Logo 9" style="width:auto;height:80px;display:block;max-width:none;margin:0 auto;" />
+                    </div>
+                    <div>
+                        <img data-u="image" src="images/logo-20.jpg" alt="Customer Logo 10" style="width:auto;height:80px;display:block;max-width:none;margin:0 auto;" />
+                    </div>
+                </div>
+            </div>
+            <!-- Jssor Slider End -->
+
+            <!-- Fallback for customer logos if JavaScript is disabled -->
+            <noscript>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mt-8">
+                    <div class="bg-white p-4 flex items-center justify-center rounded shadow">
+                        <img src="images/logo-3.jpg" alt="Customer Logo 1" class="h-16 w-auto" />
+                    </div>
+                    <div class="bg-white p-4 flex items-center justify-center rounded shadow">
+                        <img src="images/logo-7.jpg" alt="Customer Logo 2" class="h-16 w-auto" />
+                    </div>
+                    <div class="bg-white p-4 flex items-center justify-center rounded shadow">
+                        <img src="images/logo-8.jpg" alt="Customer Logo 3" class="h-16 w-auto" />
+                    </div>
+                    <div class="bg-white p-4 flex items-center justify-center rounded shadow">
+                        <img src="images/logo-9.jpg" alt="Customer Logo 4" class="h-16 w-auto" />
+                    </div>
+                    <div class="bg-white p-4 flex items-center justify-center rounded shadow">
+                        <img src="images/logo-10.jpg" alt="Customer Logo 5" class="h-16 w-auto" />
+                    </div>
+                    <div class="bg-white p-4 flex items-center justify-center rounded shadow">
+                        <img src="images/logo-12.jpg" alt="Customer Logo 6" class="h-16 w-auto" />
+                    </div>
+                </div>
+            </noscript>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-neutral text-white">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-oswald font-bold mb-6 text-white">About Us</h3>
+                    <p class="text-gray-300 mb-4">Dyna-K Automotive Stamping Pvt. Ltd is a leading manufacturer of precision automotive components with a commitment to quality and innovation.</p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="btn btn-circle btn-sm ">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/dyna-k-automotive-stampings/" class="btn btn-circle btn-sm ">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="btn btn-circle btn-sm ">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-oswald font-bold mb-6 text-white">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="flex items-center hover:text-white transition-colors">
+                            <i class="fa fa-chevron-right mr-2 text-white text-xs"></i> Home
+                        </a></li>
+                        <li><a href="products.html" class="flex items-center hover:text-white transition-colors">
+                            <i class="fa fa-chevron-right mr-2 text-white text-xs"></i> Products
+                        </a></li>
+                        <li><a href="company-profile.html" class="flex items-center hover:text-white transition-colors">
+                            <i class="fa fa-chevron-right mr-2 text-white text-xs"></i> About Us
+                        </a></li>
+                        <li><a href="facilities.html" class="flex items-center hover:text-white transition-colors">
+                            <i class="fa fa-chevron-right mr-2 text-white text-xs"></i> Facilities
+                        </a></li>
+                        <li><a href="contact.html" class="flex items-center hover:text-white transition-colors">
+                            <i class="fa fa-chevron-right mr-2 text-white text-xs"></i> Contact
+                        </a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-oswald font-bold mb-6 text-white">Contact Info</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fa fa-map-marker text-white mt-1 mr-3"></i>
+                            <span>J6, MIDC Indrayani Nagar Road, Balaji Nagar, Bhosari,
+                              Pimpri-Chinchwad, Maharashtra, India – 411026.</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-phone text-white mr-3"></i>
+                            <span>+91 20 27111900</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-envelope text-white mr-3"></i>
+                            <span>contact@dynakstamp.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-clock-o text-white mr-3"></i>
+                            <span>Mon-Sat: 9:00 AM - 5:30 PM</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-oswald font-bold mb-6 text-white">Newsletter</h3>
+                    <p class="text-gray-300 mb-4">Subscribe to our newsletter for the latest updates and industry insights.</p>
+                    <div class="form-control">
+                        <div class="join">
+                            <input type="email" placeholder="Your email" class="input input-bordered join-item text-black" />
+                            <button class="btn btn-primary join-item">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-10 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Dyna-K Automotive Stamping Pvt. Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Slider Initialization Script -->
+    <script type="text/javascript">
+        // Initialize customer logos slider after window load
+        window.addEventListener('load', function() {
+            if (typeof jssor_1_slider_init === 'function') {
+                jssor_1_slider_init();
+                console.log("Customer logos slider initialized on window load");
+            } else {
+                console.error("Jssor slider initialization function not found");
+            }
+        });
+
+        // Backup initialization after a timeout
+        setTimeout(function() {
+            if (typeof jssor_1_slider === 'undefined' || jssor_1_slider === null) {
+                if (typeof jssor_1_slider_init === 'function') {
+                    jssor_1_slider_init();
+                    console.log("Customer logos slider initialized on timeout");
+                }
+            }
+        }, 1500);
+    </script>
+</body>
+
+<!-- Mirrored from dynakstamp.com/emission-filtration-parts.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 05 Dec 2020 07:18:34 GMT -->
+</html>

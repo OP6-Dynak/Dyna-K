@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Dyna-K Automotive Stamping Pvt. Ltd</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a237e',
+                        secondary: '#ff6f00',
+                        accent: '#ffd700',
+                        dark: '#0d47a1',
+                        light: '#e3f2fd',
+                    },
+                    fontFamily: {
+                        oswald: ['Oswald', 'sans-serif'],
+                        roboto: ['Roboto', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .nav-link {
+            @apply text-base-content hover:text-white transition-colors duration-300 relative;
+        }
+        .nav-link::after {
+            content: '';
+            @apply absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300;
+        }
+        .nav-link:hover::after {
+            @apply w-full;
+        }
+        .nav-link.active {
+            @apply text-white font-bold;
+        }
+        .nav-link.active::after {
+            @apply w-full;
+        }
+        .dropdown-content {
+            @apply mt-2 border-t-2 border-primary;
+        }
+        .drawer-side {
+            @apply bg-base-100;
+        }
+        .drawer-side ul {
+            @apply p-4;
+        }
+        .drawer-side a {
+            @apply hover:bg-base-200 rounded-lg transition-all duration-300;
+        }
+        .card {
+            @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-xl;
+        }
+        .btn {
+            @apply transition-all duration-300 hover:scale-105;
+        }
+        .stats {
+            @apply transition-all duration-300 hover:shadow-xl;
+        }
+        .section-title {
+            @apply relative inline-block;
+        }
+        .section-title::after {
+            content: '';
+            @apply absolute bottom-0 left-0 w-1/2 h-1 bg-primary transform -translate-x-1/2;
+        }
+        .service-card:hover img {
+            @apply scale-110;
+        }
+        .service-card img {
+            @apply transition-all duration-500;
+        }
+    </style>
+</head>
+<body class="font-roboto bg-base-200">
+    <!-- Announcement Bar -->
+    <div class="bg-primary text-white py-1 px-4 text-center text-sm">
+        <span>Leading manufacturer of precision automotive components | IATF16949:2016 Certified</span>
+    </div>
+
+    <!-- Top Navigation -->
+    <div class="bg-neutral text-white py-2">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <a href="download/dynak-Automo.pdf" download class="hover:text-white transition-colors duration-300 flex items-center space-x-2">
+                        <i class="fa fa-book text-white"></i>
+                        <span>Download Brochure</span>
+                    </a>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="mailto:contact@dynakstamp.com" class="hover:text-white transition-colors duration-300 flex items-center space-x-2">
+                        <i class="fa fa-envelope text-white"></i>
+                        <span>contact@dynakstamp.com</span>
+                    </a>
+                    <a href="tel:+91 20 27111900" class="hover:text-white transition-colors duration-300 flex items-center space-x-2">
+                        <i class="fa fa-phone text-white"></i>
+                        <span>+91 20 27111900</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <img src="images/logo-dyna.jpg" alt="Dyna-K Logo" class="h-16">
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link font-medium active">Home</a>
+                    <div class="dropdown dropdown-hover">
+                        <label tabindex="0" class="nav-link font-medium cursor-pointer flex items-center">
+                            About Us <i class="fa fa-chevron-down ml-1 text-xs"></i>
+                        </label>
+                        <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a href="company-profile.html">Company Profile</a></li>
+                            <li><a href="vision-quality-policy.html">Vision & Quality</a></li>
+                            <li><a href="certification.html">Certification</a></li>
+                            <li><a href="initiatives.html">Initiatives</a></li>
+                        </ul>
+                    </div>
+                    <a href="services.html" class="nav-link font-medium">Services</a>
+                    <a href="facilities.html" class="nav-link font-medium">Facilities</a>
+                    <a href="customers.html" class="nav-link font-medium">Customers</a>
+                    <div class="dropdown dropdown-hover">
+                        <label tabindex="0" class="nav-link font-medium cursor-pointer flex items-center">
+                            Products <i class="fa fa-chevron-down ml-1 text-xs"></i>
+                        </label>
+                        <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a href="engine-parts.html">Engine Parts</a></li>
+                            <li><a href="brake-components.html">Brake Components</a></li>
+                            <li><a href="chassis-parts.html">Chassis Parts</a></li>
+                            <li><a href="turbo-chargers.html">Turbo Chargers</a></li>
+                            <li><a href="other-parts.html">Other Parts</a></li>
+                            <li><a href="emission-filtration-parts.html">Emission & Filtration</a></li>
+                            <li><a href="welded-assemblies.html">Welded Assemblies</a></li>
+                        </ul>
+                    </div>
+                    <a href="career.html" class="nav-link font-medium">Careers</a>
+                    <a href="contact.html" class="nav-link font-medium">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <div class="drawer drawer-end">
+                        <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+                        <div class="drawer-content">
+                            <label for="my-drawer" class="btn btn-ghost btn-circle">
+                                <i class="fa fa-bars text-xl"></i>
+                            </label>
+                        </div> 
+                        <div class="drawer-side">
+                            <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+                            <ul class="menu p-4 w-80 min-h-full bg-base-200">
+                                <li><a href="index.html" class="active">Home</a></li>
+                                <li>
+                                    <details>
+                                        <summary>About Us</summary>
+                                        <ul>
+                                            <li><a href="company-profile.html">Company Profile</a></li>
+                                            <li><a href="vision-quality-policy.html">Vision & Quality</a></li>
+                                            <li><a href="certification.html">Certification</a></li>
+                                            <li><a href="initiatives.html">Initiatives</a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="facilities.html">Facilities</a></li>
+                                <li><a href="customers.html">Customers</a></li>
+                                <li>
+                                    <details>
+                                        <summary>Products</summary>
+                                        <ul>
+                                            <li><a href="engine-parts.html">Engine Parts</a></li>
+                                            <li><a href="brake-components.html">Brake Components</a></li>
+                                            <li><a href="chassis-parts.html">Chassis Parts</a></li>
+                                            <li><a href="turbo-chargers.html">Turbo Chargers</a></li>
+                                            <li><a href="other-parts.html">Other Parts</a></li>
+                                            <li><a href="emission-filtration-parts.html">Emission & Filtration</a></li>
+                                            <li><a href="welded-assemblies.html">Welded Assemblies</a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+                                <li><a href="career.html">Careers</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative h-80 md:h-96 overflow-hidden">
+        <!-- Background image with overlay -->
+        <div class="absolute inset-0 bg-gradient-to-r from-primary/90 to-dark/80">
+            
+        </div>
+        
+        <div class="relative container mx-auto px-4 h-full flex items-center">
+            <div class="max-w-3xl">
+                <div class="inline-block bg-white/10 backdrop-blur-sm px-4 py-1 rounded-full mb-4">
+                    <span class="text-white/90 text-sm font-medium text-primary">Comprehensive Automotive Solutions</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-oswald font-bold mb-4 text-white">Our Services</h1>
+                <p class="text-xl text-white/90 mb-8 max-w-2xl">From design and prototyping to manufacturing and quality assurance, we offer end-to-end solutions</p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#services" class="btn btn-primary hover:scale-105 transition-transform">
+                        Explore Services <i class="fa fa-arrow-down ml-2"></i>
+                    </a>
+                    <a href="contact.html" class="btn bg-white/20 hover:bg-white/30 text-white border-none hover:scale-105 transition-transform">
+                        Contact Us <i class="fa fa-envelope ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-oswald font-bold  mb-2 text-primary">Comprehensive Services</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-4"></div>
+                <p class="text-lg text-base-content max-w-3xl mx-auto">From concept to final product, we provide end-to-end solutions for automotive component needs</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="card bg-base-100 shadow-lg overflow-hidden service-card">
+                    <figure class="h-48 overflow-hidden">
+                        <svg viewBox="0 0 800 400" class="w-full h-full">
+                            <g transform="translate(400, 200)">
+                                <circle cx="0" cy="0" r="80" fill="#1a237e" opacity="0.2"/>
+                                <g transform="translate(-40, -40)">
+                                    <path d="M20,0 L60,0 L80,20 L80,80 L0,80 L0,20 Z" fill="#1a237e" opacity="0.7"/>
+                                    <line x1="20" y1="20" x2="60" y2="20" stroke="#ffffff" stroke-width="4"/>
+                                    <line x1="20" y1="40" x2="60" y2="40" stroke="#ffffff" stroke-width="4"/>
+                                    <line x1="20" y1="60" x2="60" y2="60" stroke="#ffffff" stroke-width="4"/>
+                                </g>
+                                <g transform="translate(20, -20)">
+                                    <path d="M0,0 L30,0 L40,10 L40,40 L0,40 Z" fill="#1a237e"/>
+                                    <line x1="10" y1="10" x2="30" y2="10" stroke="#ffffff" stroke-width="2"/>
+                                    <line x1="10" y1="20" x2="30" y2="20" stroke="#ffffff" stroke-width="2"/>
+                                    <line x1="10" y1="30" x2="30" y2="30" stroke="#ffffff" stroke-width="2"/>
+                                </g>
+                                <g transform="translate(0, 30)">
+                                    <circle cx="0" cy="0" r="15" fill="#1a237e"/>
+                                    <path d="M-8,-5 L8,-5 L0,8 Z" fill="#ffffff"/>
+                                </g>
+                            </g>
+                            <text x="400" y="320" text-anchor="middle" font-family="Arial" font-size="24" fill="#1a237e">Design & Engineering</text>
+                        </svg>
+                    </figure>
+                    <div class="card-body">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                            <i class="fa fa-pencil text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="card-title text-xl font-oswald">Design & Engineering</h3>
+                        <p class="text-base-content/80 mb-4">Our expert engineers work with you to design components that meet your exact specifications and performance requirements.</p>
+                        <ul class="space-y-2 mb-4">
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-primary mr-2 mt-1"></i>
+                                <span>3D modeling and CAD design</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-primary mr-2 mt-1"></i>
+                                <span>Finite Element Analysis (FEA)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-primary mr-2 mt-1"></i>
+                                <span>Design optimization</span>
+                            </li>
+                        </ul>
+                        <div class="card-actions justify-end">
+                            <a href="contact.html" class="btn btn-primary">Request Service</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service Card 2 -->
+                <div class="card bg-base-100 shadow-lg overflow-hidden service-card">
+                    <figure class="h-48 overflow-hidden">
+                        <svg viewBox="0 0 800 400" class="w-full h-full">
+                            <g transform="translate(400, 180)">
+                                <circle cx="0" cy="0" r="100" fill="#1a237e" opacity="0.1"/>
+                                <!-- Gear 1 -->
+                                <g transform="translate(-50, -20)">
+                                    <circle cx="0" cy="0" r="30" fill="#1a237e" opacity="0.7"/>
+                                    <circle cx="0" cy="0" r="15" fill="#e3f2fd"/>
+                                    <g>
+                                        <rect x="-5" y="-40" width="10" height="15" fill="#1a237e" opacity="0.7"/>
+                                        <rect x="-5" y="25" width="10" height="15" fill="#1a237e" opacity="0.7"/>
+                                        <rect x="-40" y="-5" width="15" height="10" fill="#1a237e" opacity="0.7"/>
+                                        <rect x="25" y="-5" width="15" height="10" fill="#1a237e" opacity="0.7"/>
+                                        <rect x="-34" y="-34" width="15" height="10" transform="rotate(45)" fill="#1a237e" opacity="0.7"/>
+                                        <rect x="19" y="-34" width="15" height="10" transform="rotate(135)" fill="#1a237e" opacity="0.7"/>
+                                        <rect x="-34" y="24" width="15" height="10" transform="rotate(-45)" fill="#1a237e" opacity="0.7"/>
+                                        <rect x="19" y="24" width="15" height="10" transform="rotate(-135)" fill="#1a237e" opacity="0.7"/>
+                                    </g>
+                                </g>
+                                <!-- Gear 2 -->
+                                <g transform="translate(30, 20)">
+                                    <circle cx="0" cy="0" r="25" fill="#1a237e" opacity="0.9"/>
+                                    <circle cx="0" cy="0" r="12" fill="#e3f2fd"/>
+                                    <g>
+                                        <rect x="-4" y="-32" width="8" height="12" fill="#1a237e" opacity="0.9"/>
+                                        <rect x="-4" y="20" width="8" height="12" fill="#1a237e" opacity="0.9"/>
+                                        <rect x="-32" y="-4" width="12" height="8" fill="#1a237e" opacity="0.9"/>
+                                        <rect x="20" y="-4" width="12" height="8" fill="#1a237e" opacity="0.9"/>
+                                        <rect x="-25" y="-25" width="12" height="8" transform="rotate(45)" fill="#1a237e" opacity="0.9"/>
+                                        <rect x="13" y="-25" width="12" height="8" transform="rotate(135)" fill="#1a237e" opacity="0.9"/>
+                                        <rect x="-25" y="17" width="12" height="8" transform="rotate(-45)" fill="#1a237e" opacity="0.9"/>
+                                        <rect x="13" y="17" width="12" height="8" transform="rotate(-135)" fill="#1a237e" opacity="0.9"/>
+                                    </g>
+                                </g>
+                                <!-- Testing Icon -->
+                                <g transform="translate(0, -70)">
+                                    <rect x="-25" y="-15" width="50" height="30" rx="5" fill="#1a237e"/>
+                                    <line x1="-15" y1="0" x2="15" y2="0" stroke="#ffffff" stroke-width="3"/>
+                                    <circle cx="-8" cy="0" r="4" fill="#ffffff"/>
+                                </g>
+                            </g>
+                            <text x="400" y="320" text-anchor="middle" font-family="Arial" font-size="24" fill="#1a237e">Prototyping & Testing</text>
+                        </svg>
+                    </figure>
+                    <div class="card-body">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                            <i class="fa fa-cogs text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="card-title text-xl font-oswald">Prototyping & Testing</h3>
+                        <p class="text-base-content/80 mb-4">Validate designs with prototypes and comprehensive testing before moving to full-scale production.</p>
+                        <ul class="space-y-2 mb-4">
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-primary mr-2 mt-1"></i>
+                                <span>Rapid prototyping</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-primary mr-2 mt-1"></i>
+                                <span>Material testing</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-primary mr-2 mt-1"></i>
+                                <span>Performance validation</span>
+                            </li>
+                        </ul>
+                        <div class="card-actions justify-end">
+                            <a href="contact.html" class="btn btn-primary">Request Service</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service Card 3 -->
+                <div class="card bg-base-100 shadow-lg overflow-hidden service-card">
+                    <figure class="h-48 overflow-hidden">
+                        <svg viewBox="0 0 800 400" class="w-full h-full">
+                            <g transform="translate(400, 180)">
+                                <circle cx="0" cy="0" r="100" fill="#1a237e" opacity="0.1"/>
+                                <!-- Factory Icon -->
+                                <g transform="translate(0, 0) scale(0.8)">
+                                    <!-- Building -->
+                                    <path d="M-100,60 L-100,-20 L-40,-50 L-40,60 Z" fill="#1a237e" opacity="0.7"/>
+                                    <path d="M-40,60 L-40,-50 L20,-20 L20,60 Z" fill="#1a237e" opacity="0.85"/>
+                                    <path d="M20,60 L20,-20 L80,10 L80,60 Z" fill="#1a237e" opacity="0.7"/>
+                                    <!-- Windows -->
+                                    <rect x="-85" y="-10" width="15" height="15" fill="#ffffff" opacity="0.8"/>
+                                    <rect x="-85" y="20" width="15" height="15" fill="#ffffff" opacity="0.8"/>
+                                    <rect x="-25" y="-25" width="15" height="15" fill="#ffffff" opacity="0.8"/>
+                                    <rect x="-25" y="5" width="15" height="15" fill="#ffffff" opacity="0.8"/>
+                                    <rect x="-25" y="35" width="15" height="15" fill="#ffffff" opacity="0.8"/>
+                                    <rect x="35" y="0" width="15" height="15" fill="#ffffff" opacity="0.8"/>
+                                    <rect x="35" y="30" width="15" height="15" fill="#ffffff" opacity="0.8"/>
+                                    <!-- Chimneys -->
+                                    <rect x="-70" y="-40" width="10" height="25" fill="#1a237e"/>
+                                    <rect x="-75" y="-45" width="20" height="5" fill="#1a237e"/>
+                                    <rect x="-5" y="-35" width="10" height="20" fill="#1a237e"/>
+                                    <rect x="-10" y="-40" width="20" height="5" fill="#1a237e"/>
+                                    <!-- Smoke -->
+                                    <circle cx="-65" cy="-60" r="8" fill="#1a237e" opacity="0.3"/>
+                                    <circle cx="-55" cy="-70" r="6" fill="#1a237e" opacity="0.2"/>
+                                    <circle cx="-45" cy="-75" r="4" fill="#1a237e" opacity="0.1"/>
+                                    <circle cx="0" cy="-50" r="7" fill="#1a237e" opacity="0.3"/>
+                                    <circle cx="10" cy="-60" r="5" fill="#1a237e" opacity="0.2"/>
+                                    <circle cx="15" cy="-65" r="3" fill="#1a237e" opacity="0.1"/>
+                                </g>
+                            </g>
+                            <text x="400" y="320" text-anchor="middle" font-family="Arial" font-size="24" fill="#1a237e">Precision Manufacturing</text>
+                        </svg>
+                    </figure>
+                    <div class="card-body">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                            <i class="fa fa-industry text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="card-title text-xl font-oswald">Precision Manufacturing</h3>
+                        <p class="text-base-content/80 mb-4">State-of-the-art production facilities and processes to ensure high-quality components.</p>
+                        <ul class="space-y-2 mb-4">
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-primary mr-2 mt-1"></i>
+                                <span>Stamping and forming</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-primary mr-2 mt-1"></i>
+                                <span>CNC machining</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-primary mr-2 mt-1"></i>
+                                <span>Welding and assembly</span>
+                            </li>
+                        </ul>
+                        <div class="card-actions justify-end">
+                            <a href="contact.html" class="btn btn-primary">Request Service</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service Card 4 -->
+                <div class="card bg-base-100 shadow-lg overflow-hidden service-card">
+                    <figure class="h-48 overflow-hidden">
+                        <svg viewBox="0 0 800 400" class="w-full h-full">
+                            <g transform="translate(400, 180)">
+                                <circle cx="0" cy="0" r="100" fill="#1a237e" opacity="0.1"/>
+                                <!-- Check mark in circle -->
+                                <circle cx="0" cy="0" r="70" fill="#1a237e" opacity="0.2"/>
+                                <circle cx="0" cy="0" r="60" fill="#1a237e" opacity="0.5"/>
+                                <path d="M-30,0 L-10,20 L30,-20" stroke="#ffffff" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                                
+                                <!-- Measurement tools on the sides -->
+                                <g transform="translate(-100, -40)">
+                                    <!-- Caliper -->
+                                    <rect x="0" y="0" width="50" height="10" fill="#1a237e" opacity="0.8"/>
+                                    <rect x="10" y="-15" width="5" height="40" fill="#1a237e" opacity="0.8"/>
+                                    <rect x="35" y="-15" width="5" height="40" fill="#1a237e" opacity="0.8"/>
+                                </g>
+                                
+                                <g transform="translate(70, 50)">
+                                    <!-- Magnifying glass -->
+                                    <circle cx="0" cy="0" r="20" stroke="#1a237e" stroke-width="6" fill="none"/>
+                                    <line x1="15" y1="15" x2="35" y2="35" stroke="#1a237e" stroke-width="6"/>
+                                </g>
+                            </g>
+                            <text x="400" y="320" text-anchor="middle" font-family="Arial" font-size="24" fill="#1a237e">Quality Assurance</text>
+                        </svg>
+                    </figure>
+                    <div class="card-body">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                            <i class="fa fa-check-circle text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="card-title text-xl font-oswald">Quality Assurance</h3>
+                        <p class="text-base-content/80 mb-4">Rigorous quality control processes that ensure every component meets the highest standards.</p>
+                        <ul class="space-y-2 mb-4">
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-primary mr-2 mt-1"></i>
+                                <span>Dimensional inspection</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-primary mr-2 mt-1"></i>
+                                <span>Material composition analysis</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-primary mr-2 mt-1"></i>
+                                <span>Statistical process control</span>
+                            </li>
+                        </ul>
+                        <div class="card-actions justify-end">
+                            <a href="contact.html" class="btn btn-primary">Request Service</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service Card 5 -->
+                <div class="card bg-base-100 shadow-lg overflow-hidden service-card">
+                    <figure class="h-48 overflow-hidden">
+                        <svg viewBox="0 0 800 400" class="w-full h-full">
+                            <g transform="translate(400, 180)">
+                                <circle cx="0" cy="0" r="100" fill="#1a237e" opacity="0.1"/>
+                                
+                                <!-- Supply Chain Nodes and Links -->
+                                <g transform="translate(-150, 0)">
+                                    <!-- Factory node -->
+                                    <rect x="-20" y="-20" width="40" height="40" fill="#1a237e" opacity="0.8"/>
+                                    <line x1="-10" y1="-10" x2="10" y2="-10" stroke="#ffffff" stroke-width="2"/>
+                                    <line x1="-10" y1="0" x2="10" y2="0" stroke="#ffffff" stroke-width="2"/>
+                                    <line x1="-10" y1="10" x2="10" y2="10" stroke="#ffffff" stroke-width="2"/>
+                                </g>
+                                
+                                <g transform="translate(-50, -50)">
+                                    <!-- Warehouse node -->
+                                    <path d="M-20,20 L0,-10 L20,20 Z" fill="#1a237e" opacity="0.7"/>
+                                    <rect x="-15" y="5" width="30" height="15" fill="#1a237e" opacity="0.7"/>
+                                </g>
+                                
+                                <g transform="translate(50, -30)">
+                                    <!-- Distribution node -->
+                                    <circle cx="0" cy="0" r="20" fill="#1a237e" opacity="0.7"/>
+                                    <path d="M-10,-10 L10,10 M-10,10 L10,-10" stroke="#ffffff" stroke-width="3"/>
+                                </g>
+                                
+                                <g transform="translate(150, 0)">
+                                    <!-- Store/Customer node -->
+                                    <path d="M-20,-20 L20,-20 L20,20 L-20,20 Z" fill="#1a237e" opacity="0.8"/>
+                                    <path d="M-20,-20 L0,-40 L20,-20" fill="#1a237e" opacity="0.8"/>
+                                    <rect x="-5" y="0" width="10" height="20" fill="#ffffff"/>
+                                </g>
+                                
+                                <!-- Truck in the middle -->
+                                <g transform="translate(0, 40)">
+                                    <rect x="-40" y="-15" width="80" height="30" fill="#1a237e" opacity="0.9" rx="5"/>
+                                    <rect x="-35" y="-30" width="30" height="25" fill="#1a237e" opacity="0.9" rx="2"/>
+                                    <circle cx="-25" cy="15" r="10" fill="#1a237e"/>
+                                    <circle cx="25" cy="15" r="10" fill="#1a237e"/>
+                                    <circle cx="-25" cy="15" r="5" fill="#ffffff"/>
+                                    <circle cx="25" cy="15" r="5" fill="#ffffff"/>
+                                    <rect x="-15" y="-10" width="25" height="10" fill="#ffffff" opacity="0.7"/>
+                                </g>
+                                
+                                <!-- Connection lines -->
+                                <line x1="-150" y1="0" x2="-50" y2="-50" stroke="#1a237e" stroke-width="3" stroke-dasharray="5,5"/>
+                                <line x1="-50" y1="-50" x2="50" y2="-30" stroke="#1a237e" stroke-width="3" stroke-dasharray="5,5"/>
+                                <line x1="50" y1="-30" x2="150" y2="0" stroke="#1a237e" stroke-width="3" stroke-dasharray="5,5"/>
+                            </g>
+                            <text x="400" y="320" text-anchor="middle" font-family="Arial" font-size="24" fill="#1a237e">Supply Chain Management</text>
+                        </svg>
+                    </figure>
+                    <div class="card-body">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                            <i class="fa fa-truck text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="card-title text-xl font-oswald">Supply Chain Management</h3>
+                        <p class="text-base-content/80 mb-4">Efficient logistics and supply chain solutions to ensure timely delivery of components.</p>
+                        <ul class="space-y-2 mb-4">
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-primary mr-2 mt-1"></i>
+                                <span>Just-in-time delivery</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-primary mr-2 mt-1"></i>
+                                <span>Inventory management</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-primary mr-2 mt-1"></i>
+                                <span>Global logistics coordination</span>
+                            </li>
+                        </ul>
+                        <div class="card-actions justify-end">
+                            <a href="contact.html" class="btn btn-primary">Request Service</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service Card 6 -->
+                <div class="card bg-base-100 shadow-lg overflow-hidden service-card">
+                    <figure class="h-48 overflow-hidden">
+                        <svg viewBox="0 0 800 400" class="w-full h-full">
+                            <g transform="translate(400, 180)">
+                                <circle cx="0" cy="0" r="100" fill="#1a237e" opacity="0.1"/>
+                                
+                                <!-- Brain graphic representing consulting/knowledge -->
+                                <g transform="translate(0, -10) scale(0.9)">
+                                    <!-- Brain outline -->
+                                    <path d="M-60,0 C-60,-40 -30,-60 0,-60 C30,-60 60,-40 60,0 C60,40 30,60 0,60 C-30,60 -60,40 -60,0 Z" fill="#1a237e" opacity="0.2"/>
+                                    
+                                    <!-- Left hemisphere -->
+                                    <path d="M-60,0 C-60,-30 -40,-50 -20,-50 C-10,-50 0,-45 0,-30 L0,30 C0,45 -10,50 -20,50 C-40,50 -60,30 -60,0 Z" fill="#1a237e" opacity="0.6"/>
+                                    
+                                    <!-- Right hemisphere -->
+                                    <path d="M60,0 C60,-30 40,-50 20,-50 C10,-50 0,-45 0,-30 L0,30 C0,45 10,50 20,50 C40,50 60,30 60,0 Z" fill="#1a237e" opacity="0.5"/>
+                                    
+                                    <!-- Brain details -->
+                                    <path d="M-40,-30 C-50,-25 -50,-15 -40,-10 C-30,-5 -30,5 -40,10 C-50,15 -50,25 -40,30" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.7"/>
+                                    <path d="M40,-30 C50,-25 50,-15 40,-10 C30,-5 30,5 40,10 C50,15 50,25 40,30" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.7"/>
+                                    
+                                    <!-- Connection between hemispheres -->
+                                    <path d="M-10,-40 L10,-40 M-15,-20 L15,-20 M-20,0 L20,0 M-15,20 L15,20 M-10,40 L10,40" stroke="#ffffff" stroke-width="2" opacity="0.8"/>
+                                </g>
+                                
+                                <!-- Light bulb for ideas -->
+                                <g transform="translate(0, -80)">
+                                    <circle cx="0" cy="0" r="20" fill="#1a237e" opacity="0.9"/>
+                                    <path d="M-15,15 C-15,25 -10,30 0,30 C10,30 15,25 15,15" fill="none" stroke="#ffffff" stroke-width="3"/>
+                                    <path d="M-12,12 L12,12 M-8,6 L8,6 M-12,0 L12,0 M-8,-6 L8,-6 M-12,-12 L12,-12" stroke="#ffffff" stroke-width="2" opacity="0.8"/>
+                                    <rect x="-5" y="30" width="10" height="5" fill="#1a237e"/>
+                                    <rect x="-5" y="35" width="10" height="5" fill="#1a237e" opacity="0.7"/>
+                                </g>
+                            </g>
+                            <text x="400" y="320" text-anchor="middle" font-family="Arial" font-size="24" fill="#1a237e">Technical Consulting</text>
+                        </svg>
+                    </figure>
+                    <div class="card-body">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                            <i class="fa fa-lightbulb-o text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="card-title text-xl font-oswald">Technical Consulting</h3>
+                        <p class="text-base-content/80 mb-4">Expert advice on material selection, design optimization, and manufacturing processes.</p>
+                        <ul class="space-y-2 mb-4">
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-primary mr-2 mt-1"></i>
+                                <span>Material selection guidance</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-primary mr-2 mt-1"></i>
+                                <span>Cost optimization strategies</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-primary mr-2 mt-1"></i>
+                                <span>Process improvement consultation</span>
+                            </li>
+                        </ul>
+                        <div class="card-actions justify-end">
+                            <a href="contact.html" class="btn btn-primary">Request Service</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+
+    <!-- Footer -->
+    <footer class="bg-neutral text-white">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-oswald font-bold mb-6  relative inline-block">
+                        About Us
+                        
+                    </h3>
+                    <p class="text-gray-300 mb-4">Dyna-K Automotive Stamping Pvt. Ltd is a leading manufacturer of precision automotive components with a commitment to quality and innovation.</p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="btn btn-circle btn-sm ">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/dyna-k-automotive-stampings/" class="btn btn-circle btn-sm ">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="btn btn-circle btn-sm ">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-oswald font-bold mb-6  relative inline-block">
+                        Quick Links
+                    </h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="flex items-center transition-colors">
+                            <i class="fa fa-chevron-right mr-2  text-xs"></i> Home
+                        </a></li>
+                        <li><a href="products.html" class="flex items-center transition-colors">
+                            <i class="fa fa-chevron-right mr-2  text-xs"></i> Products
+                        </a></li>
+                        <li><a href="company-profile.html" class="flex items-center transition-colors">
+                            <i class="fa fa-chevron-right mr-2  text-xs"></i> About Us
+                        </a></li>
+                        <li><a href="facilities.html" class="flex items-center transition-colors">
+                            <i class="fa fa-chevron-right mr-2  text-xs"></i> Facilities
+                        </a></li>
+                        <li><a href="contact.html" class="flex items-center transition-colors">
+                            <i class="fa fa-chevron-right mr-2  text-xs"></i> Contact
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="sm:col-span-2 md:col-span-1">
+                    <h3 class="text-xl font-oswald font-bold mb-6  relative inline-block">
+                        Contact Info
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fa fa-map-marker  mt-1 mr-3"></i>
+                            <span>J6, MIDC Indrayani Nagar Road, Balaji Nagar, Bhosari,
+                              Pimpri-Chinchwad, Maharashtra, India – 411026.</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-phone  mr-3"></i>
+                            <span>+91 20 27111900</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-envelope  mr-3"></i>
+                            <span>contact@dynakstamp.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-clock-o  mr-3"></i>
+                            <span>Mon-Sat: 9:00 AM - 5:30 PM</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sm:col-span-2 md:col-span-1">
+                    <h3 class="text-xl font-oswald font-bold mb-6  relative inline-block">
+                        Newsletter 
+                    </h3>
+                    <p class="text-gray-300 mb-4">Subscribe to our newsletter for the latest updates and industry insights.</p>
+                    <div class="form-control">
+                        <div class="join w-full">
+                            <input type="email" placeholder="Your email" class="input input-bordered join-item w-2/3 text-black" />
+                            <button class="btn btn-primary join-item w-1/3">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-10 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Dyna-K Automotive Stamping. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 

@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Dyna-K Automotive Stamping Pvt. Ltd</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a237e',
+                        secondary: '#ff6f00',
+                        accent: '#ffd700',
+                        dark: '#0d47a1',
+                        light: '#e3f2fd',
+                    },
+                    fontFamily: {
+                        oswald: ['Oswald', 'sans-serif'],
+                        roboto: ['Roboto', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .nav-link {
+            @apply text-base-content hover:text-white transition-colors duration-300 relative;
+        }
+        .nav-link::after {
+            content: '';
+            @apply absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300;
+        }
+        .nav-link:hover::after {
+            @apply w-full;
+        }
+        .nav-link.active {
+            @apply text-white font-bold;
+        }
+        .nav-link.active::after {
+            @apply w-full;
+        }
+        .dropdown-content {
+            @apply mt-2 border-t-2 border-primary;
+        }
+        .drawer-side {
+            @apply bg-base-100;
+        }
+        .drawer-side ul {
+            @apply p-4;
+        }
+        .drawer-side a {
+            @apply hover:bg-base-200 rounded-lg transition-all duration-300;
+        }
+        .card {
+            @apply transition-all duration-300 hover:-translate-y-1;
+        }
+        .btn {
+            @apply transition-all duration-300 hover:scale-105;
+        }
+        .stats {
+            @apply transition-all duration-300 hover:shadow-xl;
+        }
+        .section-title {
+            @apply relative inline-block;
+        }
+        .section-title::after {
+            content: '';
+            @apply absolute bottom-0 left-0 w-1/2 h-1 bg-secondary transform -translate-x-1/2;
+        }
+    </style>
+</head>
+<body class="font-roboto bg-base-200">
+    <!-- Announcement Bar -->
+    <div class="bg-primary text-white py-1 px-4 text-center text-sm">
+        <span>Leading manufacturer of precision automotive components | IATF16949:2016 Certified</span>
+    </div>
+
+    <!-- Top Navigation -->
+    <div class="bg-neutral text-white py-2">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <a href="#" class="hover:text-secondary transition-colors duration-300 flex items-center space-x-2">
+                        <i class="fa fa-book text-secondary"></i>
+                        <span>Download Brochure</span>
+                    </a>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="mailto:contact@dynakstamp.com" class="hover:text-secondary transition-colors duration-300 flex items-center space-x-2">
+                        <i class="fa fa-envelope text-secondary"></i>
+                        <span>contact@dynakstamp.com</span>
+                    </a>
+                    <a href="tel:+91 20 27111900" class="hover:text-secondary transition-colors duration-300 flex items-center space-x-2">
+                        <i class="fa fa-phone text-secondary"></i>
+                        <span>+91 20 27111900</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <img src="images/logo-dyna.jpg" alt="Dyna-K Logo" class="h-16">
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link font-medium active">Home</a>
+                    <div class="dropdown dropdown-hover">
+                        <label tabindex="0" class="nav-link font-medium cursor-pointer flex items-center">
+                            About Us <i class="fa fa-chevron-down ml-1 text-xs"></i>
+                        </label>
+                        <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a href="company-profile.html">Company Profile</a></li>
+                            <li><a href="vision-quality-policy.html">Vision & Quality</a></li>
+                            <li><a href="certification.html">Certification</a></li>
+                            <li><a href="initiatives.html">Initiatives</a></li>
+                        </ul>
+                    </div>
+                    <a href="services.html" class="nav-link font-medium">Services</a>
+                    <a href="facilities.html" class="nav-link font-medium">Facilities</a>
+                    <a href="customers.html" class="nav-link font-medium">Customers</a>
+                    <div class="dropdown dropdown-hover">
+                        <label tabindex="0" class="nav-link font-medium cursor-pointer flex items-center">
+                            Products <i class="fa fa-chevron-down ml-1 text-xs"></i>
+                        </label>
+                        <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a href="engine-parts.html">Engine Parts</a></li>
+                            <li><a href="brake-components.html">Brake Components</a></li>
+                            <li><a href="chassis-parts.html">Chassis Parts</a></li>
+                            <li><a href="turbo-chargers.html">Turbo Chargers</a></li>
+                            <li><a href="other-parts.html">Other Parts</a></li>
+                            <li><a href="emission-filtration-parts.html">Emission & Filtration</a></li>
+                            <li><a href="welded-assemblies.html">Welded Assemblies</a></li>
+                        </ul>
+                    </div>
+                    <a href="career.html" class="nav-link font-medium">Careers</a>
+                    <a href="contact.html" class="nav-link font-medium">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <div class="drawer drawer-end">
+                        <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+                        <div class="drawer-content">
+                            <label for="my-drawer" class="btn btn-ghost btn-circle">
+                                <i class="fa fa-bars text-xl"></i>
+                            </label>
+                        </div> 
+                        <div class="drawer-side">
+                            <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+                            <ul class="menu p-4 w-80 min-h-full bg-base-200">
+                                <li><a href="index.html" class="active">Home</a></li>
+                                <li>
+                                    <details>
+                                        <summary>About Us</summary>
+                                        <ul>
+                                            <li><a href="company-profile.html">Company Profile</a></li>
+                                            <li><a href="vision-quality-policy.html">Vision & Quality</a></li>
+                                            <li><a href="certification.html">Certification</a></li>
+                                            <li><a href="initiatives.html">Initiatives</a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="facilities.html">Facilities</a></li>
+                                <li><a href="customers.html">Customers</a></li>
+                                <li>
+                                    <details>
+                                        <summary>Products</summary>
+                                        <ul>
+                                            <li><a href="engine-parts.html">Engine Parts</a></li>
+                                            <li><a href="brake-components.html">Brake Components</a></li>
+                                            <li><a href="chassis-parts.html">Chassis Parts</a></li>
+                                            <li><a href="turbo-chargers.html">Turbo Chargers</a></li>
+                                            <li><a href="other-parts.html">Other Parts</a></li>
+                                            <li><a href="emission-filtration-parts.html">Emission & Filtration</a></li>
+                                            <li><a href="welded-assemblies.html">Welded Assemblies</a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+                                <li><a href="career.html">Careers</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative h-80 md:h-96 overflow-hidden">
+        <!-- Background image with overlay -->
+        <div class="absolute inset-0 bg-gradient-to-r from-primary/90 to-dark/80">
+            <img src="images/about-us-banner.jpg" alt="About Us" class="w-full h-full object-cover mix-blend-overlay opacity-70">
+        </div>
+        
+        <div class="relative container mx-auto px-4 h-full flex items-center">
+            <div class="max-w-3xl">
+                <div class="inline-block bg-white/10 backdrop-blur-sm px-4 py-1 rounded-full mb-4">
+                    <span class="text-white/90 text-sm font-medium">Excellence in Automotive Manufacturing</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-oswald font-bold mb-4 text-white">About Dyna-K Automotive</h1>
+                <p class="text-xl text-white/90 mb-8 max-w-2xl">Leading the automotive industry with precision engineering and quality manufacturing since 2004</p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="company-profile.html" class="btn btn-primary hover:scale-105 transition-transform">
+                        Company Profile <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                    <a href="contact.html" class="btn bg-white/20 hover:bg-white/30 text-white border-none hover:scale-105 transition-transform">
+                        Contact Us <i class="fa fa-envelope ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Content -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="group">
+                    <div class="overflow-hidden rounded-xl shadow-xl relative">
+                        <img src="images/about-us-banner.jpg" alt="About Us" class="w-full h-[500px] object-cover transform transition-transform duration-700 group-hover:scale-105">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                            <div class="text-white">
+                                <p class="uppercase text-secondary text-sm tracking-wider font-semibold mb-2">Established 2004</p>
+                                <h3 class="text-2xl font-oswald">Two Decades of Excellence</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-oswald font-bold text-white mb-4">Our Story</h2>
+                    <div class="w-24 h-1 bg-secondary mb-6"></div>
+                    <p class="text-lg text-base-content mb-6">Dyna-K Automotive Stamping Pvt. Ltd has been at the forefront of automotive component manufacturing for over two decades. Our commitment to quality, innovation, and customer satisfaction has made us a trusted partner for leading automotive manufacturers worldwide.</p>
+                    <p class="text-lg text-base-content mb-8">With state-of-the-art facilities and a team of skilled professionals, we deliver precision-engineered components that meet the highest industry standards.</p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="stats shadow bg-base-100 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                            <div class="stat">
+                                <div class="stat-title text-base-content/70">Years of Experience</div>
+                                <div class="stat-value text-white">20+</div>
+                                <div class="stat-desc text-secondary">Since 2004</div>
+                            </div>
+                        </div>
+                        <div class="stats shadow bg-base-100 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                            <div class="stat">
+                                <div class="stat-title text-base-content/70">Happy Clients</div>
+                                <div class="stat-value text-white">50+</div>
+                                <div class="stat-desc text-secondary">Global Manufacturers</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <a href="company-profile.html" class="btn btn-primary">Learn More About Our Journey</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Timeline -->
+    <section class="py-16 bg-base-200">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-oswald font-bold text-white mb-4">Our Journey</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto mb-6"></div>
+                <p class="text-lg text-base-content/80 max-w-3xl mx-auto">From our modest beginnings to becoming an industry leader</p>
+            </div>
+            
+            <div class="relative">
+                <!-- Timeline line -->
+                <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-primary/20"></div>
+                
+                <!-- Timeline items -->
+                <div class="grid grid-cols-1 gap-12">
+                    <!-- 2004 -->
+                    <div class="relative flex items-center">
+                        <div class="w-1/2 pr-12 md:pr-16 text-right">
+                            <h3 class="text-2xl font-oswald text-white font-bold">2004</h3>
+                            <p class="mt-2">Dyna-K Automotive Stamping Pvt. Ltd was founded with a vision to deliver excellence in automotive components.</p>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-primary border-4 border-base-200 z-10"></div>
+                        <div class="w-1/2 pl-12 md:pl-16"></div>
+                    </div>
+                    
+                    <!-- 2010 -->
+                    <div class="relative flex items-center">
+                        <div class="w-1/2 pr-12 md:pr-16"></div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-primary border-4 border-base-200 z-10"></div>
+                        <div class="w-1/2 pl-12 md:pl-16">
+                            <h3 class="text-2xl font-oswald text-white font-bold">2010</h3>
+                            <p class="mt-2">Expanded our manufacturing facility and received ISO 9001:2008 certification.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- 2015 -->
+                    <div class="relative flex items-center">
+                        <div class="w-1/2 pr-12 md:pr-16 text-right">
+                            <h3 class="text-2xl font-oswald text-white font-bold">2015</h3>
+                            <p class="mt-2">Introduced advanced automated manufacturing processes and expanded our product range.</p>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-primary border-4 border-base-200 z-10"></div>
+                        <div class="w-1/2 pl-12 md:pl-16"></div>
+                    </div>
+                    
+                    <!-- 2020 -->
+                    <div class="relative flex items-center">
+                        <div class="w-1/2 pr-12 md:pr-16"></div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-primary border-4 border-base-200 z-10"></div>
+                        <div class="w-1/2 pl-12 md:pl-16">
+                            <h3 class="text-2xl font-oswald text-white font-bold">2020</h3>
+                            <p class="mt-2">Achieved IATF16949:2016 certification and implemented Industry 4.0 technologies.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Today -->
+                    <div class="relative flex items-center">
+                        <div class="w-1/2 pr-12 md:pr-16 text-right">
+                            <h3 class="text-2xl font-oswald text-white font-bold">Today</h3>
+                            <p class="mt-2">Continuing to innovate and lead the industry with a focus on sustainable manufacturing practices.</p>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-secondary border-4 border-base-200 z-10"></div>
+                        <div class="w-1/2 pl-12 md:pl-16"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Values Section with improved design -->
+    <section class="py-16 bg-base-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-oswald font-bold text-white mb-2">Our Core Values</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto mb-4"></div>
+                <p class="text-lg text-base-content max-w-3xl mx-auto">The principles that guide our operations and define our success</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card bg-base-200 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-t-4 border-primary">
+                    <div class="card-body">
+                        <div class="text-white text-4xl mb-4 bg-primary/10 w-16 h-16 flex items-center justify-center rounded-full">
+                            <i class="fa fa-check-circle"></i>
+                        </div>
+                        <h3 class="card-title text-xl font-oswald">Quality Excellence</h3>
+                        <p>Committed to delivering products of the highest quality that exceed industry standards and customer expectations.</p>
+                        <ul class="mt-4 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fa fa-arrow-right text-secondary mr-2 mt-1"></i>
+                                <span>Rigorous quality control</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-arrow-right text-secondary mr-2 mt-1"></i>
+                                <span>Advanced testing facilities</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-arrow-right text-secondary mr-2 mt-1"></i>
+                                <span>Continuous improvement</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card bg-base-200 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-t-4 border-primary">
+                    <div class="card-body">
+                        <div class="text-white text-4xl mb-4 bg-primary/10 w-16 h-16 flex items-center justify-center rounded-full">
+                            <i class="fa fa-lightbulb-o"></i>
+                        </div>
+                        <h3 class="card-title text-xl font-oswald">Innovation</h3>
+                        <p>Continuously improving our processes and embracing new technologies to stay ahead in a competitive market.</p>
+                        <ul class="mt-4 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fa fa-arrow-right text-secondary mr-2 mt-1"></i>
+                                <span>Research & development</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-arrow-right text-secondary mr-2 mt-1"></i>
+                                <span>Advanced manufacturing</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-arrow-right text-secondary mr-2 mt-1"></i>
+                                <span>Technology adoption</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card bg-base-200 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-t-4 border-primary">
+                    <div class="card-body">
+                        <div class="text-white text-4xl mb-4 bg-primary/10 w-16 h-16 flex items-center justify-center rounded-full">
+                            <i class="fa fa-handshake-o"></i>
+                        </div>
+                        <h3 class="card-title text-xl font-oswald">Customer Focus</h3>
+                        <p>Building lasting relationships through exceptional service, reliability, and understanding customer needs.</p>
+                        <ul class="mt-4 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fa fa-arrow-right text-secondary mr-2 mt-1"></i>
+                                <span>Responsive service</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-arrow-right text-secondary mr-2 mt-1"></i>
+                                <span>Tailored solutions</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-arrow-right text-secondary mr-2 mt-1"></i>
+                                <span>Long-term partnerships</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-neutral text-white">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-oswald font-bold mb-6 text-secondary relative inline-block">
+                        About Us
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-secondary/50"></span>
+                    </h3>
+                    <p class="text-gray-300 mb-4">Dyna-K Automotive Stamping Pvt. Ltd is a leading manufacturer of precision automotive components with a commitment to quality and innovation.</p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="btn btn-circle btn-sm ">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/dyna-k-automotive-stampings/" class="btn btn-circle btn-sm ">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="btn btn-circle btn-sm ">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-oswald font-bold mb-6 text-secondary relative inline-block">
+                        Quick Links
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-secondary/50"></span>
+                    </h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="flex items-center hover:text-secondary transition-colors">
+                            <i class="fa fa-chevron-right mr-2 text-secondary text-xs"></i> Home
+                        </a></li>
+                        <li><a href="products.html" class="flex items-center hover:text-secondary transition-colors">
+                            <i class="fa fa-chevron-right mr-2 text-secondary text-xs"></i> Products
+                        </a></li>
+                        <li><a href="about.html" class="flex items-center hover:text-secondary transition-colors">
+                            <i class="fa fa-chevron-right mr-2 text-secondary text-xs"></i> About Us
+                        </a></li>
+                        <li><a href="facilities.html" class="flex items-center hover:text-secondary transition-colors">
+                            <i class="fa fa-chevron-right mr-2 text-secondary text-xs"></i> Facilities
+                        </a></li>
+                        <li><a href="contact.html" class="flex items-center hover:text-secondary transition-colors">
+                            <i class="fa fa-chevron-right mr-2 text-secondary text-xs"></i> Contact
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="sm:col-span-2 md:col-span-1">
+                    <h3 class="text-xl font-oswald font-bold mb-6 text-secondary relative inline-block">
+                        Contact Info
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-secondary/50"></span>
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fa fa-map-marker text-secondary mt-1 mr-3"></i>
+                            <span>J6, MIDC Indrayani Nagar Road, Balaji Nagar, Bhosari,
+                              Pimpri-Chinchwad, Maharashtra, India – 411026.</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-phone text-secondary mr-3"></i>
+                            <span>+91 20 27111900</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-envelope text-secondary mr-3"></i>
+                            <span>contact@dynakstamp.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-clock-o text-secondary mr-3"></i>
+                            <span>Mon-Sat: 9:00 AM - 5:30 PM</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sm:col-span-2 md:col-span-1">
+                    <h3 class="text-xl font-oswald font-bold mb-6 text-secondary relative inline-block">
+                        Newsletter
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-secondary/50"></span>
+                    </h3>
+                    <p class="text-gray-300 mb-4">Subscribe to our newsletter for the latest updates and industry insights.</p>
+                    <div class="form-control">
+                        <div class="join w-full">
+                            <input type="email" placeholder="Your email" class="input input-bordered join-item w-2/3" />
+                            <button class="btn btn-primary join-item w-1/3">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-10 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Dyna-K Automotive Stamping. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 

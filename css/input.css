@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles that can't be handled by Tailwind */
+@layer components {
+  .btn-primary {
+    @apply btn bg-dyna-primary text-white hover:bg-dyna-secondary transition-colors duration-300;
+  }
+  
+  .nav-link {
+    @apply text-gray-700 hover:text-dyna-secondary transition-colors duration-300;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl font-oswald font-bold text-dyna-primary mb-2;
+  }
+  
+  .section-title-bar {
+    @apply w-24 h-1 bg-dyna-secondary mb-4;
+  }
+  
+  .section-subtitle {
+    @apply text-lg text-dyna-neutral max-w-3xl mx-auto;
+  }
+  
+  .card-hover {
+    @apply hover:shadow-xl transition-all duration-300;
+  }
+  
+  .image-hover {
+    @apply transition-transform duration-500 hover:scale-105;
+  }
+  
+  .footer-link {
+    @apply flex items-center hover:text-dyna-secondary transition-colors;
+  }
+  
+  .social-icon {
+    @apply btn btn-circle btn-sm hover:bg-dyna-secondary hover:border-dyna-secondary transition-all duration-300;
+  }
+  
+  .input-primary {
+    @apply input input-bordered focus:border-dyna-accent focus:ring-2 focus:ring-dyna-accent/30;
+  }
+  
+  .dropdown-menu {
+    @apply dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52;
+  }
+}
+
+/* Animations */
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out;
+  }
+  
+  .animate-pulse-slow {
+    animation: pulse 3s infinite;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-base-200;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-dyna-primary rounded-md;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-dyna-secondary;
+}
+
+/* Keep any custom styles that need to remain outside of Tailwind */ 

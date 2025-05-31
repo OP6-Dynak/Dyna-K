@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Initiatives - Dyna-K Automotive Stamping Pvt. Ltd</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a237e',    // Deep blue
+                        secondary: '#2c3e50',   // Dark slate
+                        accent: '#34495e',      // Steel blue
+                        dark: '#0d47a1',        // Navy blue
+                        light: '#e3f2fd',       // Light blue
+                    },
+                    fontFamily: {
+                        oswald: ['Oswald', 'sans-serif'],
+                        roboto: ['Roboto', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .nav-link {
+            @apply text-base-content hover:text-white transition-colors duration-300 relative;
+        }
+        .nav-link::after {
+            content: '';
+            @apply absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300;
+        }
+        .nav-link:hover::after {
+            @apply w-full;
+        }
+        .nav-link.active {
+            @apply text-white font-bold;
+        }
+        .nav-link.active::after {
+            @apply w-full;
+        }
+        .dropdown-content {
+            @apply mt-2 border-t-2 border-primary;
+        }
+        .drawer-side {
+            @apply bg-base-100;
+        }
+        .drawer-side ul {
+            @apply p-4;
+        }
+        .drawer-side a {
+            @apply hover:bg-base-200 rounded-lg transition-all duration-300;
+        }
+        .card {
+            @apply transition-all duration-300 hover:-translate-y-1;
+        }
+        .btn {
+            @apply transition-all duration-300 hover:scale-105;
+        }
+        .stats {
+            @apply transition-all duration-300 hover:shadow-xl;
+        }
+        .section-title {
+            @apply relative inline-block;
+        }
+        .section-title::after {
+            content: '';
+            @apply absolute bottom-0 left-0 w-1/2 h-1 bg-primary transform -translate-x-1/2;
+        }
+        .timeline-item {
+            @apply relative pl-8 pb-8 border-l-2 border-primary;
+        }
+        .timeline-item::before {
+            content: '';
+            @apply absolute w-4 h-4 bg-secondary rounded-full -left-[9px] top-0;
+        }
+        .timeline-item:last-child {
+            @apply border-l-0;
+        }
+        .btn-primary {
+            @apply bg-primary hover:bg-dark text-white;
+        }
+        .btn-secondary {
+            @apply bg-secondary hover:bg-accent text-white;
+        }
+        .btn-outline {
+            @apply border-2 border-white hover:bg-white hover:text-white;
+        }
+        .icon-primary {
+            @apply text-white;
+        }
+        .icon-secondary {
+            @apply text-secondary;
+        }
+    </style>
+</head>
+<body class="font-roboto bg-base-200">
+    <!-- Announcement Bar -->
+    <div class="bg-primary text-white py-1 px-4 text-center text-sm">
+        <span>Leading manufacturer of precision automotive components | IATF16949:2016 Certified</span>
+    </div>
+
+    <!-- Top Navigation -->
+    <div class="bg-neutral text-white py-2">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <a href="#" class=" transition-colors duration-300 flex items-center space-x-2">
+                        <i class="fa fa-book "></i>
+                        <span>Download Brochure</span>
+                    </a>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="mailto:contact@dynakstamp.com" class=" transition-colors duration-300 flex items-center space-x-2">
+                        <i class="fa fa-envelope "></i>
+                        <span>contact@dynakstamp.com</span>
+                    </a>
+                    <a href="tel:+91 20 27111900" class=" transition-colors duration-300 flex items-center space-x-2">
+                        <i class="fa fa-phone "></i>
+                        <span>+91 20 27111900</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <img src="images/logo-dyna.jpg" alt="Dyna-K Logo" class="h-16">
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link font-medium active">Home</a>
+                    <div class="dropdown dropdown-hover">
+                        <label tabindex="0" class="nav-link font-medium cursor-pointer flex items-center">
+                            About Us <i class="fa fa-chevron-down ml-1 text-xs"></i>
+                        </label>
+                        <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a href="company-profile.html">Company Profile</a></li>
+                            <li><a href="vision-quality-policy.html">Vision & Quality</a></li>
+                            <li><a href="certification.html">Certification</a></li>
+                            <li><a href="initiatives.html">Initiatives</a></li>
+                        </ul>
+                    </div>
+                    <a href="services.html" class="nav-link font-medium">Services</a>
+                    <a href="facilities.html" class="nav-link font-medium">Facilities</a>
+                    <a href="customers.html" class="nav-link font-medium">Customers</a>
+                    <div class="dropdown dropdown-hover">
+                        <label tabindex="0" class="nav-link font-medium cursor-pointer flex items-center">
+                            Products <i class="fa fa-chevron-down ml-1 text-xs"></i>
+                        </label>
+                        <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a href="engine-parts.html">Engine Parts</a></li>
+                            <li><a href="brake-components.html">Brake Components</a></li>
+                            <li><a href="chassis-parts.html">Chassis Parts</a></li>
+                            <li><a href="turbo-chargers.html">Turbo Chargers</a></li>
+                            <li><a href="other-parts.html">Other Parts</a></li>
+                            <li><a href="emission-filtration-parts.html">Emission & Filtration</a></li>
+                            <li><a href="welded-assemblies.html">Welded Assemblies</a></li>
+                        </ul>
+                    </div>
+                    <a href="career.html" class="nav-link font-medium">Careers</a>
+                    <a href="contact.html" class="nav-link font-medium">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <div class="drawer drawer-end">
+                        <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+                        <div class="drawer-content">
+                            <label for="my-drawer" class="btn btn-ghost btn-circle">
+                                <i class="fa fa-bars text-xl"></i>
+                            </label>
+                        </div> 
+                        <div class="drawer-side">
+                            <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+                            <ul class="menu p-4 w-80 min-h-full bg-base-200">
+                                <li><a href="index.html" class="active">Home</a></li>
+                                <li>
+                                    <details>
+                                        <summary>About Us</summary>
+                                        <ul>
+                                            <li><a href="company-profile.html">Company Profile</a></li>
+                                            <li><a href="vision-quality-policy.html">Vision & Quality</a></li>
+                                            <li><a href="certification.html">Certification</a></li>
+                                            <li><a href="initiatives.html">Initiatives</a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="facilities.html">Facilities</a></li>
+                                <li><a href="customers.html">Customers</a></li>
+                                <li>
+                                    <details>
+                                        <summary>Products</summary>
+                                        <ul>
+                                            <li><a href="engine-parts.html">Engine Parts</a></li>
+                                            <li><a href="brake-components.html">Brake Components</a></li>
+                                            <li><a href="chassis-parts.html">Chassis Parts</a></li>
+                                            <li><a href="turbo-chargers.html">Turbo Chargers</a></li>
+                                            <li><a href="other-parts.html">Other Parts</a></li>
+                                            <li><a href="emission-filtration-parts.html">Emission & Filtration</a></li>
+                                            <li><a href="welded-assemblies.html">Welded Assemblies</a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+                                <li><a href="career.html">Careers</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative bg-primary text-white py-20">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-oswald font-bold mb-6">Our Initiatives</h1>
+                <p class="text-xl">Discover our commitment to sustainability, diversity, and innovation</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Diversity & Gender Equality -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="md:col-span-2">
+                    <h2 class="text-3xl md:text-4xl font-oswald font-bold text-primary mb-6">Diversity & Gender Equality</h2>
+                    <div class="w-24 h-1 bg-primary mb-6"></div>
+                    <p class="text-lg text-base-content mb-6">
+                        Considerable rewards can be attained by businesses which successfully attract both women and men to their workforce. As Dyna-K reaches out to attract and retain global customers, the company acknowledges that a diverse workforce is essential to its continued competitiveness and innovation. While diversity is fundamental, gender equality is paramount at Dyna-K Automotive Stamping Pvt. Ltd. Gender equality is achieved when people are able to access and enjoy the same rewards, resources and opportunities regardless of their gender. As systems and internal processes evolve, more women are willing to explore opportunities on the shop floor apart from just the corporate functions and Dyna-K is focused on moving forward on this journey.
+                    </p>
+                    <p class="text-lg text-base-content mb-6">
+                        Fostering a workforce that promotes this initiative the organization has been able to,
+                    </p>
+                    <ul class="list-disc pl-6 mb-6 space-y-2">
+                        <li>Attract the best employees</li>
+                        <li>Enhance organisational performance</li>
+                        <li>Improve access to target markets</li>
+                        <li>Enhance reputation</li>
+                    </ul>
+                    
+                    <p class="text-lg text-base-content mb-6">
+                        All the employees are given 'Respect Diversity' Training, through multiple sessions that showcase the importance of a diverse work culture and show the employees that diverse organizations are better able to develop creative solutions to difficult business.
+                    </p>
+                    <div class="flex items-start mb-6">
+                        <img src="images/tathapi-logo-dyna.jpg" alt="Tathapi Logo" class="mr-4">
+                        <div>
+                            <p class="text-lg text-base-content">
+                                All employees are required to understand the company policy on Anti-Sexual Harassment and to review the Dyna-K Code of Conduct. Monthly trainings are organized to address workers, staff and leadership team.
+                            </p>
+                            <p class="text-lg text-base-content mt-4">
+                                Dyna-K has partnered with NGO Tathapi Trust in Pune to be a part of our Internal Complaint Committee along with a partnership for assistance in training initiatives.
+                            </p>
+                            <p class="text-lg text-base-content mt-4">
+                                Diversity training doesn't stop with new employees. The training is designed to address management issues with a diversity component, to train team leaders in results management, coaching and driving change.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="space-y-6">
+                        <img src="images/initiatives-img-0.png" alt="Diversity Initiatives" class="w-full h-auto rounded-lg shadow-lg border border-gray-300">
+                        <img src="images/initiatives-img-1.png" alt="Diversity Initiatives" class="w-full h-auto rounded-lg shadow-lg border border-gray-300">
+                        <img src="images/initiatives-img-2.png" alt="Diversity Initiatives" class="w-full h-auto rounded-lg shadow-lg border border-gray-300">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Health & Safety -->
+    <section class="py-16 bg-base-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-oswald font-bold text-primary mb-6">Health & Safety</h2>
+            <div class="w-24 h-1 bg-secondary mb-6"></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <p class="text-lg text-base-content mb-6">
+                        At Dyna-K Automotive Stamping Pvt. Ltd, our long-term success depends upon ensuring the safety of our workers, visitors and our operations.
+                    </p>
+                    <p class="text-lg text-base-content mb-6">
+                        We believe that a safe and healthy workplace is a fundamental right of every person and also a business imperative. Our Health & Safety Initiative requires that we take responsibility for maintaining a productive workplace in every part of our Company by minimizing the risk of accidents, injury and exposure to health hazards for all of our employees.
+                    </p>
+                    <p class="text-lg text-base-content mb-6">
+                        Our Health & Safety Initiative defines the policies, standards and requirements for managing safety, the environment and quality throughout its operations.
+                    </p>
+                </div>
+                <div class="flex justify-center">
+                    <img src="images/initiatives-icon.png" alt="Health & Safety Icons" class="max-w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Environment -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-oswald font-bold text-primary mb-6">Environment</h2>
+            <div class="w-24 h-1 bg-secondary mb-6"></div>
+            <div class="flex flex-col md:flex-row gap-8 items-start">
+                <img src="images/environmental-icons.png" alt="Environmental Icons" class="max-w-xs h-auto mx-auto md:mx-0">
+                <div>
+                    <p class="text-lg text-base-content mb-6">
+                        Dyna-K Automotive Stamping Pvt. Ltd strives to preserve and uphold natural resources and reduce the environmental impact of its products and services throughout their lifecycle in order to be a responsible corporate citizen.
+                    </p>
+                    <p class="text-lg text-base-content mb-6">
+                        The guiding principle for our environmental initiatives is the 5R's: Reduce, Reuse, Recycle, Renew and Respect.
+                    </p>
+                    <p class="text-lg text-base-content mb-6">
+                        Dyna-K Automotive Stamping Pvt. Ltd  strives to develop and promote processes and newer technologies to make all our products and services environmentally responsible. Employees, the supply chain and other stakeholders are sensitized through personal interactions and other channels of effective communication. Initiatives can be measured through resource savings in all cases.
+                    </p>
+                    <p class="text-lg text-base-content">
+                        The company aims to engage with government and non-government agencies to promote conservation.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Innovation -->
+    <section class="py-16 bg-base-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-oswald font-bold text-primary mb-6">Innovation</h2>
+            <div class="w-24 h-1 bg-primary mb-6"></div>
+            <div class="max-w-4xl mx-auto">
+                <p class="text-lg text-base-content mb-6">
+                    Innovation is often associated with the introduction of new products or services in your business; however, it can also be about changing the way you do business.
+                </p>
+                <p class="text-lg text-base-content mb-6">
+                    At Dyna-K Automotive Stamping Pvt. Ltd, innovation embraces new uses of technologies, improved industry methods, meeting changing customer demands or needs, and better systems and processes.
+                </p>
+                <p class="text-lg text-base-content">
+                    Focus on innovation at Dyna-K Automotive Stamping Pvt. Ltd, ensures everyone is working towards better business practices and improving business efficiency and performance.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Footer -->
+    <footer class="bg-neutral text-white">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-oswald font-bold mb-6 text-white">About Us</h3>
+                    <p class="text-gray-300 mb-4">Dyna-K Automotive Stamping Pvt. Ltd is a leading manufacturer of precision automotive components with a commitment to quality and innovation.</p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="btn btn-circle btn-sm ">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/dyna-k-automotive-stampings/" class="btn btn-circle btn-sm ">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="btn btn-circle btn-sm ">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-oswald font-bold mb-6 text-white">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="flex items-center  transition-colors">
+                            <i class="fa fa-chevron-right mr-2 text-white text-xs"></i> Home
+                        </a></li>
+                        <li><a href="products.html" class="flex items-center  transition-colors">
+                            <i class="fa fa-chevron-right mr-2 text-white text-xs"></i> Products
+                        </a></li>
+                        <li><a href="company-profile.html" class="flex items-center  transition-colors">
+                            <i class="fa fa-chevron-right mr-2 text-white text-xs"></i> About Us
+                        </a></li>
+                        <li><a href="facilities.html" class="flex items-center  transition-colors">
+                            <i class="fa fa-chevron-right mr-2 text-white text-xs"></i> Facilities
+                        </a></li>
+                        <li><a href="contact.html" class="flex items-center  transition-colors">
+                            <i class="fa fa-chevron-right mr-2 text-white text-xs"></i> Contact
+                        </a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-oswald font-bold mb-6 text-white">Contact Info</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fa fa-map-marker text-white mt-1 mr-3"></i>
+                            <span>J6, MIDC Indrayani Nagar Road, Balaji Nagar, Bhosari,
+                              Pimpri-Chinchwad, Maharashtra, India – 411026.</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-phone text-white mr-3"></i>
+                            <span>+91 20 27111900</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-envelope text-white mr-3"></i>
+                            <span>contact@dynakstamp.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-clock-o text-white mr-3"></i>
+                            <span>Mon-Sat: 9:00 AM - 5:30 PM</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-oswald font-bold mb-6 text-white">Newsletter</h3>
+                    <p class="text-gray-300 mb-4">Subscribe to our newsletter for the latest updates and industry insights.</p>
+                    <div class="form-control">
+                        <div class="join">
+                            <input type="email" placeholder="Your email" class="input input-bordered join-item text-black" />
+                            <button class="btn btn-primary join-item">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-10 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Dyna-K Automotive Stamping Pvt. Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Dyna-K Automotive Stamping Pvt. Ltd</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a237e',
+                        secondary: '#ff6f00',
+                        accent: '#ffd700',
+                        dark: '#0d47a1',
+                        light: '#e3f2fd',
+                    },
+                    fontFamily: {
+                        oswald: ['Oswald', 'sans-serif'],
+                        roboto: ['Roboto', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .btn {
+            @apply transition-all duration-300 hover:scale-105;
+        }
+    </style>
+</head>
+<body class="font-roboto bg-base-200">
+    <div class="min-h-screen flex flex-col">
+        <!-- Announcement Bar -->
+        <div class="bg-primary text-white py-1 px-4 text-center text-sm">
+            <span>Leading manufacturer of precision automotive components | IATF16949:2016 Certified</span>
+        </div>
+        
+        <!-- Login Section -->
+        <div class="flex-grow flex items-center justify-center p-4">
+            <div class="card bg-base-100 shadow-xl w-96 border-t-4 border-primary">
+                <div class="card-body">
+                    <div class="flex justify-center mb-6">
+                        <img src="images/logo-dyna.jpg" alt="Dyna-K Logo" class="h-16">
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-oswald font-bold text-white text-center mb-6">Account Login</h2>
+                    <form>
+                        <div class="form-control">
+                            <label class="label">
+                                <span class="label-text font-medium">Email</span>
+                            </label>
+                            <div class="input-group">
+                                <span class="bg-base-200 px-3 flex items-center border border-r-0 rounded-l-md border-base-300">
+                                    <i class="fa fa-envelope text-secondary"></i>
+                                </span>
+                                <input type="email" placeholder="email@example.com" class="input input-bordered w-full rounded-l-none" />
+                            </div>
+                        </div>
+                        <div class="form-control mt-4">
+                            <label class="label">
+                                <span class="label-text font-medium">Password</span>
+                            </label>
+                            <div class="input-group">
+                                <span class="bg-base-200 px-3 flex items-center border border-r-0 rounded-l-md border-base-300">
+                                    <i class="fa fa-lock text-secondary"></i>
+                                </span>
+                                <input type="password" placeholder="••••••••" class="input input-bordered w-full rounded-l-none" />
+                            </div>
+                            <label class="label">
+                                <a href="#" class="label-text-alt link link-hover text-secondary">Forgot password?</a>
+                            </label>
+                        </div>
+                        <div class="form-control mt-6">
+                            <button class="btn btn-primary hover:shadow-lg">
+                                <i class="fa fa-sign-in mr-2"></i> Login
+                            </button>
+                        </div>
+                        <div class="divider text-base-content/60">OR</div>
+                        <div class="form-control">
+                            <button class="btn btn-outline border-secondary text-secondary hover:bg-secondary hover:text-white">
+                                <i class="fa fa-user-plus mr-2"></i> Register
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="bg-neutral text-white py-4">
+            <div class="container mx-auto px-4 text-center">
+                <p class="text-gray-400 text-sm">&copy; 2024 Dyna-K Automotive Stamping. All rights reserved.</p>
+                <div class="mt-2">
+                    <a href="index.html" class="text-sm text-gray-400 hover:text-secondary mx-2">Home</a>
+                    <span class="text-gray-600">|</span>
+                    <a href="privacy-policy.html" class="text-sm text-gray-400 hover:text-secondary mx-2">Privacy Policy</a>
+                    <span class="text-gray-600">|</span>
+                    <a href="contact.html" class="text-sm text-gray-400 hover:text-secondary mx-2">Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
